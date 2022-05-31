@@ -1,0 +1,1238 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Laplace Transforms of Common Signals</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32849</md:content-id>
+  <md:title>Laplace Transforms of Common Signals</md:title>
+  <md:abstract>This module derives the Laplace transform of well-known signals.</md:abstract>
+  <md:uuid>63c47933-ed7b-461e-b55c-bd7a00325f2b</md:uuid>
+</metadata>
+
+<content>
+    <section id="cid1">
+      <title>Laplace Transforms of Some Common Signals</title>
+      <para id="id336121">We'll next build up a collection of Laplace transform pairs which we will include in a table. It's important to keep in mind that once the transform pair has been derived, the focus should be on utilizing the transform pair found in the table rather than in recalculating the transform.</para>
+      <section id="uid1">
+        <title>Exponential Signal</title>
+        <para id="id336135">Consider the Laplace transform of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>α</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>:</para>
+        <equation id="uid2">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi mathvariant="fraktur">L</m:mi>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:msup>
+                        <m:mi>e</m:mi>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mi>α</m:mi>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                      <m:mi>u</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mn>0</m:mn>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>α</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mn>0</m:mn>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:mi>α</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>α</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>s</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:msubsup>
+                      <m:mfenced separators="" open="" close="|">
+                        <m:msup>
+                          <m:mi>e</m:mi>
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mo>(</m:mo>
+                            <m:mi>α</m:mi>
+                            <m:mo>+</m:mo>
+                            <m:mi>σ</m:mi>
+                            <m:mo>+</m:mo>
+                            <m:mi>j</m:mi>
+                            <m:mi>Ω</m:mi>
+                            <m:mo>)</m:mo>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                      </m:mfenced>
+                      <m:mn>0</m:mn>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mrow>
+                        <m:mi>α</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>s</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>,</m:mo>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mi>σ</m:mi>
+                    <m:mo>&gt;</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>α</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id336954">where <m:math overflow="scroll"><m:mrow><m:mi>σ</m:mi><m:mo>&gt;</m:mo><m:mo>-</m:mo><m:mi>α</m:mi></m:mrow></m:math> defines the region of convergence. Notice also that if <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math> still exists provided <m:math overflow="scroll"><m:mrow><m:mi>σ</m:mi><m:mo>&gt;</m:mo><m:mo>-</m:mo><m:mi>α</m:mi></m:mrow></m:math>. Therefore,</para>
+        <equation id="uid3">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>α</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:mrow>
+                  <m:mi>α</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>s</m:mi>
+                </m:mrow>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+      </section>
+      <section id="uid4">
+        <title>Unit Step Function</title>
+        <para id="id337076">Recall that the Fourier transform of <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> does not converge for this signal (it contains a <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math> term, since <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is not absolutely integrable). The Laplace transform on the other hand, converges. In fact, since <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a special case of the exponential function with <m:math overflow="scroll"><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>,</para>
+        <equation id="uid5">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:mi>s</m:mi>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id337186">The region of convergence is <m:math overflow="scroll"><m:mrow><m:mi>σ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>, the <emphasis effect="italics">right-half plane</emphasis>.</para>
+      </section>
+      <section id="uid6">
+        <title>Ramp Signal</title>
+        <para id="id337219">This signal is given by <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>t</m:mi><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> and also does not have a finite Fourier transform. The Laplace transform can be easily found using the multiplication by <m:math overflow="scroll"><m:mi>t</m:mi></m:math> property,</para>
+        <equation id="uid7">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id337298">The region of convergence is once again the right-half plane, <m:math overflow="scroll"><m:mrow><m:mi>σ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>.</para>
+      </section>
+      <section id="uid8">
+        <title>Cosine Signal</title>
+        <para id="id337326">Even though we computed the Fourier transform of the cosine signal, <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, the Fourier transform technically does not converge for this signal. That is why <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math> involves impulse functions. The Laplace transform produces quite a different result. First we use the fact that</para>
+        <equation id="uid9">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mo form="prefix">cos</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mi>j</m:mi>
+                      <m:msub>
+                        <m:mi>Ω</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mi>u</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>+</m:mo>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:msub>
+                        <m:mi>Ω</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mi>u</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+                <m:mn>2</m:mn>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id337496">Since each of the two terms is an exponential function we have</para>
+        <equation id="uid10">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi mathvariant="fraktur">L</m:mi>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:mo form="prefix">cos</m:mo>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                          <m:mi>Ω</m:mi>
+                          <m:mn>0</m:mn>
+                        </m:msub>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mi>u</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mn>2</m:mn>
+                      </m:mfrac>
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>j</m:mi>
+                        <m:msub>
+                          <m:mi>Ω</m:mi>
+                          <m:mn>0</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mn>2</m:mn>
+                      </m:mfrac>
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>j</m:mi>
+                        <m:msub>
+                          <m:mi>Ω</m:mi>
+                          <m:mn>0</m:mn>
+                        </m:msub>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mfrac>
+                    <m:mi>s</m:mi>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>s</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:mo>+</m:mo>
+                      <m:msubsup>
+                        <m:mi>Ω</m:mi>
+                        <m:mn>0</m:mn>
+                        <m:mn>2</m:mn>
+                      </m:msubsup>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id337653">Here, the region of convergence corresponds to the right-half plane, <m:math overflow="scroll"><m:mrow><m:mi>σ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>.</para>
+      </section>
+      <section id="uid11">
+        <title>More Transform Pairs</title>
+        <para id="id337680">We can use the existing transform pairs along with the properties of the Laplace transform to derive many new transform pairs. Consider the exponentially weighted cosine signal.
+This signal is given by</para>
+        <equation id="id337686">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>α</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mo form="prefix">cos</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id337748">We can use the <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>-</m:mo></m:mrow></m:math>shift property of the Laplace transform <link target-id=""/> along with the Laplace transform of the cosine signal <link target-id="uid10"/> to get</para>
+        <equation id="uid12">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>α</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mo form="prefix">cos</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>α</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:msup>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mi>s</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>α</m:mi>
+                    </m:mfenced>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                  <m:mo>+</m:mo>
+                  <m:msubsup>
+                    <m:mi>Ω</m:mi>
+                    <m:mn>0</m:mn>
+                    <m:mn>2</m:mn>
+                  </m:msubsup>
+                </m:mrow>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id337870">Another common signal is</para>
+        <equation id="id337875">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mi>t</m:mi>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>α</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id337920">We use the Laplace transform of the exponential signal <link target-id="uid1">"Exponential Signal"</link> and the <m:math overflow="scroll"><m:mi>t</m:mi></m:math> multiplication property to get</para>
+        <equation id="uid13">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>α</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:msup>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mi>s</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>α</m:mi>
+                  </m:mfenced>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id338001">Extending this idea one step further, we have</para>
+        <equation id="id338006">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:msup>
+                <m:mi>t</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>α</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id338057">Here, multiplication by <m:math overflow="scroll"><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:math> applies, giving</para>
+        <equation id="uid14">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msup>
+                <m:mi>t</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>α</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:mfrac>
+                <m:mn>2</m:mn>
+                <m:msup>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mi>s</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>α</m:mi>
+                  </m:mfenced>
+                  <m:mn>3</m:mn>
+                </m:msup>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id338143"><emphasis effect="bold">Example 3.1</emphasis> Consider the signal <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>t</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+Therefore, we get</para>
+        <equation id="uid16">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>t</m:mi>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>2</m:mn>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:msup>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mi>s</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>2</m:mn>
+                  </m:mfenced>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id338260"><emphasis effect="bold">Example 3.2</emphasis> Consider the signal <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:mn>5</m:mn><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>. As seen in <link target-id="uid19"/>,</para>
+        <equation id="uid18">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>2</m:mn>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mo form="prefix">cos</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mn>5</m:mn>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>2</m:mn>
+                </m:mrow>
+                <m:mrow>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mn>2</m:mn>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                  <m:mo>+</m:mo>
+                  <m:mn>25</m:mn>
+                </m:mrow>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <table id="uid19" summary="">
+          <tgroup cols="2">
+            <tbody>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>x</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>X</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>e</m:mi>
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mi>α</m:mi>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                        <m:mi>u</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mrow>
+                          <m:mi>s</m:mi>
+                          <m:mo>+</m:mo>
+                          <m:mi>α</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>u</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mi>s</m:mi>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>δ</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mn>1</m:mn>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>t</m:mi>
+                        <m:mi>u</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:msup>
+                          <m:mi>s</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mo form="prefix">cos</m:mo>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:msub>
+                            <m:mi>Ω</m:mi>
+                            <m:mn>0</m:mn>
+                          </m:msub>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mi>u</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:mi>s</m:mi>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mi>s</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>+</m:mo>
+                          <m:msubsup>
+                            <m:mi>Ω</m:mi>
+                            <m:mn>0</m:mn>
+                            <m:mn>2</m:mn>
+                          </m:msubsup>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mo form="prefix">sin</m:mo>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:msub>
+                            <m:mi>Ω</m:mi>
+                            <m:mn>0</m:mn>
+                          </m:msub>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mi>u</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:msub>
+                          <m:mi>Ω</m:mi>
+                          <m:mn>0</m:mn>
+                        </m:msub>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mi>s</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>+</m:mo>
+                          <m:msubsup>
+                            <m:mi>Ω</m:mi>
+                            <m:mn>0</m:mn>
+                            <m:mn>2</m:mn>
+                          </m:msubsup>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>e</m:mi>
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mi>α</m:mi>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                        <m:mo form="prefix">cos</m:mo>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:msub>
+                            <m:mi>Ω</m:mi>
+                            <m:mn>0</m:mn>
+                          </m:msub>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mi>u</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mi>s</m:mi>
+                          <m:mo>+</m:mo>
+                          <m:mi>α</m:mi>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mfenced separators="" open="(" close=")">
+                              <m:mi>s</m:mi>
+                              <m:mo>+</m:mo>
+                              <m:mi>α</m:mi>
+                            </m:mfenced>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>+</m:mo>
+                          <m:msubsup>
+                            <m:mi>Ω</m:mi>
+                            <m:mn>0</m:mn>
+                            <m:mn>2</m:mn>
+                          </m:msubsup>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>e</m:mi>
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mi>α</m:mi>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                        <m:mo form="prefix">sin</m:mo>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:msub>
+                            <m:mi>Ω</m:mi>
+                            <m:mn>0</m:mn>
+                          </m:msub>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mi>u</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:msub>
+                          <m:mi>Ω</m:mi>
+                          <m:mn>0</m:mn>
+                        </m:msub>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mfenced separators="" open="(" close=")">
+                              <m:mi>s</m:mi>
+                              <m:mo>+</m:mo>
+                              <m:mi>α</m:mi>
+                            </m:mfenced>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>+</m:mo>
+                          <m:msubsup>
+                            <m:mi>Ω</m:mi>
+                            <m:mn>0</m:mn>
+                            <m:mn>2</m:mn>
+                          </m:msubsup>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>t</m:mi>
+                        <m:msup>
+                          <m:mi>e</m:mi>
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mi>α</m:mi>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                        <m:mi>u</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:msup>
+                          <m:mfenced separators="" open="(" close=")">
+                            <m:mi>s</m:mi>
+                            <m:mo>+</m:mo>
+                            <m:mi>α</m:mi>
+                          </m:mfenced>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>t</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:msup>
+                          <m:mi>e</m:mi>
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mi>α</m:mi>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                        <m:mi>u</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:mn>2</m:mn>
+                        <m:msup>
+                          <m:mfenced separators="" open="(" close=")">
+                            <m:mi>s</m:mi>
+                            <m:mo>+</m:mo>
+                            <m:mi>α</m:mi>
+                          </m:mfenced>
+                          <m:mn>3</m:mn>
+                        </m:msup>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>t</m:mi>
+                          <m:mi>n</m:mi>
+                        </m:msup>
+                        <m:msup>
+                          <m:mi>e</m:mi>
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mi>α</m:mi>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                        <m:mi>u</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mi>n</m:mi>
+                          <m:mo>!</m:mo>
+                        </m:mrow>
+                        <m:msup>
+                          <m:mfenced separators="" open="(" close=")">
+                            <m:mi>s</m:mi>
+                            <m:mo>+</m:mo>
+                            <m:mi>α</m:mi>
+                          </m:mfenced>
+                          <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>+</m:mo>
+                            <m:mn>1</m:mn>
+                          </m:mrow>
+                        </m:msup>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+          <caption>Some common Laplace Transform pairs.</caption>
+        </table>
+      </section>
+    </section>
+  </content>
+</document>

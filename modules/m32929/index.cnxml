@@ -1,0 +1,31 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>References for Signals, Systems, and Society</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32929</md:content-id>
+  <md:title>References for Signals, Systems, and Society</md:title>
+  <md:abstract/>
+  <md:uuid>c543c16d-4156-4969-afa8-1aee68caaaf4</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="supplemental">
+      <link url="http://cnx.org/content/col10965/latest/" strength="3">Signals, Systems, and Society</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+  <list id="eip-935" list-type="enumerated" number-style="arabic"><item>W.H. Hayt, Jr. and J.E. Kemmerly, <emphasis effect="italics">Engineering Circuit Analysis</emphasis>, McGraw Hill, 1978.</item>
+<item>B.P. Lathi, <emphasis effect="italics">Linear Systems and Signals</emphasis>
+, Oxford University Press, 2004. </item>
+<item>A.V. Oppenheim and A.S. Willsky, <emphasis effect="italics">Signals and Systems</emphasis>
+, Prentice Hall, 1997.</item>
+<item>M.J. Roberts, <emphasis effect="italics">Signals and Systems</emphasis>, McGraw Hill, 2004.</item>
+</list><para id="delete_me">
+     <!-- Insert module text here -->
+  </para>
+</content>
+
+</document>

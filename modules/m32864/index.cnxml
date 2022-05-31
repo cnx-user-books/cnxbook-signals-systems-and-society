@@ -1,0 +1,132 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Signal Power, Energy, and Frequency</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32864</md:content-id>
+  <md:title>Signal Power, Energy, and Frequency</md:title>
+  <md:abstract/>
+  <md:uuid>c1b7c41b-311e-48f8-a680-f7c944771316</md:uuid>
+</metadata>
+<content>
+
+      <para id="id203853">Signals can be characterized in several different ways. Audio signals (music,
+speech, and really, any kind of sound we can hear) are particularly
+useful because we can use our existing notion of “loudness" and
+“pitch" which we normally associate with an audio signal to develop
+ways of characterizing any kind of signal. In terms of audio signals,
+we use “power" to characterize the loudness of a sound. Audio
+signals which have greater power sound “louder" than signals which
+have lower power (assuming the pitch of the sounds are within the
+range of human hearing). Of course, power is related to the amplitude, or size of the signal. We can
+develop a more precise definition of power. The signal power is defined
+as:</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>p</m:mi>
+              <m:mi>x</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:munder>
+              <m:mo movablelimits="true" form="prefix">lim</m:mo>
+              <m:mrow>
+                <m:mi>T</m:mi>
+                <m:mo>→</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+            </m:munder>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>T</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>T</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+            </m:msubsup>
+            <m:mrow>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id203792">The energy of this signal is similarly defined</para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>e</m:mi>
+              <m:mi>x</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mrow>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id204535">We can see that power has units of energy per unit time. Strictly speaking, the units for energy depend on the units assigned to the signal. If <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a voltage, than the units for <m:math overflow="scroll"><m:msub><m:mi>e</m:mi><m:mi>x</m:mi></m:msub></m:math> would be volts<m:math overflow="scroll"><m:msup><m:mrow/><m:mn>2</m:mn></m:msup></m:math>-seconds. Notice also that some signals may not have finite energy. As we will see shortly, periodic signals do not have finite energy. Signals having a finite energy are sometimes called <emphasis effect="italics">energy signals</emphasis>. Some signals that have infinite energy however can have finite power. Such signals are sometimes called <emphasis effect="italics">power signals</emphasis>.</para>
+      <para id="id204594">We use the concept of “frequency" to characterize the pitch of audio
+signals. The frequency of a signal is closely related to the
+variation of the signal with time. Signals which change rapidly with
+time have higher frequencies than signals which are changing slowly
+with time as seen <link target-id="uid3"/>.
+As we shall see, signals can also
+be represented in terms of their frequencies, <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math>, where <m:math overflow="scroll"><m:mi>Ω</m:mi></m:math> is a frequency variable.
+Devices which enable us to view the frequency content of a signal in real-time are called <emphasis effect="italics">spectrum analyzers</emphasis>.</para>
+      <figure id="uid3">
+        <media id="uid3_media" alt="">
+          <image mime-type="image/png" src="../../media/pitch.png" id="uid3_onlineimage" width="535"><!-- NOTE: attribute width changes image size online (pixels). original width is 535. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/pitch.eps" id="uid3_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>The signal <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> contains a greater amount of high frequencies than <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>.</caption>
+      </figure>
+      <para id="id204683">Something to keep in mind is that the signals shown in Figures
+<link target-id="uid1" document="m32862"/>, <link target-id="uid2" document="m32862"/>, and <link target-id="uid3" document="m32862"/> each have
+different units (degrees Fahrenheit, pressure, and voltage,
+respectively). So while we can compare relative frequencies between
+these signals, it doesn't make much sense to compare their power
+since each signal has different units. We will take a more formal
+look at the frequency of signals starting in Chapter 2.</para>
+
+  </content>
+</document>

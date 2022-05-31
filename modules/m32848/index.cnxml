@@ -1,0 +1,3557 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Properties of the Laplace Transform</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32848</md:content-id>
+  <md:title>Properties of the Laplace Transform</md:title>
+  <md:abstract>Derives basic properties of the Laplace transform.</md:abstract>
+  <md:uuid>c6f6837f-dacc-4caf-95bc-f6b9f7e26417</md:uuid>
+</metadata>
+
+<content>
+    <section id="cid1">
+      <title>Properties of the Laplace Transform</title>
+      <para id="id129410">The properties associated with the Laplace transform are similar to those of the Fourier transform. First, let's set define some notation, we will use the notation <m:math overflow="scroll"><m:mrow><m:mi mathvariant="fraktur">L</m:mi><m:mo>{</m:mo><m:mo>}</m:mo></m:mrow></m:math> to denote the Laplace transform operation. Therefore we can write <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi mathvariant="fraktur">L</m:mi><m:mfenced separators="" open="{" close="}"><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mfenced></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi mathvariant="fraktur">L</m:mi><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mfenced separators="" open="{" close="}"><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mfenced></m:mrow></m:math> for the <emphasis effect="italics">forward</emphasis> and <emphasis effect="italics">inverse</emphasis> Laplace transforms, respectively. We can also use the transform pair notation used earlier:</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+            <m:mo>↔</m:mo>
+            <m:mi>X</m:mi>
+            <m:mo>(</m:mo>
+            <m:mi>s</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id130077">With this notation defined, lets now look at some properties.</para>
+      <section id="uid2">
+        <title>Linearity</title>
+        <para id="id130091">Given that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>↔</m:mo><m:msub><m:mi>X</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>↔</m:mo><m:msub><m:mi>X</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> then for any constants <m:math overflow="scroll"><m:mi>α</m:mi></m:math> and <m:math overflow="scroll"><m:mi>β</m:mi></m:math>, we have</para>
+        <equation id="uid3">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>α</m:mi>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>+</m:mo>
+              <m:mi>β</m:mi>
+              <m:msub>
+                <m:mi>x</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:mi>α</m:mi>
+              <m:msub>
+                <m:mi>X</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>+</m:mo>
+              <m:mi>β</m:mi>
+              <m:msub>
+                <m:mi>X</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id130274">The linearity property follows easily using the definition of the Laplace transform.</para>
+      </section>
+      <section id="uid4">
+        <title>Time Delay</title>
+        <para id="id130290">The reason we call this the <emphasis effect="italics">time delay</emphasis> property rather than the time shift property is that the time shift must be positive, i.e. if <m:math overflow="scroll"><m:mrow><m:mi>τ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>, then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math> corresponds to a delay. If <m:math overflow="scroll"><m:mrow><m:mi>τ</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> then we would not be able to use the single-sided Laplace transform because we would have a lower integration limit of <m:math overflow="scroll"><m:mi>τ</m:mi></m:math>, which is less than zero. To derive the property, lets evaluate the Laplace transform of the time-delayed signal</para>
+        <equation id="uid5">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi mathvariant="fraktur">L</m:mi>
+              <m:mfenced separators="" open="{" close="}">
+                <m:mi>x</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>τ</m:mi>
+                <m:mo>)</m:mo>
+              </m:mfenced>
+              <m:mo>=</m:mo>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mn>0</m:mn>
+                <m:mi>∞</m:mi>
+              </m:msubsup>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>τ</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id130436">Letting <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi></m:mrow></m:math> leads to <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>γ</m:mi><m:mo>+</m:mo><m:mi>τ</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>d</m:mi><m:mi>γ</m:mi></m:mrow></m:math>. Substituting these quantities into <link target-id="uid5"/> gives</para>
+        <equation id="uid6">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi mathvariant="fraktur">L</m:mi>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:mi>x</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>τ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>τ</m:mi>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>γ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>γ</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>τ</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>γ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>τ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>τ</m:mi>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>γ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>γ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>γ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>τ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>τ</m:mi>
+                      </m:mrow>
+                      <m:mn>0</m:mn>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>γ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>γ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>γ</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>τ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mn>0</m:mn>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>γ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>γ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>γ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id130780">where we note that the first integral in the last line is zero since <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>. Therefore the time delay property is given by</para>
+        <equation id="uid7">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi mathvariant="fraktur">L</m:mi>
+              <m:mfenced separators="" open="{" close="}">
+                <m:mi>x</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>τ</m:mi>
+                <m:mo>)</m:mo>
+              </m:mfenced>
+              <m:mo>=</m:mo>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mi>τ</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+      </section>
+      <section id="uid8">
+        <title>s-Shift</title>
+        <para id="id130885">This property is the Laplace transform corresponds to the frequency shift property of the Fourier transform. In fact, the derivation of the <m:math overflow="scroll"><m:mi>s</m:mi></m:math>-shift property is virtually identical to that of the frequency shift property.</para>
+        <equation id="uid9">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi mathvariant="fraktur">L</m:mi>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:msup>
+                        <m:mi>e</m:mi>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mi>a</m:mi>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mn>0</m:mn>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>a</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mn>0</m:mn>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:mi>a</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mn>0</m:mn>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:mi>a</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>σ</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>j</m:mi>
+                        <m:mi>Ω</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>X</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id131150">The <m:math overflow="scroll"><m:mi>s</m:mi></m:math>-shift property also alters the region of convergence of the Laplace transform. If the region of convergence for <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math> is <m:math overflow="scroll"><m:mrow><m:mi>σ</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>σ</m:mi><m:mrow><m:mi>m</m:mi><m:mi>i</m:mi><m:mi>n</m:mi></m:mrow></m:msub></m:mrow></m:math>, then the region of convergence for <m:math overflow="scroll"><m:mrow><m:mi mathvariant="fraktur">L</m:mi><m:mfenced separators="" open="{" close="}"><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>a</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mfenced></m:mrow></m:math> is <m:math overflow="scroll"><m:mrow><m:mi>σ</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>σ</m:mi><m:mrow><m:mi>m</m:mi><m:mi>i</m:mi><m:mi>n</m:mi></m:mrow></m:msub><m:mo>-</m:mo><m:mtext>Re</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.</para>
+      </section>
+      <section id="uid10">
+        <title>Multiplication by <m:math overflow="scroll"><m:mi>t</m:mi></m:math></title>
+        <para id="id131295">Let's begin by taking the derivative of the Laplace transform:</para>
+        <equation id="uid11">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mi>d</m:mi>
+                      <m:mi>X</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>d</m:mi>
+                      <m:mi>s</m:mi>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mi>d</m:mi>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>s</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mn>0</m:mn>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow/>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mn>0</m:mn>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mfrac>
+                      <m:mi>d</m:mi>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>s</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow/>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mn>0</m:mn>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>t</m:mi>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id131505">So we can write</para>
+        <equation id="uid12">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi mathvariant="fraktur">L</m:mi>
+              <m:mfenced separators="" open="{" close="}">
+                <m:mi>t</m:mi>
+                <m:mi>x</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mfenced>
+              <m:mo>=</m:mo>
+              <m:mo>-</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>X</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>s</m:mi>
+                </m:mrow>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id131569">This idea can be extended to multiplication by <m:math overflow="scroll"><m:msup><m:mi>t</m:mi><m:mi>n</m:mi></m:msup></m:math>. Letting <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>t</m:mi><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>, if follows that</para>
+        <equation id="uid13">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mi>y</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>↔</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>Y</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>s</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow/>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>↔</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>d</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:mi>X</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>d</m:mi>
+                      <m:msup>
+                        <m:mi>s</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id131718">Proceeding in this manner, we find that</para>
+        <equation id="uid14">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msup>
+                <m:mi>t</m:mi>
+                <m:mi>n</m:mi>
+              </m:msup>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mi>n</m:mi>
+              </m:msup>
+              <m:mfrac>
+                <m:mrow>
+                  <m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                  <m:mi>X</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:msup>
+                    <m:mi>s</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msup>
+                </m:mrow>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+      </section>
+      <section id="uid15">
+        <title>Time Scaling</title>
+        <para id="id131810">The time scaling property for the Laplace transform is similar to that of the Fourier transform:</para>
+        <equation id="uid16">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi mathvariant="fraktur">L</m:mi>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:mi>x</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>α</m:mi>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mn>0</m:mn>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>α</m:mi>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow/>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>α</m:mi>
+                    </m:mfrac>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mn>0</m:mn>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>γ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mfrac>
+                          <m:mi>s</m:mi>
+                          <m:mi>α</m:mi>
+                        </m:mfrac>
+                        <m:mi>γ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>γ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow/>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>α</m:mi>
+                    </m:mfrac>
+                    <m:mi>X</m:mi>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mfrac>
+                        <m:mi>s</m:mi>
+                        <m:mi>α</m:mi>
+                      </m:mfrac>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id132000">where in the second equality, we made the substitution <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>γ</m:mi><m:mi>α</m:mi></m:mfrac></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>γ</m:mi></m:mrow><m:mi>α</m:mi></m:mfrac></m:mrow></m:math>.</para>
+      </section>
+      <section id="uid17">
+        <title>Convolution</title>
+        <para id="id132058">The derivation of the convolution property for the Laplace transform is virtually identical to that of the Fourier transform. We begin with</para>
+        <equation id="uid18">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi mathvariant="fraktur">L</m:mi>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:msubsup>
+                        <m:mo>∫</m:mo>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mi>∞</m:mi>
+                        </m:mrow>
+                        <m:mi>∞</m:mi>
+                      </m:msubsup>
+                      <m:mi>x</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>τ</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mi>h</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>τ</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mi>d</m:mi>
+                      <m:mi>τ</m:mi>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>τ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi mathvariant="fraktur">L</m:mi>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:mi>h</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>τ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mfenced>
+                    <m:mi>d</m:mi>
+                    <m:mi>τ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id132201">Applying the time-delay property of the Laplace transform gives</para>
+        <equation id="uid19">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>τ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi mathvariant="fraktur">L</m:mi>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:mi>h</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>τ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mfenced>
+                    <m:mi>d</m:mi>
+                    <m:mi>τ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>H</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>τ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>τ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>τ</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd/>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>H</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id132369">If <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is the the impulse response of a linear time-invariant system, then we call <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math> the <emphasis effect="italics">system function</emphasis> of the system. The frequency response results by setting <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> in <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math>. The system function provides us with a very powerful means of determining the output of a linear time-invariant filter given the input signal. It will also enable us to determine a means of establishing the stability<footnote id="uid20">We will discuss stability shortly</footnote> of a linear-time invariant filter, something which was not possible with the frequency response.</para>
+      </section>
+      <section id="uid21">
+        <title>Differentiation</title>
+        <para id="id132469">The Laplace transform of the derivative of a signal will be used widely. Consider</para>
+        <equation id="uid22">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi mathvariant="fraktur">L</m:mi>
+              <m:mfenced separators="" open="{" close="}">
+                <m:mfrac>
+                  <m:mi>d</m:mi>
+                  <m:mrow>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mi>x</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mfenced>
+              <m:mo>=</m:mo>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mrow>
+                <m:mi>∞</m:mi>
+              </m:msubsup>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mo>'</m:mo>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id132570">this can be integrated by parts:</para>
+        <equation id="id132576">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>u</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>v</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>=</m:mo>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>u</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mo>=</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                    <m:mspace width="0.277778em"/>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>v</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id132728">which gives</para>
+        <equation id="uid23">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi mathvariant="fraktur">L</m:mi>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:mfrac>
+                        <m:mi>d</m:mi>
+                        <m:mrow>
+                          <m:mi>d</m:mi>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                      <m:mi>x</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mfenced separators="" open="" close="|">
+                        <m:mi>u</m:mi>
+                        <m:mi>v</m:mi>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mn>0</m:mn>
+                          <m:mo>-</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mo>-</m:mo>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mn>0</m:mn>
+                          <m:mo>-</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:msup>
+                      <m:mi>u</m:mi>
+                      <m:mo>'</m:mo>
+                    </m:msup>
+                    <m:mi>v</m:mi>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow/>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mfenced separators="" open="" close="|">
+                        <m:msup>
+                          <m:mi>e</m:mi>
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mi>s</m:mi>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                        <m:mi>x</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mfenced>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mn>0</m:mn>
+                          <m:mo>-</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mo>+</m:mo>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mn>0</m:mn>
+                          <m:mo>-</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>s</m:mi>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow/>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msup>
+                        <m:mn>0</m:mn>
+                        <m:mo>-</m:mo>
+                      </m:msup>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mi>X</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow/>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id133011">therefore we have,</para>
+        <equation id="id133016">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfrac>
+                <m:mi>d</m:mi>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:mi>s</m:mi>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+      </section>
+      <section id="uid24">
+        <title>Higher Order Derivatives</title>
+        <para id="id133087">The previous derivation can be extended to higher order derivatives. Consider</para>
+        <equation id="id133091">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>y</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>x</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>↔</m:mo>
+              <m:mi>s</m:mi>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id133163">it follows that</para>
+        <equation id="uid25">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>y</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>↔</m:mo>
+              <m:mi>s</m:mi>
+              <m:mi>Y</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>y</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id133233">which leads to</para>
+        <equation id="uid26">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfrac>
+                <m:msup>
+                  <m:mi>d</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                </m:mrow>
+              </m:mfrac>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>↔</m:mo>
+              <m:msup>
+                <m:mi>s</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>s</m:mi>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>x</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id133348">This process can be iterated to get the Laplace transform of arbitrary higher order derivatives, giving</para>
+        <equation id="uid27">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>d</m:mi>
+                        <m:mi>n</m:mi>
+                      </m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>d</m:mi>
+                      <m:msup>
+                        <m:mi>t</m:mi>
+                        <m:mi>n</m:mi>
+                      </m:msup>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>↔</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>s</m:mi>
+                      <m:mi>n</m:mi>
+                    </m:msup>
+                    <m:mi>X</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:msup>
+                      <m:mi>s</m:mi>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msup>
+                        <m:mn>0</m:mn>
+                        <m:mo>-</m:mo>
+                      </m:msup>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:munderover>
+                      <m:mo>∑</m:mo>
+                      <m:mrow>
+                        <m:mi>k</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mn>2</m:mn>
+                      </m:mrow>
+                      <m:mi>n</m:mi>
+                    </m:munderover>
+                    <m:msup>
+                      <m:mi>s</m:mi>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>d</m:mi>
+                          <m:mrow>
+                            <m:mi>k</m:mi>
+                            <m:mo>-</m:mo>
+                            <m:mn>1</m:mn>
+                          </m:mrow>
+                        </m:msup>
+                        <m:mi>x</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:msup>
+                            <m:mn>0</m:mn>
+                            <m:mo>-</m:mo>
+                          </m:msup>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:msup>
+                          <m:mi>t</m:mi>
+                          <m:mrow>
+                            <m:mi>k</m:mi>
+                            <m:mo>-</m:mo>
+                            <m:mn>1</m:mn>
+                          </m:mrow>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id133539">where it should be understood that</para>
+        <equation id="id133545">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfrac>
+                <m:mrow>
+                  <m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:msup>
+                      <m:mn>0</m:mn>
+                      <m:mo>-</m:mo>
+                    </m:msup>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:msup>
+                    <m:mi>t</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msup>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>≡</m:mo>
+              <m:msub>
+                <m:mfenced separators="" open="" close="|">
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>d</m:mi>
+                        <m:mi>m</m:mi>
+                      </m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>d</m:mi>
+                      <m:msup>
+                        <m:mi>t</m:mi>
+                        <m:mi>m</m:mi>
+                      </m:msup>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:mrow>
+                  <m:mi>t</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mrow>
+              </m:msub>
+              <m:mo>,</m:mo>
+              <m:mi>m</m:mi>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+              <m:mo>,</m:mo>
+              <m:mo>...</m:mo>
+              <m:mo>,</m:mo>
+              <m:mi>n</m:mi>
+              <m:mo>-</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+          </m:math>
+        </equation>
+      </section>
+      <section id="uid28">
+        <title>Integration</title>
+        <para id="id133679">Let</para>
+        <equation id="uid29">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>g</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mrow>
+                <m:mi>t</m:mi>
+              </m:msubsup>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>τ</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>τ</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id133740">it follows that</para>
+        <equation id="uid30">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>g</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id133791">and <m:math overflow="scroll"><m:mrow><m:mi>g</m:mi><m:mfenced separators="" open="(" close=")"><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mfenced><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. Moreover, we have</para>
+        <equation id="uid31">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:mi>X</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi mathvariant="fraktur">L</m:mi>
+                    <m:mfenced separators="" open="{" close="}">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mi>d</m:mi>
+                          <m:mi>g</m:mi>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mi>d</m:mi>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow/>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>s</m:mi>
+                    <m:mi>G</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>g</m:mi>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:msup>
+                        <m:mn>0</m:mn>
+                        <m:mo>-</m:mo>
+                      </m:msup>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow/>
+                </m:mtd>
+                <m:mtd>
+                  <m:mo>=</m:mo>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mi>s</m:mi>
+                    <m:mi>G</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id133962">therefore</para>
+        <equation id="uid32">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>G</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>X</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mi>s</m:mi>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id134008">but since</para>
+        <equation id="uid33">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>G</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mi mathvariant="fraktur">L</m:mi>
+              <m:mfenced separators="" open="{" close="}">
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mn>0</m:mn>
+                      <m:mo>-</m:mo>
+                    </m:msup>
+                  </m:mrow>
+                  <m:mi>t</m:mi>
+                </m:msubsup>
+                <m:mi>x</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>τ</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mi>d</m:mi>
+                <m:mi>τ</m:mi>
+              </m:mfenced>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id134082">we have</para>
+        <equation id="uid34">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mrow>
+                <m:mi>t</m:mi>
+              </m:msubsup>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>τ</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>τ</m:mi>
+              <m:mo>↔</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>X</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mi>s</m:mi>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id134150">Now suppose <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> has a non-zero integral over negative values of <m:math overflow="scroll"><m:mi>t</m:mi></m:math>. We have</para>
+        <equation id="uid35">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+                <m:mi>t</m:mi>
+              </m:msubsup>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>τ</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>τ</m:mi>
+              <m:mo>=</m:mo>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+              </m:msubsup>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>τ</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>τ</m:mi>
+              <m:mo>+</m:mo>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mrow>
+                <m:mi>t</m:mi>
+              </m:msubsup>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>τ</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>τ</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id134292">The quantity <m:math overflow="scroll"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>τ</m:mi></m:mrow></m:math> is a constant for positive values of <m:math overflow="scroll"><m:mi>t</m:mi></m:math>, and can be expressed as</para>
+        <equation id="id134350">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>u</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+              </m:msubsup>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>τ</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>τ</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id134402">it follows that</para>
+        <equation id="uid36">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+                <m:mi>t</m:mi>
+              </m:msubsup>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>τ</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>τ</m:mi>
+              <m:mo>↔</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>∞</m:mi>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mn>0</m:mn>
+                      <m:mo>-</m:mo>
+                    </m:msup>
+                  </m:msubsup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>τ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>τ</m:mi>
+                </m:mrow>
+                <m:mi>s</m:mi>
+              </m:mfrac>
+              <m:mo>+</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>X</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mi>s</m:mi>
+              </m:mfrac>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id134506">where we have used the fact that <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>↔</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>s</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+      </section>
+      <section id="uid37">
+        <title>The Initial Value Theorem</title>
+        <para id="id134549">The initial value theorem makes it possible to determine <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> at <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:math> from <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math>. From the derivative property of the Laplace transform, we can write</para>
+        <equation id="uid38">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi mathvariant="fraktur">L</m:mi>
+              <m:mfenced separators="" open="{" close="}">
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>d</m:mi>
+                    <m:mi>x</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mfrac>
+              </m:mfenced>
+              <m:mo>=</m:mo>
+              <m:mi>s</m:mi>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>x</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+              </m:mfenced>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id134684">Taking the limit <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi></m:mrow></m:math></para>
+        <equation id="uid39">
+          <m:math overflow="scroll" mode="display">
+            <m:mtable displaystyle="true">
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:munder>
+                      <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mo>→</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                    </m:munder>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mn>0</m:mn>
+                          <m:mo>-</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>x</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>=</m:mo>
+                    <m:munder>
+                      <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mo>→</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                    </m:munder>
+                    <m:mfenced separators="" open="[" close="]">
+                      <m:mi>s</m:mi>
+                      <m:mi>X</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>x</m:mi>
+                      <m:mfenced separators="" open="(" close=")">
+                        <m:msup>
+                          <m:mn>0</m:mn>
+                          <m:mo>-</m:mo>
+                        </m:msup>
+                      </m:mfenced>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+              <m:mtr>
+                <m:mtd columnalign="right">
+                  <m:mrow>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mn>0</m:mn>
+                          <m:mo>-</m:mo>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:munder>
+                      <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mo>→</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                    </m:munder>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>x</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mi>d</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:mtd>
+                <m:mtd columnalign="left">
+                  <m:mrow>
+                    <m:mo>=</m:mo>
+                    <m:munder>
+                      <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mo>→</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                    </m:munder>
+                    <m:mfenced separators="" open="[" close="]">
+                      <m:mi>s</m:mi>
+                      <m:mi>X</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>x</m:mi>
+                      <m:mfenced separators="" open="(" close=")">
+                        <m:msup>
+                          <m:mn>0</m:mn>
+                          <m:mo>-</m:mo>
+                        </m:msup>
+                      </m:mfenced>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:mtd>
+              </m:mtr>
+            </m:mtable>
+          </m:math>
+        </equation>
+        <para id="id134998">There are two cases, the first is when <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. In this case it is clear that <m:math overflow="scroll"><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mo>→</m:mo><m:mn>0</m:mn></m:mrow></m:math> as <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi></m:mrow></m:math>, so <link target-id="uid39"/> can be written as</para>
+        <equation id="uid40">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mn>0</m:mn>
+              <m:mo>=</m:mo>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:mfenced separators="" open="[" close="]">
+                <m:mi>s</m:mi>
+                <m:mi>X</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>x</m:mi>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mfenced>
+              </m:mfenced>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id135172">Since <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is continuous at <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mfenced separators="" open="(" close=")"><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mfenced><m:mo>=</m:mo><m:mi>x</m:mi><m:mfenced separators="" open="(" close=")"><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mfenced></m:mrow></m:math>, the Initial Value Theorem follows,</para>
+        <equation id="uid41">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>+</m:mo>
+                </m:msup>
+              </m:mfenced>
+              <m:mo>=</m:mo>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:mi>s</m:mi>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id135314">The second case is when <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is discontinuous at <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. In this case, we use the fact that</para>
+        <equation id="uid42">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msub>
+                <m:mfenced separators="" open="" close="|">
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mi>d</m:mi>
+                      <m:mi>x</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>d</m:mi>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:mrow>
+                  <m:mi>t</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:mn>0</m:mn>
+                </m:mrow>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mfenced separators="" open="[" close="]">
+                <m:mi>x</m:mi>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>+</m:mo>
+                  </m:msup>
+                </m:mfenced>
+                <m:mo>-</m:mo>
+                <m:mi>x</m:mi>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mfenced>
+              </m:mfenced>
+              <m:mi>δ</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id135456">For example, if we integrate the right-hand side of <link target-id="uid42"/> with <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mfenced separators="" open="(" close=")"><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mfenced><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mfenced separators="" open="(" close=")"><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mfenced><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math>, we get the unit step function, <m:math overflow="scroll"><m:mrow><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>. Proceeding as before, we have
+</para>
+        <equation id="uid43">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mrow>
+                <m:mi>∞</m:mi>
+              </m:msubsup>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>x</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+              <m:mo>=</m:mo>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:mfenced separators="" open="[" close="]">
+                <m:mi>s</m:mi>
+                <m:mi>X</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>x</m:mi>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mfenced>
+              </m:mfenced>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id135700">The left-hand side of <link target-id="uid43"/> can be written as</para>
+        <equation id="uid44">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>+</m:mo>
+                  </m:msup>
+                </m:mrow>
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+              </m:msubsup>
+              <m:mfenced separators="" open="[" close="]">
+                <m:mi>x</m:mi>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>+</m:mo>
+                  </m:msup>
+                </m:mfenced>
+                <m:mo>-</m:mo>
+                <m:mi>x</m:mi>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mfenced>
+              </m:mfenced>
+              <m:mi>δ</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+              <m:mo>+</m:mo>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>+</m:mo>
+                  </m:msup>
+                </m:mrow>
+                <m:mi>∞</m:mi>
+              </m:msubsup>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>x</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id135908">From the sifting property of the unit impulse, the first term in <link target-id="uid44"/> is</para>
+        <equation id="uid45">
+          <m:math overflow="scroll" mode="display">
+            <m:mfenced separators="" open="[" close="]">
+              <m:mi>x</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>+</m:mo>
+                </m:msup>
+              </m:mfenced>
+              <m:mo>-</m:mo>
+              <m:mi>x</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+              </m:mfenced>
+            </m:mfenced>
+          </m:math>
+        </equation>
+        <para id="id135975">while the second term is zero since in the limit, the real part of <m:math overflow="scroll"><m:mi>s</m:mi></m:math> goes to infinity. Substituting these results into the left-hand side of <link target-id="uid43"/> again leads to the initial value theorem, in <link target-id="uid41"/>.</para>
+      </section>
+      <section id="uid46">
+        <title>The Final Value Theorem</title>
+        <para id="id136009">The Final Value Theorem allows us to determine</para>
+        <equation id="id136013">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>t</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+              </m:munder>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id136050">from <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math>. Taking the limit as <m:math overflow="scroll"><m:mi>s</m:mi></m:math> approaches zero in the derivative property gives</para>
+        <equation id="uid47">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mn>0</m:mn>
+                </m:mrow>
+              </m:munder>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mrow>
+                <m:mi>∞</m:mi>
+              </m:msubsup>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>x</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+              <m:mo>=</m:mo>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mn>0</m:mn>
+                </m:mrow>
+              </m:munder>
+              <m:mfenced separators="" open="[" close="]">
+                <m:mi>s</m:mi>
+                <m:mi>X</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>x</m:mi>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mfenced>
+              </m:mfenced>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id136224">The left-hand-side of <link target-id="uid47"/> can be written as</para>
+        <equation id="uid48">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mrow>
+                <m:mi>∞</m:mi>
+              </m:msubsup>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mn>0</m:mn>
+                </m:mrow>
+              </m:munder>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>x</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+              <m:mo>=</m:mo>
+              <m:msubsup>
+                <m:mo>∫</m:mo>
+                <m:mrow>
+                  <m:msup>
+                    <m:mn>0</m:mn>
+                    <m:mo>-</m:mo>
+                  </m:msup>
+                </m:mrow>
+                <m:mi>∞</m:mi>
+              </m:msubsup>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>x</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+              <m:mo>=</m:mo>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>∞</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>-</m:mo>
+              <m:mi>x</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+              </m:mfenced>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id136394">Substituting this result back into <link target-id="uid47"/> leads to the Final Value Theorem</para>
+        <equation id="uid49">
+          <m:math overflow="scroll" mode="display">
+            <m:mrow>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>∞</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:munder>
+                <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                <m:mrow>
+                  <m:mi>s</m:mi>
+                  <m:mo>→</m:mo>
+                  <m:mn>0</m:mn>
+                </m:mrow>
+              </m:munder>
+              <m:mi>s</m:mi>
+              <m:mi>X</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+          </m:math>
+        </equation>
+        <para id="id136460">which is only valid as long as the limit <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>∞</m:mi><m:mo>)</m:mo></m:mrow></m:math> exists.</para>
+        <table id="uid50" summary="">
+          <tgroup cols="3">
+            <colspec colnum="1" colname="c1"/>
+            <colspec colnum="2" colname="c2"/>
+            <colspec colnum="3" colname="c3"/>
+            <tbody>
+              <row>
+                <entry>Property</entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>y</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>Y</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>Linearity</entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>α</m:mi>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mo>+</m:mo>
+                        <m:mi>β</m:mi>
+                        <m:msub>
+                          <m:mi>x</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>α</m:mi>
+                        <m:msub>
+                          <m:mi>X</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>s</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mo>+</m:mo>
+                        <m:mi>β</m:mi>
+                        <m:msub>
+                          <m:mi>X</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>s</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>Time Delay</entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>x</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>τ</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>X</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>s</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:msup>
+                          <m:mi>e</m:mi>
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mi>s</m:mi>
+                            <m:mi>τ</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>s-Shift</entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>x</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:msup>
+                          <m:mi>e</m:mi>
+                          <m:mrow>
+                            <m:mo>-</m:mo>
+                            <m:mi>a</m:mi>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>X</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>a</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>Multiplication by <m:math overflow="scroll"><m:mstyle scriptlevel="0" displaystyle="true"><m:mi>t</m:mi></m:mstyle></m:math></entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>t</m:mi>
+                        <m:mi>x</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mi>d</m:mi>
+                            <m:mi>X</m:mi>
+                            <m:mo>(</m:mo>
+                            <m:mi>s</m:mi>
+                            <m:mo>)</m:mo>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>d</m:mi>
+                            <m:mi>s</m:mi>
+                          </m:mrow>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>Multiplication by <m:math overflow="scroll"><m:mstyle scriptlevel="0" displaystyle="true"><m:msup><m:mi>t</m:mi><m:mi>n</m:mi></m:msup></m:mstyle></m:math></entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>t</m:mi>
+                          <m:mi>n</m:mi>
+                        </m:msup>
+                        <m:mi>x</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:msup>
+                          <m:mrow>
+                            <m:mo>(</m:mo>
+                            <m:mo>-</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>)</m:mo>
+                          </m:mrow>
+                          <m:mi>n</m:mi>
+                        </m:msup>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:msup>
+                              <m:mi>d</m:mi>
+                              <m:mi>n</m:mi>
+                            </m:msup>
+                            <m:mi>X</m:mi>
+                            <m:mrow>
+                              <m:mo>(</m:mo>
+                              <m:mi>s</m:mi>
+                              <m:mo>)</m:mo>
+                            </m:mrow>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>d</m:mi>
+                            <m:msup>
+                              <m:mi>s</m:mi>
+                              <m:mi>n</m:mi>
+                            </m:msup>
+                          </m:mrow>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>Convolution</entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>x</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mo>*</m:mo>
+                        <m:mi>h</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>t</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>X</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mi>H</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>Differentiation</entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mi>d</m:mi>
+                          <m:mi>x</m:mi>
+                          <m:mo>(</m:mo>
+                          <m:mi>t</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mi>d</m:mi>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mi>X</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>s</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>x</m:mi>
+                        <m:mfenced separators="" open="(" close=")">
+                          <m:msup>
+                            <m:mn>0</m:mn>
+                            <m:mo>-</m:mo>
+                          </m:msup>
+                        </m:mfenced>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry/>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mi>d</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mi>x</m:mi>
+                          <m:mrow>
+                            <m:mo>(</m:mo>
+                            <m:mi>t</m:mi>
+                            <m:mo>)</m:mo>
+                          </m:mrow>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mi>d</m:mi>
+                          <m:msup>
+                            <m:mi>t</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>s</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:mi>X</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>s</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mi>x</m:mi>
+                        <m:mfenced separators="" open="(" close=")">
+                          <m:msup>
+                            <m:mn>0</m:mn>
+                            <m:mo>-</m:mo>
+                          </m:msup>
+                        </m:mfenced>
+                        <m:mo>-</m:mo>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mi>d</m:mi>
+                            <m:mi>x</m:mi>
+                            <m:mfenced separators="" open="(" close=")">
+                              <m:msup>
+                                <m:mn>0</m:mn>
+                                <m:mo>-</m:mo>
+                              </m:msup>
+                            </m:mfenced>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>d</m:mi>
+                            <m:mi>t</m:mi>
+                          </m:mrow>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry/>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mi>d</m:mi>
+                            <m:mi>n</m:mi>
+                          </m:msup>
+                          <m:mi>x</m:mi>
+                          <m:mrow>
+                            <m:mo>(</m:mo>
+                            <m:mi>t</m:mi>
+                            <m:mo>)</m:mo>
+                          </m:mrow>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mi>d</m:mi>
+                          <m:msup>
+                            <m:mi>t</m:mi>
+                            <m:mi>n</m:mi>
+                          </m:msup>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:msup>
+                          <m:mi>s</m:mi>
+                          <m:mi>n</m:mi>
+                        </m:msup>
+                        <m:mi>X</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>s</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:msup>
+                          <m:mi>s</m:mi>
+                          <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>-</m:mo>
+                            <m:mn>1</m:mn>
+                          </m:mrow>
+                        </m:msup>
+                        <m:mi>x</m:mi>
+                        <m:mfenced separators="" open="(" close=")">
+                          <m:msup>
+                            <m:mn>0</m:mn>
+                            <m:mo>-</m:mo>
+                          </m:msup>
+                        </m:mfenced>
+                        <m:mo>-</m:mo>
+                        <m:munderover>
+                          <m:mo>∑</m:mo>
+                          <m:mrow>
+                            <m:mi>k</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:mrow>
+                          <m:mi>n</m:mi>
+                        </m:munderover>
+                        <m:msup>
+                          <m:mi>s</m:mi>
+                          <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>-</m:mo>
+                            <m:mi>k</m:mi>
+                          </m:mrow>
+                        </m:msup>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:msup>
+                              <m:mi>d</m:mi>
+                              <m:mrow>
+                                <m:mi>k</m:mi>
+                                <m:mo>-</m:mo>
+                                <m:mn>1</m:mn>
+                              </m:mrow>
+                            </m:msup>
+                            <m:mi>x</m:mi>
+                            <m:mfenced separators="" open="(" close=")">
+                              <m:msup>
+                                <m:mn>0</m:mn>
+                                <m:mo>-</m:mo>
+                              </m:msup>
+                            </m:mfenced>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mi>d</m:mi>
+                            <m:msup>
+                              <m:mi>t</m:mi>
+                              <m:mrow>
+                                <m:mi>k</m:mi>
+                                <m:mo>-</m:mo>
+                                <m:mn>1</m:mn>
+                              </m:mrow>
+                            </m:msup>
+                          </m:mrow>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>Integration</entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:msubsup>
+                          <m:mo>∫</m:mo>
+                          <m:mrow>
+                            <m:mi>∞</m:mi>
+                          </m:mrow>
+                          <m:mi>t</m:mi>
+                        </m:msubsup>
+                        <m:mi>x</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>τ</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mi>d</m:mi>
+                        <m:mi>τ</m:mi>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+                <entry>
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:msubsup>
+                              <m:mo>∫</m:mo>
+                              <m:mrow>
+                                <m:mo>-</m:mo>
+                                <m:mi>∞</m:mi>
+                              </m:mrow>
+                              <m:msup>
+                                <m:mn>0</m:mn>
+                                <m:mo>-</m:mo>
+                              </m:msup>
+                            </m:msubsup>
+                            <m:mi>x</m:mi>
+                            <m:mrow>
+                              <m:mo>(</m:mo>
+                              <m:mi>τ</m:mi>
+                              <m:mo>)</m:mo>
+                            </m:mrow>
+                            <m:mi>d</m:mi>
+                            <m:mi>τ</m:mi>
+                          </m:mrow>
+                          <m:mi>s</m:mi>
+                        </m:mfrac>
+                        <m:mo>+</m:mo>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mi>X</m:mi>
+                            <m:mo>(</m:mo>
+                            <m:mi>s</m:mi>
+                            <m:mo>)</m:mo>
+                          </m:mrow>
+                          <m:mi>s</m:mi>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>Initial Value Theorem</entry>
+                <entry namest="c2" nameend="c3">
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>x</m:mi>
+                        <m:mfenced separators="" open="(" close=")">
+                          <m:msup>
+                            <m:mn>0</m:mn>
+                            <m:mo>+</m:mo>
+                          </m:msup>
+                        </m:mfenced>
+                        <m:mo>=</m:mo>
+                        <m:munder>
+                          <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                          <m:mrow>
+                            <m:mi>s</m:mi>
+                            <m:mo>→</m:mo>
+                            <m:mi>∞</m:mi>
+                          </m:mrow>
+                        </m:munder>
+                        <m:mi>s</m:mi>
+                        <m:mi>X</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>s</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+              <row>
+                <entry>Final Value Theorem</entry>
+                <entry namest="c2" nameend="c3">
+                  <m:math overflow="scroll">
+                    <m:mstyle scriptlevel="0" displaystyle="true">
+                      <m:mrow>
+                        <m:mi>x</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>∞</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mo>=</m:mo>
+                        <m:munder>
+                          <m:mo movablelimits="true" form="prefix">lim</m:mo>
+                          <m:mrow>
+                            <m:mi>s</m:mi>
+                            <m:mo>→</m:mo>
+                            <m:mn>0</m:mn>
+                          </m:mrow>
+                        </m:munder>
+                        <m:mi>s</m:mi>
+                        <m:mi>X</m:mi>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mi>s</m:mi>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:math>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+          <caption>Laplace Transform properties.</caption>
+        </table>
+      </section>
+    </section>
+  </content>
+</document>

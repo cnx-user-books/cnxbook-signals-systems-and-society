@@ -1,0 +1,804 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Trigonometric Form of the Fourier Series</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32879</md:content-id>
+  <md:title>Trigonometric Form of the Fourier Series</md:title>
+  <md:abstract/>
+  <md:uuid>8b769485-0505-4cb2-b0b4-7bd4b11ac245</md:uuid>
+</metadata>
+<content>
+
+      
+      <para id="id202556">A major goal of this book is to develop tools which will enable us to study the frequency content of signals. An important first step is the <emphasis effect="italics">Fourier Series</emphasis>.
+The Fourier Series enables us to completely characterize the frequency content of a periodic signal<footnote id="uid1">There are periodic signals for which a Fourier series doesn't exist, conditions for existence of the Fourier series are given below.</footnote>. A periodic signal <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> can be expressed in terms of the Fourier Series, which is given by:</para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+            <m:mo>+</m:mo>
+            <m:munderover>
+              <m:mo>∑</m:mo>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:munderover>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo form="prefix">cos</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>+</m:mo>
+            <m:munderover>
+              <m:mo>∑</m:mo>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:munderover>
+            <m:msub>
+              <m:mi>b</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo form="prefix">sin</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id203057">where</para>
+      <equation id="uid3">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>π</m:mi>
+              </m:mrow>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id202493">is the <emphasis effect="italics">fundamental frequency</emphasis> of the periodic signal.
+Examination of <link target-id="uid2"/> suggests that periodic signals can be represented as a sum of suitably scaled cosine and sine waveforms at frequencies of <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:mn>2</m:mn><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:mn>3</m:mn><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo></m:mrow></m:math>. The cosine and sine terms at frequency <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> are called the <emphasis effect="italics"><m:math overflow="scroll"><m:msup><m:mi>n</m:mi><m:mrow><m:mi>t</m:mi><m:mi>h</m:mi></m:mrow></m:msup></m:math> harmonics</emphasis>. Evidently, periodic signals contain only the fundamental frequency and its harmonics. A periodic signal cannot contain a frequency that is not an integer multiple of its fundamental frequency.</para>
+      <para id="id203369">In order to find the Fourier Series, we must compute the <emphasis effect="italics">Fourier Series coefficients</emphasis>. These are given by</para>
+      <equation id="uid4">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:mrow>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mi>T</m:mi>
+              </m:mrow>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <equation id="uid5">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>2</m:mn>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:mrow>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mi>T</m:mi>
+              </m:mrow>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo form="prefix">cos</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>,</m:mo>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mi>n</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>,</m:mo>
+            <m:mn>2</m:mn>
+            <m:mo>,</m:mo>
+            <m:mo>...</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <equation id="uid6">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>b</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>2</m:mn>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:mrow>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mi>T</m:mi>
+              </m:mrow>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo form="prefix">sin</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>,</m:mo>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mi>n</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>,</m:mo>
+            <m:mn>2</m:mn>
+            <m:mo>,</m:mo>
+            <m:mo>...</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id203684">From our discussion of even and odd symmetric signals, it is clear that if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is even, then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo form="prefix">sin</m:mo><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> must be odd and so <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. Also if, <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> has odd symmetry, then <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> also has odd symmetry and hence <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> (see exercise <link target-id=""/>). Moreover, if a signal is even, since <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> is also even, if we use the fact that for any even symmetric periodic signal <m:math overflow="scroll"><m:mrow><m:mi>v</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>,</para>
+      <equation id="uid7">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>T</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>T</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+            </m:msubsup>
+            <m:mi>v</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>2</m:mn>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mn>0</m:mn>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>T</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+            </m:msubsup>
+            <m:mi>v</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id203972">then setting <m:math overflow="scroll"><m:mrow><m:msub><m:mi>t</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>T</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> in <link target-id="uid5"/> gives,</para>
+      <equation id="uid8">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>4</m:mn>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mn>0</m:mn>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>T</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo form="prefix">cos</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>,</m:mo>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mi>n</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>,</m:mo>
+            <m:mn>2</m:mn>
+            <m:mo>,</m:mo>
+            <m:mo>...</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id204114">This can sometimes lead to a savings in the number of integrals that must be computed. Similarly, if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> has odd symmetry, we have</para>
+      <equation id="uid9">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>b</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>4</m:mn>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mn>0</m:mn>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>T</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo form="prefix">sin</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>,</m:mo>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mi>n</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>,</m:mo>
+            <m:mn>2</m:mn>
+            <m:mo>,</m:mo>
+            <m:mo>...</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id204243"><emphasis effect="bold">Example 2.1</emphasis> Consider the signal in <link target-id="uid18"/>. This signal has even symmetry, hence all of the <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. We compute <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub></m:math> using,</para>
+      <equation id="uid11">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:mrow>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mi>T</m:mi>
+              </m:mrow>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id204361">which we recognize as the area of one period, divided by the period. Hence, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mi>τ</m:mi><m:mo>/</m:mo><m:mi>T</m:mi></m:mrow></m:math>. Next, using <link target-id="uid5"/> we get</para>
+      <equation id="uid12">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>2</m:mn>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>τ</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>τ</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+            </m:msubsup>
+            <m:mo form="prefix">cos</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id204471">Note how the limits of integration only go from <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> to <m:math overflow="scroll"><m:mrow><m:mi>τ</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> since <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is zero everywhere else. Evaluating this integral leads to</para>
+      <equation id="uid13">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>τ</m:mi>
+              </m:mrow>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>s</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>n</m:mi>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mi>n</m:mi>
+                  <m:msub>
+                    <m:mi>Ω</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:msub>
+                  <m:mi>τ</m:mi>
+                  <m:mo>/</m:mo>
+                  <m:mn>2</m:mn>
+                </m:mfenced>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mi>τ</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>,</m:mo>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mi>n</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>,</m:mo>
+            <m:mn>2</m:mn>
+            <m:mo>,</m:mo>
+            <m:mo>...</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id204630"><link target-id="uid19"/> shows the first few Fourier Series coefficients for <m:math overflow="scroll"><m:mrow><m:mi>τ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math>. If we attempt to reconstruct <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> based on only a limited number (say, <m:math overflow="scroll"><m:mi>N</m:mi></m:math>) of Fourier Series coefficients, we have</para>
+      <equation id="uid14">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mover accent="true">
+              <m:mi>x</m:mi>
+              <m:mo>^</m:mo>
+            </m:mover>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+            <m:mo>+</m:mo>
+            <m:munderover>
+              <m:mo>∑</m:mo>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>0</m:mn>
+              </m:mrow>
+              <m:mi>N</m:mi>
+            </m:munderover>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo form="prefix">cos</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id204780">Figures <link target-id="uid20"/> and <link target-id="uid21"/> show <m:math overflow="scroll"><m:mrow><m:mover accent="true"><m:mi>x</m:mi><m:mo>^</m:mo></m:mover><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math>, and <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>=</m:mo><m:mn>50</m:mn></m:mrow></m:math>, respectively.
+The ringing characteristic is known as <emphasis effect="italics">Gibb's phenomenon</emphasis> and disappears only as <m:math overflow="scroll"><m:mi>N</m:mi></m:math> approaches <m:math overflow="scroll"><m:mi>∞</m:mi></m:math>.</para>
+      <para id="id204864">The following example looks at the Fourier series of an odd-symmetric signal, a <emphasis effect="italics">sawtooth</emphasis> signal.</para>
+      <para id="id204873"><emphasis effect="bold">Example 2.2</emphasis> Now let's compute the Fourier series for the signal in <link target-id="uid22"/>. The signal is odd-symmetric, so all of the <m:math overflow="scroll"><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub></m:math> are zero. The period is <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math>, hence <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>4</m:mn><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>3</m:mn></m:mrow></m:math>.
+Using <link target-id="uid6"/>, the <m:math overflow="scroll"><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub></m:math> coefficients are found by computing the following integral,</para>
+      <equation id="uid16">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>b</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>8</m:mn>
+              <m:mn>3</m:mn>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>/</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+            </m:msubsup>
+            <m:mi>t</m:mi>
+            <m:mo form="prefix">sin</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mn>4</m:mn>
+              <m:mi>π</m:mi>
+              <m:mi>n</m:mi>
+              <m:mi>t</m:mi>
+              <m:mo>/</m:mo>
+              <m:mn>3</m:mn>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id205045">After integrating by parts, we get</para>
+      <equation id="uid17">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>b</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mn>3</m:mn>
+            <m:mfrac>
+              <m:mrow>
+                <m:mo form="prefix">sin</m:mo>
+                <m:mo>(</m:mo>
+                <m:mn>2</m:mn>
+                <m:mi>π</m:mi>
+                <m:mi>n</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>3</m:mn>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>π</m:mi>
+                  <m:mi>n</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mn>2</m:mn>
+              </m:msup>
+            </m:mfrac>
+            <m:mo>-</m:mo>
+            <m:mn>2</m:mn>
+            <m:mfrac>
+              <m:mrow>
+                <m:mo form="prefix">cos</m:mo>
+                <m:mo>(</m:mo>
+                <m:mn>2</m:mn>
+                <m:mi>π</m:mi>
+                <m:mi>n</m:mi>
+                <m:mo>/</m:mo>
+                <m:mn>3</m:mn>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>π</m:mi>
+                <m:mi>n</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>,</m:mo>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mspace width="0.277778em"/>
+            <m:mi>n</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>,</m:mo>
+            <m:mn>2</m:mn>
+            <m:mo>,</m:mo>
+            <m:mo>...</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id205174">These are plotted in <link target-id="uid23"/> and approximations of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> using <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>=</m:mo><m:mn>50</m:mn></m:mrow></m:math> coefficients are shown in Figures <link target-id="uid24"/> and <link target-id="uid25"/>, respectively.</para>
+      <figure id="uid18">
+        <media id="uid18_media" alt="">
+          <image mime-type="image/png" src="../../media/pulse_train.png" id="uid18_onlineimage" width="592"><!-- NOTE: attribute width changes image size online (pixels). original width is 592. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/pulse_train.eps" id="uid18_printimage" print-width="3in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Example <link target-id="cid1">"Trigonometric Form of the Fourier Series"</link>. This signal is sometimes called a pulse train.</caption>
+      </figure>
+      <figure id="uid19">
+        <media id="uid19_media" alt="">
+          <image mime-type="image/png" src="../../media/a_n.png" id="uid19_onlineimage" width="535"><!-- NOTE: attribute width changes image size online (pixels). original width is 535. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/a_n.eps" id="uid19_printimage" print-width="3in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Fourier Series coefficients for Example <link target-id="cid1">"Trigonometric Form of the Fourier Series"</link>.</caption>
+      </figure>
+      <figure id="uid20">
+        <media id="uid20_media" alt="">
+          <image mime-type="image/png" src="../../media/x_hat1.png" id="uid20_onlineimage" width="529"><!-- NOTE: attribute width changes image size online (pixels). original width is 529. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/x_hat1.eps" id="uid20_printimage" print-width="3in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Approximation to <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> based on the first 10 Fourier Series coefficients for Example <link target-id="cid1">"Trigonometric Form of the Fourier Series"</link>.</caption>
+      </figure>
+      <figure id="uid21">
+        <media id="uid21_media" alt="">
+          <image mime-type="image/png" src="../../media/x_hat2.png" id="uid21_onlineimage" width="529"><!-- NOTE: attribute width changes image size online (pixels). original width is 529. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/x_hat2.eps" id="uid21_printimage" print-width="3in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Fourier Series coefficients for Example <link target-id="cid1">"Trigonometric Form of the Fourier Series"</link>.</caption>
+      </figure>
+      <figure id="uid22">
+        <media id="uid22_media" alt="">
+          <image mime-type="image/png" src="../../media/sawtooth.png" id="uid22_onlineimage" width="538"><!-- NOTE: attribute width changes image size online (pixels). original width is 538. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/sawtooth.eps" id="uid22_printimage" print-width="3in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Example <link target-id="cid1">"Trigonometric Form of the Fourier Series"</link>. Sawtooth signal.</caption>
+      </figure>
+      <figure id="uid23">
+        <media id="uid23_media" alt="">
+          <image mime-type="image/png" src="../../media/b_n.png" id="uid23_onlineimage" width="535"><!-- NOTE: attribute width changes image size online (pixels). original width is 535. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/b_n.eps" id="uid23_printimage" print-width="3in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Fourier Series coefficients for Example <link target-id="cid1">"Trigonometric Form of the Fourier Series"</link>.</caption>
+      </figure>
+      <figure id="uid24">
+        <media id="uid24_media" alt="">
+          <image mime-type="image/png" src="../../media/x_hat1a.png" id="uid24_onlineimage" width="523"><!-- NOTE: attribute width changes image size online (pixels). original width is 523. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/x_hat1a.eps" id="uid24_printimage" print-width="3in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Approximation to <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> based on the first 10 Fourier Series coefficients for Example <link target-id="cid1">"Trigonometric Form of the Fourier Series"</link>.</caption>
+      </figure>
+      <figure id="uid25">
+        <media id="uid25_media" alt="">
+          <image mime-type="image/png" src="../../media/x_hat2a.png" id="uid25_onlineimage" width="538"><!-- NOTE: attribute width changes image size online (pixels). original width is 538. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/x_hat2a.eps" id="uid25_printimage" print-width="3in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Fourier Series coefficients for Example <link target-id="cid1">"Trigonometric Form of the Fourier Series"</link>.</caption>
+      </figure><para id="eip-1"><link document="m32929">References</link></para>
+
+  </content>
+</document>

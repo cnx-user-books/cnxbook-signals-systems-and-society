@@ -1,0 +1,72 @@
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en">
+  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
+    <md:content-id>col10965</md:content-id>
+    <md:title>Signals, Systems, and Society</md:title>
+    <md:language>en</md:language>
+    <md:license url="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</md:license>
+    <md:uuid>a60ae1e5-d11e-44c7-b9d8-02615f78bd1c</md:uuid>
+<md:slug>signals-systems-and-society</md:slug>
+</metadata>
+  <col:content>
+    <col:subcollection>
+      <md:title>Introduction to Continuous-Time Signals</md:title>
+      <col:content>
+        <col:module document="m32862"/>
+        <col:module document="m32864"/>
+        <col:module document="m32866"/>
+        <col:module document="m32867"/>
+        <col:module document="m32869"/>
+        <col:module document="m32870"/>
+        <col:module document="m32871"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Fourier Series of Periodic Signals </md:title>
+      <col:content>
+        <col:module document="m32875"/>
+        <col:module document="m32879"/>
+        <col:module document="m32877"/>
+        <col:module document="m32880"/>
+        <col:module document="m32887"/>
+        <col:module document="m32881"/>
+        <col:module document="m32884"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>The Fourier Transform </md:title>
+      <col:content>
+        <col:module document="m32889"/>
+        <col:module document="m32892"/>
+        <col:module document="m33894"/>
+        <col:module document="m32896"/>
+        <col:module document="m32898"/>
+        <col:module document="m32899"/>
+        <col:module document="m32900"/>
+        <col:module document="m32913"/>
+        <col:module document="m32904"/>
+        <col:module document="m32909"/>
+        <col:module document="m32921"/>
+        <col:module document="m32916"/>
+        <col:module document="m32919"/>
+        <col:module document="m32925"/>
+        <col:module document="m32922"/>
+        <col:module document="m32927"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>The Laplace Transform</md:title>
+      <col:content>
+        <col:module document="m32847"/>
+        <col:module document="m32848"/>
+        <col:module document="m32849"/>
+        <col:module document="m32850"/>
+        <col:module document="m32851"/>
+        <col:module document="m32852"/>
+        <col:module document="m34269"/>
+        <col:module document="m34302"/>
+        <col:module document="m32853"/>
+      </col:content>
+    </col:subcollection>
+    <col:module document="m32929"/>
+  </col:content>
+</col:collection>

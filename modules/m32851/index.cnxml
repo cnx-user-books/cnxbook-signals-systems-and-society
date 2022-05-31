@@ -1,0 +1,518 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Transfer Functions and Frequency Response</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32851</md:content-id>
+  <md:title>Transfer Functions and Frequency Response</md:title>
+  <md:abstract>Looks at the relationship between the transfer function and the frequency response.</md:abstract>
+  <md:uuid>732699a8-7f04-44bd-bccb-cfb85f09aabb</md:uuid>
+</metadata>
+<content>
+
+      <para id="id333457">We saw in <link target-id="uid17" document="m32848"/> that the transfer function of a linear time-invariant system is given by</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>Y</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>X</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id333848">If we assume that <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a rational function of <m:math overflow="scroll"><m:mi>s</m:mi></m:math> then we can write</para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>β</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>β</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>⋯</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>β</m:mi>
+                    <m:mi>q</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>α</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>α</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mo>⋯</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>α</m:mi>
+                    <m:mi>p</m:mi>
+                  </m:msub>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id334013">where <m:math overflow="scroll"><m:mrow><m:msub><m:mi>β</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>β</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>β</m:mi><m:mi>q</m:mi></m:msub></m:mrow></m:math> are the zeros, and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>α</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>α</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>α</m:mi><m:mi>p</m:mi></m:msub></m:mrow></m:math> are the poles of <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math>. The poles and zeros are points in the <m:math overflow="scroll"><m:mi>s</m:mi></m:math>-plane where the transfer function is either non-existent (for a pole) or zero (for a zero). These points can be plotted in the <m:math overflow="scroll"><m:mi>s</m:mi></m:math>-plane with “<m:math overflow="scroll"><m:mo>×</m:mo></m:math>" representing the location of a pole and a “<m:math overflow="scroll"><m:mo>∘</m:mo></m:math>" representing the location of a zero.
+Since</para>
+      <equation id="uid3">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>H</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+              </m:mfenced>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mfenced separators="" open="" close="|">
+                <m:mi>H</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mfenced>
+              <m:mrow>
+                <m:mi>s</m:mi>
+                <m:mo>=</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+              </m:mrow>
+            </m:msub>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id334209">we have</para>
+      <equation id="uid4">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>H</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+              </m:mfenced>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mfenced separators="" open="|" close="|">
+                  <m:mi>j</m:mi>
+                  <m:mi>Ω</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>β</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                </m:mfenced>
+                <m:mfenced separators="" open="|" close="|">
+                  <m:mi>j</m:mi>
+                  <m:mi>Ω</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>β</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                </m:mfenced>
+                <m:mo>⋯</m:mo>
+                <m:mfenced separators="" open="|" close="|">
+                  <m:mi>j</m:mi>
+                  <m:mi>Ω</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>β</m:mi>
+                    <m:mi>q</m:mi>
+                  </m:msub>
+                </m:mfenced>
+              </m:mrow>
+              <m:mrow>
+                <m:mfenced separators="" open="|" close="|">
+                  <m:mi>j</m:mi>
+                  <m:mi>Ω</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>α</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                </m:mfenced>
+                <m:mfenced separators="" open="|" close="|">
+                  <m:mi>j</m:mi>
+                  <m:mi>Ω</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>α</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                </m:mfenced>
+                <m:mo>⋯</m:mo>
+                <m:mfenced separators="" open="|" close="|">
+                  <m:mi>j</m:mi>
+                  <m:mi>Ω</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>α</m:mi>
+                    <m:mi>p</m:mi>
+                  </m:msub>
+                </m:mfenced>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id334568">and</para>
+      <equation id="uid5">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>∠</m:mi>
+            <m:mrow>
+              <m:mi>H</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+              </m:mfenced>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:munderover>
+              <m:mo>∑</m:mo>
+              <m:mrow>
+                <m:mi>k</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+              <m:mi>q</m:mi>
+            </m:munderover>
+            <m:mi>∠</m:mi>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mi>j</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+              <m:mo>-</m:mo>
+              <m:msub>
+                <m:mi>β</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+            </m:mfenced>
+            <m:mo>-</m:mo>
+            <m:munderover>
+              <m:mo>∑</m:mo>
+              <m:mrow>
+                <m:mi>l</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+              <m:mi>p</m:mi>
+            </m:munderover>
+            <m:mi>∠</m:mi>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mi>j</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mi>l</m:mi>
+              </m:msub>
+              <m:mo>-</m:mo>
+              <m:msub>
+                <m:mi>α</m:mi>
+                <m:mi>l</m:mi>
+              </m:msub>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id334695">Each of the quantities <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>-</m:mo><m:msub><m:mi>β</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math> have the same magnitude and phase as a vector from the zero <m:math overflow="scroll"><m:msub><m:mi>β</m:mi><m:mi>k</m:mi></m:msub></m:math> to the <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> axis in the complex <m:math overflow="scroll"><m:mi>s</m:mi></m:math>-plane. Likewise, the quantities <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>-</m:mo><m:msub><m:mi>α</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math> have the same magnitude and phase as vectors from the pole <m:math overflow="scroll"><m:msub><m:mi>α</m:mi><m:mi>k</m:mi></m:msub></m:math> to the <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> axis.</para>
+      <para id="id334794"><emphasis effect="bold">Example 3.1</emphasis> Consider a first-order lowpass filter with transfer function</para>
+      <equation id="uid7">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mrow>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id334842">Then</para>
+      <equation id="uid8">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>H</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+              </m:mfenced>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mfenced separators="" open="|" close="|">
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>2</m:mn>
+              </m:mfenced>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id334904">The quantity <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:math> has the same magnitude and phase as a vector from the pole at <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:math> to the <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> axis in the complex plane. The magnitude of the frequency response is the inverse of the magnitude of this vector. The length of <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:math> increases as <m:math overflow="scroll"><m:mi>Ω</m:mi></m:math> increases thereby making <m:math overflow="scroll"><m:mfenced separators="" open="|" close="|"><m:mi>H</m:mi><m:mfenced separators="" open="(" close=")"><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mfenced></m:mfenced></m:math> decrease as one would expect of a lowpass filter.</para>
+      <para id="id335002"><emphasis effect="bold">Example 3.2</emphasis> Consider a first-order highpass filter with transfer function</para>
+      <equation id="uid10">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mi>s</m:mi>
+              <m:mrow>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>2</m:mn>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id335050">Then</para>
+      <equation id="uid11">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>H</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+              </m:mfenced>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mfenced separators="" open="|" close="|">
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+              </m:mfenced>
+              <m:mfenced separators="" open="|" close="|">
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>2</m:mn>
+              </m:mfenced>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id335122">When <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="|" close="|"><m:mi>H</m:mi><m:mfenced separators="" open="(" close=")"><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mfenced></m:mfenced><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>, but as <m:math overflow="scroll"><m:mi>Ω</m:mi></m:math> approaches infinity, the two vectors <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:math> have equal lengths, so the magnitude of the frequency response approaches unity.</para>
+      <para id="id335206"><emphasis effect="bold">Example 3.3</emphasis> 
+Let's now look at the transfer function corresponding to a second-order filter</para>
+      <equation id="uid13">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:mi>j</m:mi>
+                <m:mn>5</m:mn>
+                <m:mo>)</m:mo>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>-</m:mo>
+                <m:mi>j</m:mi>
+                <m:mn>5</m:mn>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id335287">Or</para>
+      <equation id="uid14">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>H</m:mi>
+              <m:mfenced separators="" open="(" close=")">
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+              </m:mfenced>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mfenced separators="" open="|" close="|">
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:mo>+</m:mo>
+                <m:mn>1</m:mn>
+              </m:mfenced>
+              <m:mrow>
+                <m:mfenced separators="" open="|" close="|">
+                  <m:mi>j</m:mi>
+                  <m:mi>Ω</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>+</m:mo>
+                  <m:mi>j</m:mi>
+                  <m:mn>5</m:mn>
+                </m:mfenced>
+                <m:mfenced separators="" open="|" close="|">
+                  <m:mi>j</m:mi>
+                  <m:mi>Ω</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>-</m:mo>
+                  <m:mi>j</m:mi>
+                  <m:mn>5</m:mn>
+                </m:mfenced>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id335394">The pole-zero plot for this transfer function is shown in <link target-id="uid15"/>. The corresponding magnitude and phase of the frequency response are shown in <link target-id="uid16"/>.</para>
+      <figure id="uid15">
+        <media id="uid15_media" alt="">
+          <image mime-type="image/png" src="../../media/pole_zero.png" id="uid15_onlineimage" width="307"><!-- NOTE: attribute width changes image size online (pixels). original width is 307. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/pole_zero.eps" id="uid15_printimage" print-width="2in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Pole-zero diagram for Example <link target-id="uid12"/>.</caption>
+      </figure>
+      <figure id="uid16">
+        <media id="uid16_media" alt="">
+          <image mime-type="image/png" src="../../media/freqs.png" id="uid16_onlineimage" width="501"><!-- NOTE: attribute width changes image size online (pixels). original width is 501. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/freqs.eps" id="uid16_printimage"/>
+        </media>
+        <caption>Magnitude and phase of frequency response for Example <link target-id="uid12"/>.</caption>
+      </figure>
+      <para id="id335442">The two poles are at <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>±</m:mo><m:mi>j</m:mi><m:mn>5</m:mn></m:mrow></m:math> and the zero is at <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math>. When the frequency gets close to either one of the poles, the frequency response magnitude increases since the lengths of one of the vectors <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>±</m:mo><m:mi>j</m:mi><m:mn>5</m:mn></m:mrow></m:math> is small.</para>
+      <para id="id335501">In the previous example we saw that as the poles get close to the <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> axis in the <m:math overflow="scroll"><m:mi>s</m:mi></m:math>-plane, the frequency response magnitude increases at frequencies that are close to the poles. In fact, when a pole is located directly on the <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> axis, the filter's frequency response magnitude becomes infinite, and will begin to oscillate. If a zero is located on the <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> axis, the filters frequency response magnitude will be zero.</para>
+      <para id="id335549"><emphasis effect="bold">Example 3.4</emphasis> 
+Suppose a filter has transfer function</para>
+      <equation id="uid18">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mi>s</m:mi>
+              <m:mrow>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mn>25</m:mn>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id335602">The two poles are at <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mo>±</m:mo><m:mi>j</m:mi><m:mn>5</m:mn></m:mrow></m:math> and there is a zero at <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. From <link target-id="uid20" document="m32849"/>, the impulse response of the filter is <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>5</m:mn><m:mi>t</m:mi><m:mo>)</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>. This impulse response doesn't die out like most of the impulse responses we've seen. Instead, it oscillates at a fixed frequency. The filter is called an <emphasis effect="italics">oscillator</emphasis>. Oscillators are useful for generating high-frequency sinusoids used in wireless communications.</para>
+
+  </content>
+</document>

@@ -1,0 +1,290 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Evaluation of Convolution Integrals</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32909</md:content-id>
+  <md:title>Evaluation of Convolution Integrals</md:title>
+  <md:abstract/>
+  <md:uuid>930f1f80-b6ff-4232-8af4-56550e508628</md:uuid>
+</metadata>
+<content>
+
+      <para id="id180574">The key to evaluating a convolution integral such as</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>*</m:mo>
+            <m:mi>h</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>h</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>τ</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id180513">is to realize that as far as the integral is concerned, the variable <m:math overflow="scroll"><m:mi>t</m:mi></m:math> is a constant and the integral is over the variable <m:math overflow="scroll"><m:mi>τ</m:mi></m:math>. Therefore, for each <m:math overflow="scroll"><m:mi>t</m:mi></m:math>, we are finding the area of the product <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math>. Let's look at an example that illustrates how this works.</para>
+      <para id="id181232"><emphasis effect="bold">Example 3.1</emphasis> 
+Find the convolution of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>t</m:mi></m:mrow></m:msup><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>. The convolution integral is given by</para>
+      <equation id="id181308">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>h</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>*</m:mo>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>τ</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>u</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>u</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>τ</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id181393"><link target-id="uid3"/> shows the graph of <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>τ</m:mi></m:mrow></m:msup><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>t</m:mi></m:mrow></m:msup><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, and their product. From the graph of the product, it is easy to see the the convolution integral becomes</para>
+      <equation id="id181457">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mn>0</m:mn>
+              </m:mrow>
+              <m:mi>t</m:mi>
+            </m:msubsup>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>τ</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>τ</m:mi>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="{" close="">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>-</m:mo>
+                      <m:msup>
+                        <m:mi>e</m:mi>
+                        <m:mrow>
+                          <m:mo>-</m:mo>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:msup>
+                      <m:mo>,</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mi>t</m:mi>
+                      <m:mo>≥</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mn>0</m:mn>
+                      <m:mo>,</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mi>t</m:mi>
+                      <m:mo>&lt;</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <figure id="uid3" orient="vertical">
+        <subfigure id="id181566">
+          <media id="id181566_media" alt="">
+            <image mime-type="image/png" src="../../media/ch3_exp.png" id="id181566_onlineimage" width="534"><!-- NOTE: attribute width changes image size online (pixels). original width is 534. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/ch3_exp.eps" id="id181566_printimage" print-width="1.5in">
+              <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+        <subfigure id="id181574">
+          <media id="id181574_media" alt="">
+            <image mime-type="image/png" src="../../media/ch3_u.png" id="id181574_onlineimage" width="527"><!-- NOTE: attribute width changes image size online (pixels). original width is 527. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/ch3_u.eps" id="id181574_printimage" print-width="1.5in">
+              <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+        <subfigure id="id181582">
+          <media id="id181582_media" alt="">
+            <image mime-type="image/png" src="../../media/ch3_prod.png" id="id181582_onlineimage" width="531"><!-- NOTE: attribute width changes image size online (pixels). original width is 531. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/ch3_prod.eps" id="id181582_printimage" print-width="1.5in">
+              <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+        <caption>Graphs of signals used in Example <link target-id="uid2"/>.</caption>
+      </figure>
+      <para id="id181592">Signals which can be expressed in functional form should be convolved as in the above example. Other signals may not have an easy functional representation but rather may be piece-wise linear. In order to convolve such signals, one must evaluate the convolution integral over different intervals on the <m:math overflow="scroll"><m:mi>t</m:mi></m:math>-axis so that each distinct interval corresponds to a different expression for <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>*</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>. The following example illustrates this:</para>
+      <para id="id181632"><emphasis effect="bold">Example 3.2</emphasis> 
+Suppose we attempt to convolve the unit step function <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> with the trapezoidal function</para>
+      <equation id="id181670">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>h</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfenced separators="" open="{" close="">
+              <m:mtable>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mi>t</m:mi>
+                      <m:mo>,</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mn>0</m:mn>
+                      <m:mo>≤</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>&lt;</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>,</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>≤</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>&lt;</m:mo>
+                      <m:mn>2</m:mn>
+                    </m:mrow>
+                  </m:mtd>
+                </m:mtr>
+                <m:mtr>
+                  <m:mtd>
+                    <m:mrow>
+                      <m:mn>0</m:mn>
+                      <m:mo>,</m:mo>
+                    </m:mrow>
+                  </m:mtd>
+                  <m:mtd>
+                    <m:mtext>elsewhere</m:mtext>
+                  </m:mtd>
+                </m:mtr>
+              </m:mtable>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id181751">From <link target-id="uid5"/>, it can be seen that on the interval <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:math>, the product <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math> is an equilateral triangle with area <m:math overflow="scroll"><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math>. On the interval <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn></m:mrow></m:math>, the area of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math> is <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math>. This latter area results by adding the area of an equilateral triangle having a base of 1, and the area of a rectangle having a base of <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> and a height of 1. For all values of <m:math overflow="scroll"><m:mi>t</m:mi></m:math> greater than 2, the convolution is 1.5 since <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a trapezoid having an area of 1.5. Finally, for <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>, the convolution is zero since <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>.</para>
+      <figure id="uid5" orient="vertical">
+        <subfigure id="id182025">
+          <media id="id182025_media" alt="">
+            <image mime-type="image/png" src="../../media/ch3_trap.png" id="id182025_onlineimage" width="521"><!-- NOTE: attribute width changes image size online (pixels). original width is 521. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/ch3_trap.eps" id="id182025_printimage" print-width="4in">
+              <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+        <subfigure id="id182033">
+          <media id="id182033_media" alt="">
+            <image mime-type="image/png" src="../../media/ch3_u1.png" id="id182033_onlineimage" width="527"><!-- NOTE: attribute width changes image size online (pixels). original width is 527. --></image>
+            <image mime-type="application/postscript" for="pdf" src="../../media/ch3_u1.eps" id="id182033_printimage" print-width="4in">
+              <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+            </image>
+          </media>
+        </subfigure>
+        <caption>Graphs of signals used in Example <link target-id="uid4"/>.</caption>
+      </figure>
+  
+  </content>
+</document>

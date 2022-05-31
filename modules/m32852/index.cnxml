@@ -1,0 +1,584 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Stability</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32852</md:content-id>
+  <md:title>Stability</md:title>
+  <md:abstract>Looks at bounded input bounded output stability.</md:abstract>
+  <md:uuid>17a074e4-9ad7-4671-aa51-ee0fb2bfc70f</md:uuid>
+</metadata>
+
+<content>
+    <section id="cid1">
+      <title>Filter Stability</title>
+      <para id="id286116">We define a filter as being <emphasis effect="italics">stable</emphasis> if a bounded input produces a bounded output. This is called <emphasis effect="italics">BIBO</emphasis> stability. Consider the convolution integral</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>y</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>h</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>τ</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id286055">We wish to find a condition that is necessary for the filter output <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> to be bounded whenever the input <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is bounded. Let's take the absolute value of both sides of <link target-id="uid1"/></para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mfenced separators="" open="|" close="|">
+                  <m:mi>y</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mfenced>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>h</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>τ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>τ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi>d</m:mi>
+                    <m:mi>τ</m:mi>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>≤</m:mo>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>∞</m:mi>
+                    </m:mrow>
+                    <m:mi>∞</m:mi>
+                  </m:msubsup>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:mi>h</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>τ</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>τ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mfenced>
+                  <m:mi>d</m:mi>
+                  <m:mi>τ</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>≤</m:mo>
+                  <m:msub>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mi>m</m:mi>
+                      <m:mi>a</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:mrow>
+                  </m:msub>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>∞</m:mi>
+                    </m:mrow>
+                    <m:mi>∞</m:mi>
+                  </m:msubsup>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:mi>h</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>τ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mfenced>
+                  <m:mi>d</m:mi>
+                  <m:mi>τ</m:mi>
+                  <m:mo>&lt;</m:mo>
+                  <m:mi>∞</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id286970">
+where the first inequality is due to the <emphasis effect="italics">triangle inequality</emphasis> and the second inequality results from replacing <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo><m:mo>|</m:mo></m:mrow></m:math> by its upper bound <m:math overflow="scroll"><m:msub><m:mi>x</m:mi><m:mrow><m:mi>m</m:mi><m:mi>a</m:mi><m:mi>x</m:mi></m:mrow></m:msub></m:math>. Therefore, the condition for BIBO stability is that the impulse response the <emphasis effect="italics">absolutely integrable</emphasis>.</para>
+      <equation id="uid3">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>h</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mfenced>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>&lt;</m:mo>
+            <m:mi>∞</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id287080"><emphasis effect="bold">Example 3.1</emphasis> The impulse response of a filter is <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>5</m:mn><m:mi>t</m:mi><m:mo>)</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>. If the input to this filter is <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>5</m:mn><m:mi>t</m:mi><m:mo>)</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>, then the output is given by</para>
+      <equation id="uid5">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:mi>y</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mi>∞</m:mi>
+                  </m:msubsup>
+                  <m:mo form="prefix">cos</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:mi>τ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo form="prefix">cos</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>τ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>u</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>τ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>τ</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mi>t</m:mi>
+                  </m:msubsup>
+                  <m:mo form="prefix">cos</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:mi>τ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo form="prefix">cos</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:mi>τ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>τ</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mn>2</m:mn>
+                  </m:mfrac>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mi>t</m:mi>
+                  </m:msubsup>
+                  <m:mo form="prefix">cos</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>10</m:mn>
+                    <m:mi>τ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>τ</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mn>2</m:mn>
+                  </m:mfrac>
+                  <m:mo form="prefix">cos</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mi>t</m:mi>
+                  </m:msubsup>
+                  <m:mi>d</m:mi>
+                  <m:mi>τ</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mn>2</m:mn>
+                  </m:mfrac>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mi>t</m:mi>
+                  </m:msubsup>
+                  <m:mo form="prefix">cos</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>10</m:mn>
+                    <m:mi>τ</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mi>d</m:mi>
+                  <m:mi>τ</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mn>2</m:mn>
+                  </m:mfrac>
+                  <m:mi>t</m:mi>
+                  <m:mo form="prefix">cos</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id287490">where in the third line, we have used the trigonometric identity</para>
+      <equation id="id287496">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mo form="prefix">cos</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>θ</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo form="prefix">cos</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:msub>
+                <m:mi>θ</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mn>2</m:mn>
+            </m:mfrac>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mo form="prefix">cos</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>+</m:mo>
+              <m:mo form="prefix">cos</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id287610">As <m:math overflow="scroll"><m:mi>t</m:mi></m:math> approaches infinity, then it is clear that <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> also becomes unbounded. Therefore the filter is unstable. Moreover, it is clear that <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is not absolutely integrable.</para>
+      <para id="id287655">If a transfer function is rational, it can be expressed as a sum of any direct term that may be present plus a proper rational function (<m:math overflow="scroll"><m:mrow><m:mi>q</m:mi><m:mo>&lt;</m:mo><m:mi>p</m:mi></m:mrow></m:math>).</para>
+      <equation id="uid6">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>m</m:mi>
+            </m:msub>
+            <m:msup>
+              <m:mi>s</m:mi>
+              <m:mi>m</m:mi>
+            </m:msup>
+            <m:mo>+</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mrow>
+                <m:mi>m</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msub>
+            <m:msup>
+              <m:mi>s</m:mi>
+              <m:mrow>
+                <m:mi>m</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msup>
+            <m:mo>+</m:mo>
+            <m:mo>⋯</m:mo>
+            <m:mo>+</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mi>s</m:mi>
+            <m:mo>+</m:mo>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+            <m:mo>+</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mi>q</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mi>q</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mrow>
+                    <m:mi>q</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mrow>
+                    <m:mi>q</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mo>⋯</m:mo>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>b</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:mrow>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mi>p</m:mi>
+                </m:msub>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mi>p</m:mi>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mrow>
+                    <m:mi>p</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mrow>
+                    <m:mi>p</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mo>⋯</m:mo>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id287908">The direct terms can be shown to produce unbounded outputs when the input is a step function (which of course, is bounded). The proper rational function produces output terms that depend on whether poles are distinct or repeated and whether these are real or complex:</para>
+      <list id="id287916" display="block" list-type="bulleted">
+        <item id="uid7">Distinct real poles, <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:msub><m:mi>σ</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math> lead to an impulse response with terms:
+<equation id="id287949"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>K</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>α</m:mi><m:mi>k</m:mi></m:msub><m:mi>t</m:mi></m:mrow></m:msup><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation></item>
+        <item id="uid8">Distinct complex conjugate poles <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:msub><m:mi>σ</m:mi><m:mi>k</m:mi></m:msub><m:mo>±</m:mo><m:mi>j</m:mi><m:msub><m:mi>Ω</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math> produce impulse response terms:
+<equation id="id288027"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>K</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>σ</m:mi><m:mi>k</m:mi></m:msub><m:mi>t</m:mi></m:mrow></m:msup><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:msub><m:mi>Ω</m:mi><m:mi>k</m:mi></m:msub><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>θ</m:mi><m:mo>)</m:mo></m:mrow><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation></item>
+        <item id="uid9">Repeated real poles <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:msub><m:mi>σ</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math> produce impulse response terms having the form:
+<equation id="id288118"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>K</m:mi><m:msup><m:mi>t</m:mi><m:mi>n</m:mi></m:msup><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>α</m:mi><m:mi>k</m:mi></m:msub><m:mi>t</m:mi></m:mrow></m:msup><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation></item>
+      </list>
+      <para id="id288163">The quantities <m:math overflow="scroll"><m:mi>K</m:mi></m:math> and <m:math overflow="scroll"><m:mi>θ</m:mi></m:math> are constants while <m:math overflow="scroll"><m:mi>n</m:mi></m:math> is a positive integer. In all of these cases the filter impulse response dies out with time if the poles have negative real parts, i.e. it is absolutely integrable and therefore leads to a stable filter. If the poles have zero or positive real parts, then the impulse response terms either oscillate or grow with time, and are not absolutely integrable. When this happens then one can always find a bounded input that produces an unbounded output. Therefore, in order for a filter with a rational transfer function to have BIBO stability, the transfer function should be proper and the poles of the transfer function should have negative real parts.</para>
+    </section>
+  </content>
+</document>

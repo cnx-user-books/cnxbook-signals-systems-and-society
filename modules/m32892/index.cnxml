@@ -1,0 +1,424 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Properties of the Fourier Transform</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32892</md:content-id>
+  <md:title>Properties of the Fourier Transform</md:title>
+  <md:abstract>Several of the most important properties of the Fourier transform are derived.</md:abstract>
+  <md:uuid>8f933bb5-4e77-4be2-8381-e033c289f388</md:uuid>
+</metadata>
+
+<content>
+    <section id="cid1">
+      <title>Properties of the Fourier Transform</title>
+      <para id="id326666">The Fourier Transform (FT) has several important properties which will be useful:</para>
+      <list id="id326670" display="block" list-type="enumerated">
+        <item id="uid1"><emphasis effect="italics">Linearity:</emphasis><equation id="uid2"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>α</m:mi><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>β</m:mi><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>↔</m:mo><m:mi>α</m:mi><m:msub><m:mi>X</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>β</m:mi><m:msub><m:mi>X</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation>
+where <m:math overflow="scroll"><m:mi>α</m:mi></m:math> and <m:math overflow="scroll"><m:mi>β</m:mi></m:math> are constants. This property is easy to verify by plugging the left side of <link target-id="uid2"/> into the definition of the FT.
+</item>
+        <item id="uid3"><emphasis effect="italics">Time shift:</emphasis><equation id="uid4"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>↔</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>τ</m:mi></m:mrow></m:msup><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation>
+To derive this property we simply take the FT of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math><equation id="uid5"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math></equation>
+using the variable substitution <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi></m:mrow></m:math> leads to
+<equation id="uid6"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>γ</m:mi><m:mo>+</m:mo><m:mi>τ</m:mi></m:mrow></m:math></equation>
+and
+<equation id="uid7"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>d</m:mi><m:mi>γ</m:mi><m:mo>=</m:mo><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math></equation>
+We also note that if <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mo>±</m:mo><m:mi>∞</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>τ</m:mi><m:mo>=</m:mo><m:mo>±</m:mo><m:mi>∞</m:mi></m:mrow></m:math>. Substituting <link target-id="uid6"/>, <link target-id="uid7"/>, and the limits of integration into <link target-id="uid5"/> gives
+<equation id="uid8"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>γ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>(</m:mo><m:mi>γ</m:mi><m:mo>+</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:msup><m:mi>d</m:mi><m:mi>γ</m:mi></m:mrow></m:mtd><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>τ</m:mi></m:mrow></m:msup><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>γ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>γ</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>γ</m:mi></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>τ</m:mi></m:mrow></m:msup><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation>
+which is the desired result.
+</item>
+        <item id="uid9"><emphasis effect="italics">Frequency shift:</emphasis><equation id="uid10"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mi>t</m:mi></m:mrow></m:msup><m:mo>↔</m:mo><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mrow><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>-</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation>
+Deriving the frequency shift property is a bit easier than the time shift property. Again, using the definition of FT we get:
+<equation id="uid11"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mi>t</m:mi></m:mrow></m:msup><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mtd><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>-</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mrow><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>-</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation></item>
+        <item id="uid12"><emphasis effect="italics">Time reversal</emphasis>:
+<equation id="uid13"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>↔</m:mo><m:mi>X</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math></equation>
+To derive this property, we again begin with the definition of FT:
+<equation id="uid14"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math></equation>
+and make the substitution <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>t</m:mi></m:mrow></m:math>. We observe that <m:math overflow="scroll"><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>d</m:mi><m:mi>γ</m:mi></m:mrow></m:math> and that if the limits of integration for <m:math overflow="scroll"><m:mi>t</m:mi></m:math> are <m:math overflow="scroll"><m:mrow><m:mo>±</m:mo><m:mi>∞</m:mi></m:mrow></m:math>, then the limits of integration for <m:math overflow="scroll"><m:mi>γ</m:mi></m:math> are <m:math overflow="scroll"><m:mrow><m:mo>∓</m:mo><m:mi>γ</m:mi></m:mrow></m:math>. Making these substitutions into <link target-id="uid14"/> gives
+<equation id="uid15"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:mo>-</m:mo><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mi>∞</m:mi></m:mrow><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>γ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>γ</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>γ</m:mi></m:mrow></m:mtd><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>γ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>γ</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>γ</m:mi></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation>
+Note that if <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is real, then <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>X</m:mi><m:msup><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:mo>*</m:mo></m:msup></m:mrow></m:math>.
+</item>
+        <item id="uid16"><emphasis effect="italics">Time scaling:</emphasis>
+Suppose we have <m:math overflow="scroll"><m:mrow><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>. We have
+<equation id="uid17"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>Y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math></equation>
+Using the substitution <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>t</m:mi></m:mrow></m:math> leads to
+<equation id="uid18"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:mi>Y</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>a</m:mi></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>γ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>γ</m:mi><m:mo>/</m:mo><m:mi>a</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>γ</m:mi></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>a</m:mi></m:mfrac><m:mi>X</m:mi><m:mfenced separators="" open="(" close=")"><m:mfrac><m:mi>Ω</m:mi><m:mi>a</m:mi></m:mfrac></m:mfenced></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation></item>
+        <item id="uid19"><emphasis effect="italics">Convolution:</emphasis> The convolution integral is given by
+<equation id="uid20"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>τ</m:mi></m:mrow></m:math></equation>
+The convolution property is given by
+<equation id="uid21"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>Y</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo><m:mo>↔</m:mo><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math></equation>
+To derive this important property, we again use the FT definition:
+<equation id="uid22"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:mi>Y</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>τ</m:mi><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:mfenced separators="" open="[" close="]"><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mfenced><m:mi>d</m:mi><m:mi>τ</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation>
+Using the time shift property, the quantity in the brackets is <m:math overflow="scroll"><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>τ</m:mi></m:mrow></m:msup><m:mi>H</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>, giving
+<equation id="uid23"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:mi>Y</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>τ</m:mi></m:mrow></m:msup><m:mi>H</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>τ</m:mi></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>H</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>τ</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>τ</m:mi></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation>
+Therefore, convolution in the time domain corresponds to multiplication in the frequency domain.
+</item>
+        <item id="uid24"><emphasis effect="italics">Multiplication (Modulation):</emphasis><equation id="uid25"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>w</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>↔</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mrow><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>-</m:mo><m:mi>Θ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>Y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Θ</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>Θ</m:mi></m:mrow></m:math></equation>
+Notice that multiplication in the time domain corresponds to convolution in the frequency domain. This property can be understood by applying the inverse Fourier Transform <link target-id=""/> to the right side of <link target-id="uid25"/>
+<equation id="uid26"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:mi>w</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mrow><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>-</m:mo><m:mi>Θ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>Y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Θ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>Θ</m:mi><m:mi>d</m:mi><m:mi>Ω</m:mi></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>Y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Θ</m:mi><m:mo>)</m:mo></m:mrow><m:mfenced separators="" open="[" close="]"><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mrow><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>-</m:mo><m:mi>Θ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>Ω</m:mi></m:mfenced><m:mi>d</m:mi><m:mi>Θ</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation>
+The quantity inside the brackets is the inverse Fourier Transform of a frequency shifted Fourier Transform,
+<equation id="uid27"><m:math overflow="scroll" mode="display"><m:mtable displaystyle="true"><m:mtr><m:mtd columnalign="right"><m:mrow><m:mi>w</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>Y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Θ</m:mi><m:mo>)</m:mo></m:mrow><m:mfenced separators="" open="[" close="]"><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>Θ</m:mi><m:mi>t</m:mi></m:mrow></m:msup></m:mfenced><m:mi>d</m:mi><m:mi>Θ</m:mi></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>Y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Θ</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>Θ</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>Θ</m:mi></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mi>y</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation></item>
+        <item id="uid28"><emphasis effect="italics">Duality:</emphasis>
+The duality property allows us to find the Fourier transform of time-domain signals whose functional forms correspond to known Fourier transforms, <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>. To derive the property, we start with the inverse Fourier transform:
+
+<equation id="uid29"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>Ω</m:mi></m:mrow></m:math></equation>
+Changing the sign of <m:math overflow="scroll"><m:mi>t</m:mi></m:math> and rearranging,
+<equation id="uid30"><m:math overflow="scroll" mode="display"><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>Ω</m:mi></m:mrow></m:math></equation>
+Now if we swap the <m:math overflow="scroll"><m:mi>t</m:mi></m:math> and the <m:math overflow="scroll"><m:mi>Ω</m:mi></m:math> in <link target-id="uid30"/>, we arrive at the desired result
+<equation id="uid31"><m:math overflow="scroll" mode="display"><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mo>-</m:mo><m:mi>∞</m:mi></m:mrow><m:mi>∞</m:mi></m:msubsup><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math></equation>
+The right-hand side of <link target-id="uid31"/> is recognized as the FT of <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>, so we have
+<equation id="uid32"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>↔</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>x</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math></equation></item>
+      </list>
+      <para id="id330384">The properties associated with the Fourier Transform are summarized in <link target-id="uid33"/>.</para>
+      <table id="uid33" summary="">
+        <tgroup cols="3">
+          <tbody>
+            <row>
+              <entry>Property</entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>y</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>Y</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+            </row>
+            <row>
+              <entry>Linearity</entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>α</m:mi>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:mi>β</m:mi>
+                    <m:msub>
+                      <m:mi>x</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>α</m:mi>
+                    <m:msub>
+                      <m:mi>X</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:mi>Ω</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:mi>β</m:mi>
+                    <m:msub>
+                      <m:mi>X</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:mi>Ω</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:math>
+              </entry>
+            </row>
+            <row>
+              <entry>Time Shift</entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:mi>τ</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>X</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:mi>Ω</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>j</m:mi>
+                        <m:mi>Ω</m:mi>
+                        <m:mi>τ</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mrow>
+                </m:math>
+              </entry>
+            </row>
+            <row>
+              <entry>Frequency Shift</entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:msub>
+                          <m:mi>Ω</m:mi>
+                          <m:mn>0</m:mn>
+                        </m:msub>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>X</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>Ω</m:mi>
+                      <m:mo>-</m:mo>
+                      <m:msub>
+                        <m:mi>Ω</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+            </row>
+            <row>
+              <entry>Time Reversal</entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>X</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+            </row>
+            <row>
+              <entry>Time Scaling</entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>a</m:mi>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mi>a</m:mi>
+                    </m:mfrac>
+                    <m:mi>X</m:mi>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mfrac>
+                        <m:mi>Ω</m:mi>
+                        <m:mi>a</m:mi>
+                      </m:mfrac>
+                    </m:mfenced>
+                  </m:mrow>
+                </m:math>
+              </entry>
+            </row>
+            <row>
+              <entry>Convolution</entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>*</m:mo>
+                    <m:mi>h</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>X</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mi>H</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+            </row>
+            <row>
+              <entry>Modulation</entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mi>w</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:mi>π</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:msubsup>
+                      <m:mo>∫</m:mo>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                      <m:mi>∞</m:mi>
+                    </m:msubsup>
+                    <m:mi>X</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>Ω</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>Θ</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi>W</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:mi>Θ</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi>d</m:mi>
+                    <m:mi>Θ</m:mi>
+                  </m:mrow>
+                </m:math>
+              </entry>
+            </row>
+            <row>
+              <entry>Duality</entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mi>X</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mi>π</m:mi>
+                    <m:mi>x</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:math>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+        <caption>Fourier Transform properties.</caption>
+      </table>
+    </section>
+  </content>
+</document>

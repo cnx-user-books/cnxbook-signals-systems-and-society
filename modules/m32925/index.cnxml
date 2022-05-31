@@ -1,0 +1,416 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>First Order Filters</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32925</md:content-id>
+  <md:title>First Order Filters</md:title>
+  <md:abstract/>
+  <md:uuid>fe0bbb34-6a82-4da0-a1c5-aa77791586b2</md:uuid>
+</metadata>
+<content>
+
+      <para id="id139546">A first-order lowpass filter has the frequency response</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mrow>
+                <m:mi>L</m:mi>
+                <m:mi>P</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:mi>j</m:mi>
+                <m:mfrac>
+                  <m:mi>Ω</m:mi>
+                  <m:msub>
+                    <m:mi>Ω</m:mi>
+                    <m:mi>c</m:mi>
+                  </m:msub>
+                </m:mfrac>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id139947">The frequency at which the frequency response magnitude has dropped to <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow></m:math> is called the <emphasis effect="italics">corner frequency</emphasis><footnote id="uid2">This term most likely originates from it's role in Bode plots, a shortcut method for sketching the graph of a frequency response.</footnote>. The frequency response magnitude and phase are plotted in <link target-id="uid8"/>. It is common to express the frequency response magnitude in units of <emphasis effect="italics">decibels</emphasis> (dB) using the formula</para>
+      <equation id="uid3">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mn>20</m:mn>
+            <m:mi>l</m:mi>
+            <m:mi>o</m:mi>
+            <m:msub>
+              <m:mi>g</m:mi>
+              <m:mn>10</m:mn>
+            </m:msub>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>H</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id140217">At the corner frequency for a first order lowpass filter, the frequency response magnitude is <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow></m:math> or roughly -3 dB.
+From <link target-id="uid18" document="m32899"/>, it can easily be seen that the impulse response for the first-order lowpass filter is given by</para>
+      <equation id="uid4">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mrow>
+                <m:mi>L</m:mi>
+                <m:mi>P</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>c</m:mi>
+            </m:msub>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>c</m:mi>
+                </m:msub>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>u</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id140308">A first-order highpass filter is given by</para>
+      <equation id="uid5">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mrow>
+                <m:mi>H</m:mi>
+                <m:mi>P</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mfrac>
+                  <m:mi>Ω</m:mi>
+                  <m:msub>
+                    <m:mi>Ω</m:mi>
+                    <m:mi>c</m:mi>
+                  </m:msub>
+                </m:mfrac>
+              </m:mrow>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:mi>j</m:mi>
+                <m:mfrac>
+                  <m:mi>Ω</m:mi>
+                  <m:msub>
+                    <m:mi>Ω</m:mi>
+                    <m:mi>c</m:mi>
+                  </m:msub>
+                </m:mfrac>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id140385">Notice that</para>
+      <equation id="uid6">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mrow>
+                <m:mi>H</m:mi>
+                <m:mi>P</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+            <m:mo>-</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:mi>j</m:mi>
+                <m:mfrac>
+                  <m:mi>Ω</m:mi>
+                  <m:msub>
+                    <m:mi>Ω</m:mi>
+                    <m:mi>c</m:mi>
+                  </m:msub>
+                </m:mfrac>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id140453">This makes sense since a highpass filter can be constructed by taking the filter input <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> and subtracting from it a lowpass filtered version of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>. The impulse response of the first-order highpass filter therefore becomes:</para>
+      <equation id="uid7">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mrow>
+                <m:mi>H</m:mi>
+                <m:mi>P</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mi>δ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>c</m:mi>
+            </m:msub>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>c</m:mi>
+                </m:msub>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>u</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <figure id="uid8">
+        <media id="uid8_media" alt="">
+          <image mime-type="image/png" src="../../media/ch3_lpfilt.png" id="uid8_onlineimage" width="531"><!-- NOTE: attribute width changes image size online (pixels). original width is 531. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/ch3_lpfilt.eps" id="uid8_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Frequency response magnitude and phase for a first-order lowpass filter (<m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>c</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> rad/sec).</caption>
+      </figure>
+      <figure id="uid9">
+        <media id="uid9_media" alt="">
+          <image mime-type="image/png" src="../../media/ch3_hpfilt.png" id="uid9_onlineimage" width="531"><!-- NOTE: attribute width changes image size online (pixels). original width is 531. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/ch3_hpfilt.eps" id="uid9_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Frequency response magnitude and phase for a first-order highpass filter (<m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>c</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> rad/sec).</caption>
+      </figure>
+      <para id="id140637">First order filters can be easily implemented using linear circuit elements like resistors, capacitors, and inductors. <link target-id="uid12"/> shows a first order filter based on a resistor and a capacitor. Since the impedance for a resistor and capacitor are <m:math overflow="scroll"><m:mi>R</m:mi></m:math> and <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mi>C</m:mi></m:mrow></m:math>, respectively, voltage division leads to a frequency response of</para>
+      <equation id="uid10">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mrow>
+                <m:mi>L</m:mi>
+                <m:mi>P</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:msub>
+                  <m:mi>R</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:msub>
+                  <m:mi>C</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id140736">Therefore the corner frequency for this filter is <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>c</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msub><m:mi>R</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:mfrac></m:mrow></m:math>.
+Similarly, a first-order highpass filter can be implemented using a resistor and capacitor as shown in <link target-id="uid13"/>. This filter has a frequency response of</para>
+      <equation id="uid11">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mrow>
+                <m:mi>H</m:mi>
+                <m:mi>P</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:msub>
+                  <m:mi>R</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:msub>
+                  <m:mi>C</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+              </m:mrow>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:msub>
+                  <m:mi>R</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:msub>
+                  <m:mi>C</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id140866">The corner frequency for the highpass filter is seen to be <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>c</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msub><m:mi>R</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:mfrac></m:mrow></m:math>.</para>
+      <figure id="uid12">
+        <media id="uid12_media" alt="">
+          <image mime-type="image/png" src="../../media/ch3_lpcirc.png" id="uid12_onlineimage" width="266"><!-- NOTE: attribute width changes image size online (pixels). original width is 266. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/ch3_lpcirc.eps" id="uid12_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Circuit implementation of a first-order lowpass filter having <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>c</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:msub><m:mi>R</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math>.</caption>
+      </figure>
+      <figure id="uid13">
+        <media id="uid13_media" alt="">
+          <image mime-type="image/png" src="../../media/ch3_hpcirc.png" id="uid13_onlineimage" width="243"><!-- NOTE: attribute width changes image size online (pixels). original width is 243. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/ch3_hpcirc.eps" id="uid13_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Circuit implementation of a first-order highpass filter having <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>c</m:mi></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:msub><m:mi>R</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math>.</caption>
+      </figure>
+      <para id="id141008">Now one might be tempted to apply the results of <link document="m32919"/> to build a bandpass filter by cascading the lowhpass and highpass circuits in Figures <link target-id="uid12"/> and <link target-id="uid13"/>, respectively. Theory would predict that the equivalent frequency response of this circuit is given by</para>
+      <equation id="id141024">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mrow>
+                <m:mi>e</m:mi>
+                <m:mi>q</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mrow>
+                <m:mi>L</m:mi>
+                <m:mi>P</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mrow>
+                <m:mi>H</m:mi>
+                <m:mi>P</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id141096">Unfortunately, this is not possible since the circuit elements in the lowpass and highpass filters interact with one another and therefore affect the overall behavior of the circuit. This interaction between the two circuits is called <emphasis effect="italics">loading</emphasis> will be studied in greater detail in the exercises. To get theoretical behavior, it is necessary to use a <emphasis effect="italics">voltage follower</emphasis> circuit, between the lowpass filter from the highpass circuits. The voltage follower circuit is usually an active circuit (requires external power supply) that has very high input impedance and very low output impedance. This eliminates any loading effects which would normally occur between the lowpass and highpass filter circuits.</para>
+
+  </content>
+</document>

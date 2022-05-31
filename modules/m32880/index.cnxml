@@ -1,0 +1,115 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Convergence of the Fourier Series</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32880</md:content-id>
+  <md:title>Convergence of the Fourier Series</md:title>
+  <md:abstract/>
+  <md:uuid>7d0eed1c-b024-4dc2-b2dd-93af4d5ac542</md:uuid>
+</metadata>
+<content>
+
+      
+      <para id="id224913">Consider the trigonometric form of the Fourier series</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+            <m:mo>+</m:mo>
+            <m:munderover>
+              <m:mo>∑</m:mo>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:munderover>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo form="prefix">cos</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>+</m:mo>
+            <m:munderover>
+              <m:mo>∑</m:mo>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>=</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:munderover>
+            <m:msub>
+              <m:mi>b</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo form="prefix">sin</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>n</m:mi>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id225381">It is important to state under what conditions this series (the right-hand side of <link target-id="uid1"/>) will actually converge to <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>. The nature of the convergence also needs to be specified. There are several ways of defining the convergence of a series.</para>
+      <list id="id225407" display="block" list-type="enumerated"><item id="uid2"><emphasis effect="italics">Uniform convergence:</emphasis> define the finite sum:
+<equation id="uid3"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:munderover><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo form="prefix">cos</m:mo><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>N</m:mi></m:munderover><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo form="prefix">sin</m:mo><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation>
+where <m:math overflow="scroll"><m:mi>N</m:mi></m:math> is finite. Then the series converges uniformly if the absolute value of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> satisfies
+<equation id="uid4"><m:math overflow="scroll" mode="display"><m:mrow><m:mfenced separators="" open="|" close="|"><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mi>N</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mfenced><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math></equation>
+for all values of <m:math overflow="scroll"><m:mi>t</m:mi></m:math> and some small positive constant <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math>.
+</item>
+        <item id="uid5"><emphasis effect="italics">Point-wise convergence:</emphasis> as with uniform convergence, we require that
+<equation id="id225693"><m:math overflow="scroll" mode="display"><m:mrow><m:mfenced separators="" open="|" close="|"><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>N</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mfenced><m:mo>&lt;</m:mo><m:mi>ϵ</m:mi></m:mrow></m:math></equation>
+for all <m:math overflow="scroll"><m:mi>t</m:mi></m:math>. The main difference between uniform and point-wise convergence is that for the latter, the number of terms in the summation <m:math overflow="scroll"><m:mrow><m:mi>N</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> needed to get the error below <m:math overflow="scroll"><m:mi>ϵ</m:mi></m:math> may vary for different values of t.
+</item>
+        <item id="uid6"><emphasis effect="italics">Mean-squared convergence:</emphasis> here, the series converges if for all <m:math overflow="scroll"><m:mi>t</m:mi></m:math>:
+<equation id="id224850"><m:math overflow="scroll" mode="display"><m:mrow><m:munder><m:mo movablelimits="true" form="prefix">lim</m:mo><m:mrow><m:mi>N</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msubsup><m:mo>∫</m:mo><m:mrow><m:msub><m:mi>t</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>t</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mi>T</m:mi></m:mrow></m:msubsup><m:msup><m:mfenced separators="" open="|" close="|"><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>N</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mfenced><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></equation>
+Gibb's phenomenon, mentioned in some of the examples above, is an example of mean-squared convergence of the series. The overshoot in Gibb's phenomenon occurs only at abrupt discontinuities. Moreover, the height of the overshoot stays the same independently of the number of terms in the series, <m:math overflow="scroll"><m:mi>N</m:mi></m:math>. The overshoot merely becomes less noticeable because it becomes more and more narrow as <m:math overflow="scroll"><m:mi>N</m:mi></m:math> increases.
+</item>
+      </list>
+      <para id="id226123">Dirichlet has given a series of conditions which are necessary for a periodic signal to have a Fourier series. If these conditions are met, then</para>
+      <list id="id226128" display="block" list-type="bulleted">
+        <item id="uid7">the Fourier series has point-wise convergence for all <m:math overflow="scroll"><m:mi>t</m:mi></m:math> at which <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is continuous.
+</item>
+        <item id="uid8">where <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> has a discontinuity, then the series converges to the midpoint between the two values on either side of the discontinuity.
+</item>
+      </list>
+      <para id="id226195">The <emphasis effect="italics">Dirichlet Conditions</emphasis> are:</para>
+      <list id="id226203" display="block" list-type="enumerated">
+        <item id="uid9"><m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> has to be <emphasis effect="italics">absolutely integrable</emphasis> on any period:
+<equation id="id226237"><m:math overflow="scroll" mode="display"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:msub><m:mi>t</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>t</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mi>T</m:mi></m:mrow></m:msubsup><m:mfenced separators="" open="|" close="|"><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mfenced><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi></m:mrow></m:math></equation></item>
+        <item id="uid10"><m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> can have only a finite number of discontinuities on any period.
+</item>
+        <item id="uid11"><m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> can have only a finite number of extrema on any period.
+</item>
+      </list>
+      <para id="id226351">Most periodic signals of practical interest satisfy these conditions.</para><para id="eip-37"><link document="m32929">References</link></para>
+
+  </content>
+</document>

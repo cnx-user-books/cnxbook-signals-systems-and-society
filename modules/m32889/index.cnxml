@@ -1,0 +1,368 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Derivation of the Fourier Transform</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32889</md:content-id>
+  <md:title>Derivation of the Fourier Transform</md:title>
+  <md:abstract>The Fourier transform is derived from the Fourier series.</md:abstract>
+  <md:uuid>627366ed-7ecb-41ff-8727-2f91790ec722</md:uuid>
+</metadata>
+<content>
+ 
+
+      <para id="id2342303">Let's begin by writing down the formula for the complex form of the Fourier Series:</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:munderover>
+              <m:mo>∑</m:mo>
+              <m:mrow>
+                <m:mi>n</m:mi>
+                <m:mo>=</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:munderover>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mi>n</m:mi>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2341570">as well as the corresponding Fourier Series coefficients:</para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:mrow>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mi>T</m:mi>
+              </m:mrow>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>n</m:mi>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2342722">As was mentioned in Chapter 2, as the period <m:math overflow="scroll"><m:mi>T</m:mi></m:math> gets large, the Fourier Series coefficients represent more closely spaced frequencies. Lets take the limit as the period <m:math overflow="scroll"><m:mi>T</m:mi></m:math> goes to infinity. We first note that the fundamental frequency approaches a differential</para>
+      <equation id="uid3">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>π</m:mi>
+              </m:mrow>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:mo>→</m:mo>
+            <m:mi>d</m:mi>
+            <m:mi>Ω</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2342788">consequently</para>
+      <equation id="uid4">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>π</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>→</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>d</m:mi>
+                <m:mi>Ω</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>π</m:mi>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2342845">The <m:math overflow="scroll"><m:mi>n</m:mi></m:math>th harmonic, <m:math overflow="scroll"><m:mrow><m:mi>n</m:mi><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math>, in the limit approaches the frequency variable <m:math overflow="scroll"><m:mi>Ω</m:mi></m:math></para>
+      <equation id="uid5">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>n</m:mi>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+            <m:mo>→</m:mo>
+            <m:mi>Ω</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2342911">From equation <link target-id="uid2"/>, we have</para>
+      <equation id="uid6">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>c</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mi>T</m:mi>
+            <m:mo>→</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2342988">The right hand side of <link target-id="uid6"/> is called the <emphasis effect="italics">Fourier Transform</emphasis> of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>:</para>
+      <equation id="uid7">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>≡</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2343089">Now, using <link target-id="uid6"/>, <link target-id="uid4"/>, and <link target-id="uid5"/> in equation <link target-id="uid1"/> gives</para>
+      <equation id="uid8">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>π</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>Ω</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2343189">which corresponds to the <emphasis effect="italics">inverse Fourier Transform</emphasis>. Equations <link target-id="uid7"/> and <link target-id="uid8"/> represent what is known as a <emphasis effect="italics">transform pair</emphasis>. The following notation is used to denote a Fourier Transform pair</para>
+      <equation id="uid9">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+            <m:mo>↔</m:mo>
+            <m:mi>X</m:mi>
+            <m:mo>(</m:mo>
+            <m:mi>j</m:mi>
+            <m:mi>Ω</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2343251">We say that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a <emphasis effect="italics">time domain</emphasis> signal while <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math> is a <emphasis effect="italics">frequency domain</emphasis> signal. Some additional notation which is sometimes used is</para>
+      <equation id="uid10">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mi>F</m:mi>
+            <m:mfenced separators="" open="{" close="}">
+              <m:mi>x</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2343349">and</para>
+      <equation id="uid11">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msup>
+              <m:mi>F</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+              </m:mrow>
+            </m:msup>
+            <m:mfenced separators="" open="{" close="}">
+              <m:mi>X</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation><para id="eip-203"><link document="m32929">References</link></para>
+
+  </content>
+</document>

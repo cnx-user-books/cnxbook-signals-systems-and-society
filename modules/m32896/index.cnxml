@@ -1,0 +1,195 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Unit Impulse Function</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32896</md:content-id>
+  <md:title>The Unit Impulse Function</md:title>
+  <md:abstract/>
+  <md:uuid>30db724d-56bc-49cf-b42d-a37ff2fffd54</md:uuid>
+</metadata>
+
+<content>
+    <section id="cid1">
+      <title>The Unit Impulse Function</title>
+      <para id="id230615">The unit impulse is very useful in the analysis of signals, <emphasis effect="italics">linear systems</emphasis>, and <emphasis effect="italics">sampling</emphasis>. Consider the plot of a rectangular pulse in <link target-id="uid3"/>. Note the height of the pulse is <m:math overflow="scroll"><m:mrow><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>τ</m:mi></m:mrow></m:math> and the width of the pulse is <m:math overflow="scroll"><m:mi>τ</m:mi></m:math>. So we can write</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>p</m:mi>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id231043">As we let <m:math overflow="scroll"><m:mi>τ</m:mi></m:math> get small, then the width of the pulse gets successively narrower and its height gets progressively higher. In the limit as <m:math overflow="scroll"><m:mi>τ</m:mi></m:math> approaches zero, we have a pulse which has infinite height, and zero width, yet its area is still one. We define the <emphasis effect="italics">unit impulse function</emphasis> as</para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>δ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>≡</m:mo>
+            <m:munder>
+              <m:mo movablelimits="true" form="prefix">lim</m:mo>
+              <m:mrow>
+                <m:mi>τ</m:mi>
+                <m:mo>→</m:mo>
+                <m:mn>0</m:mn>
+              </m:mrow>
+            </m:munder>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mi>p</m:mi>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <figure id="uid3">
+        <media id="uid3_media" alt="">
+          <image mime-type="image/png" src="../../media/pulse.png" id="uid3_onlineimage" width="517"><!-- NOTE: attribute width changes image size online (pixels). original width is 517. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/pulse.eps" id="uid3_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Rectangular pulse, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mi>p</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> approaches the unit impulse function, <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>, as <m:math overflow="scroll"><m:mi>τ</m:mi></m:math> approaches zero.</caption>
+      </figure>
+      <para id="id231365">The area under <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is one, and so we can write</para>
+      <equation id="uid4">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>δ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>1</m:mn>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id231433">If we multiply the unit impulse by a constant, <m:math overflow="scroll"><m:mi>K</m:mi></m:math>, its area is now equal to that constant, i.e.</para>
+      <equation id="uid5">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>K</m:mi>
+            <m:mi>δ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>K</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id231498">The area of the unit impulse is usually indicated by the number shown next to the arrow as seen in <link target-id="uid6"/>.</para>
+      <figure id="uid6">
+        <media id="uid6_media" alt="">
+          <image mime-type="image/png" src="../../media/impulse.png" id="uid6_onlineimage" width="229"><!-- NOTE: attribute width changes image size online (pixels). original width is 229. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/impulse.eps" id="uid6_printimage" print-width="2in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption><m:math overflow="scroll"><m:mrow><m:mi>K</m:mi><m:mi>δ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math>.</caption>
+      </figure>
+      <para id="id231542">Suppose we multiply the signal <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> with a time-shifted unit impulse, <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math>. The product is a unit impulse, having an area of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math>. This is illustrated in <link target-id="uid7"/>.</para>
+      <figure id="uid7">
+        <media id="uid7_media" alt="">
+          <image mime-type="image/png" src="../../media/sift.png" id="uid7_onlineimage" width="229"><!-- NOTE: attribute width changes image size online (pixels). original width is 229. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/sift.eps" id="uid7_printimage"/>
+        </media>
+        <caption>Sifting property of unit impulse, the product of the two signals, <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>δ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math>, is <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo><m:mi>δ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math>. Consequently, the area under <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo><m:mi>δ</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math> is <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>τ</m:mi><m:mo>)</m:mo></m:mrow></m:math>.</caption>
+      </figure>
+      <para id="id231721">In other words,</para>
+      <equation id="uid8">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>δ</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id231790">Equation <link target-id="uid8"/> is called the <emphasis effect="italics">sifting property</emphasis> of the unit impulse. As we will see, the sifting property of the unit impulse will be very useful.</para>
+    </section>
+  </content>
+</document>

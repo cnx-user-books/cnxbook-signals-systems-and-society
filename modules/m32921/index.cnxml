@@ -1,0 +1,115 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Frequency Response</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32921</md:content-id>
+  <md:title>Frequency Response</md:title>
+  <md:abstract/>
+  <md:uuid>15494619-712e-4b67-a212-9e415cb9da46</md:uuid>
+</metadata>
+<content>
+
+      <para id="id322432">Recall from <link document="m32892"/> that the convolution integral</para>
+      <equation id="id322438">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>y</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>h</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>-</m:mo>
+              <m:mi>τ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>τ</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id322371">has the Fourier Transform:</para>
+      <equation id="id322376">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>Y</m:mi>
+            <m:mo>(</m:mo>
+            <m:mi>j</m:mi>
+            <m:mi>Ω</m:mi>
+            <m:mo>)</m:mo>
+            <m:mo>=</m:mo>
+            <m:mi>H</m:mi>
+            <m:mo>(</m:mo>
+            <m:mi>j</m:mi>
+            <m:mi>Ω</m:mi>
+            <m:mo>)</m:mo>
+            <m:mi>X</m:mi>
+            <m:mo>(</m:mo>
+            <m:mi>j</m:mi>
+            <m:mi>Ω</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id323066">where <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math> are the Fourier Transforms of <m:math overflow="scroll"><m:mrow><m:mi>h</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>, respectively. Solving for <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math> gives the <emphasis effect="italics">frequency response</emphasis>:</para>
+      <equation id="id323159">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>Y</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>X</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id323207">The frequency response, the Fourier Transform of the impulse response of a filter, is useful since it gives a highly descriptive representation of the properties of the filter. The frequency response can be considered to be the <emphasis effect="italics">gain</emphasis> of the filter, expressed as a function of frequency. The magnitude of the frequency response evaluated at <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mo>|</m:mo><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo><m:mo>|</m:mo></m:mrow></m:math> gives the factor the frequency component of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> at <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> would be scaled by. The phase of the frequency response at <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>∠</m:mi><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mo>)</m:mo></m:mrow></m:mrow></m:math> gives the phase shift the component of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> at <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> would undergo. This idea will be discussed in greater detail in <link document="m32916 "/>. A <emphasis effect="italics">lowpass</emphasis> filter is a filter which only passes low frequencies, while <emphasis effect="italics">attenuating</emphasis> or filtering out higher frequencies. A <emphasis effect="italics">highpass</emphasis> filter would do just the opposite, it would filter out low frequencies and allow high frequencies to pass. <link target-id="uid1"/> shows examples of these various filter types.</para>
+      <figure id="uid1">
+        <media id="uid1_media" alt="">
+          <image mime-type="image/png" src="../../media/ch3_filter_types.png" id="uid1_onlineimage" width="229"><!-- NOTE: attribute width changes image size online (pixels). original width is 229. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/ch3_filter_types.eps" id="uid1_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Different filter types: (a) lowpass, (b) bandpass, (c) highpass.</caption>
+      </figure>
+
+  </content>
+</document>

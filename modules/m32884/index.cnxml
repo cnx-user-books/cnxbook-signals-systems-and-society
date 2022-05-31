@@ -1,0 +1,63 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Fourier Series: Exercises</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32884</md:content-id>
+  <md:title>The Fourier Series: Exercises</md:title>
+  <md:abstract/>
+  <md:uuid>fd68ab6f-ca62-4f87-bebc-3e566391d117</md:uuid>
+</metadata>
+<content>
+
+      <list id="id2253178" display="block" list-type="enumerated">
+        <item id="uid1">Show that an even-symmetric periodic signal has Fourier Series coefficients <m:math overflow="scroll"><m:mrow><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> while an odd-symmetric signal has <m:math overflow="scroll"><m:mrow><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>.
+</item>
+        <item id="uid2">Find the trigonometric form of the Fourier Series of the periodic signal shown in <link target-id="uid14"/>.
+</item>
+        <item id="uid3">Find the trigonometric form of the Fourier Series for the periodic signal shown in <link target-id="uid15"/>.
+</item>
+        <item id="uid4">Find the trigonometric form of the Fourier Series for the periodic signal shown in <link target-id="uid16"/> for <m:math overflow="scroll"><m:mrow><m:mi>τ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math>.
+</item>
+        <item id="uid5">Suppose that <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>+</m:mo><m:mn>3</m:mn><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>5</m:mn><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>-</m:mo><m:mn>2</m:mn><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>45</m:mn><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>.
+<list id="id2254266" display="block" list-type="enumerated"><item id="uid6">Find the period of this periodic signal.
+</item><item id="uid7">Find the trigonometric form of the Fourier Series.
+</item></list></item>
+        <item id="uid8">Find the complex form of the Fourier Series of the periodic signal shown in <link target-id="uid14"/>.
+</item>
+        <item id="uid9">Find the complex form of the Fourier Series of the periodic signal shown in <link target-id="uid15"/>.
+</item>
+        <item id="uid10">Find the complex form of the Fourier Series for the signal in <link target-id="uid16"/> using:
+<list id="id2254345" display="block" list-type="enumerated"><item id="uid11"><m:math overflow="scroll"><m:mrow><m:mi>τ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math>.
+</item><item id="uid12"><m:math overflow="scroll"><m:mrow><m:mi>τ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>100</m:mn></m:mrow></m:math>.
+</item></list>
+For each case plot the magnitude of the Fourier Series coefficients. You may use Matlab or some other programming language to do this.
+</item>
+        <item id="uid13">Show that
+<equation id="id2254446"><m:math overflow="scroll" mode="display"><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>T</m:mi></m:mfrac><m:msubsup><m:mo>∫</m:mo><m:mrow><m:msub><m:mi>t</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>t</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mi>T</m:mi></m:mrow></m:msubsup><m:mrow><m:munder><m:mo>∑</m:mo><m:mrow><m:mi>n</m:mi><m:mo>≠</m:mo><m:mi>m</m:mi></m:mrow></m:munder><m:msub><m:mi>c</m:mi><m:mi>n</m:mi></m:msub><m:msubsup><m:mi>c</m:mi><m:mi>m</m:mi><m:mo>*</m:mo></m:msubsup><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>-</m:mo><m:mi>m</m:mi><m:mo>)</m:mo></m:mrow><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></equation></item>
+      </list>
+      <figure id="uid14"><media id="uid14_media" alt="">
+          <image mime-type="image/png" src="../../media/vh2_1.png" id="uid14_onlineimage" width="513"><!-- NOTE: attribute width changes image size online (pixels). original width is 513. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/vh2_1.eps" id="uid14_printimage" print-width="3in">
+<!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        
+      <caption>Signal for problems <link target-id="uid2"/> and <link target-id="uid6"/>.</caption></figure>
+      <figure id="uid15"><media id="uid15_media" alt="">
+          <image mime-type="image/png" src="../../media/ch2_2.png" id="uid15_onlineimage" width="513"><!-- NOTE: attribute width changes image size online (pixels). original width is 513. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/ch2_2.eps" id="uid15_printimage" print-width="3in">
+<!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        
+      <caption>Signal for problem <link target-id="uid3"/> and <link target-id="uid7"/>.</caption></figure>
+      <figure id="uid16"><media id="uid16_media" alt="">
+          <image mime-type="image/png" src="../../media/hw2.png" id="uid16_onlineimage" width="513"><!-- NOTE: attribute width changes image size online (pixels). original width is 513. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/hw2.eps" id="uid16_printimage" print-width="3in">
+<!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        
+      <caption>Pulse train signal for problems <link target-id="uid4"/> and <link target-id="uid8"/>.</caption></figure>
+
+  </content>
+</document>

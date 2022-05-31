@@ -1,0 +1,1146 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Second-Order Filters</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34269</md:content-id>
+  <md:title>Second-Order Filters</md:title>
+  <md:abstract>Summarizes second order lowpass, bandpass, and highpass fitlers.</md:abstract>
+  <md:uuid>0b2ef9d8-2b96-4198-b899-52504d798104</md:uuid>
+</metadata>
+
+<content>
+    <section id="cid1">
+      <title>Second-Order Lowpass Filters</title>
+      <para id="id103810">The second-order lowpass filter has system function</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:msubsup>
+                <m:mi>Ω</m:mi>
+                <m:mi>n</m:mi>
+                <m:mn>2</m:mn>
+              </m:msubsup>
+              <m:mrow>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mn>2</m:mn>
+                <m:mi>ζ</m:mi>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msubsup>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id104226">where <m:math overflow="scroll"><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:math> is the <emphasis effect="italics">undamped natural frequency</emphasis>, and <m:math overflow="scroll"><m:mi>ζ</m:mi></m:math> is the <emphasis effect="italics">damping ratio</emphasis>. The undamped natural frequency and damping ratio are properties of the physical devices used to implement the second-order filter (capacitors, inductors, and resistors, in the case of an electrical circuit). It so happens that the damping ratio satisfies <m:math overflow="scroll"><m:mrow><m:mi>ζ</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math>. Using the formula for the roots of a quadratic polynomial, the two poles of <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math> are easily found to be</para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:msub>
+                  <m:mi>s</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mi>ζ</m:mi>
+                  <m:msub>
+                    <m:mi>Ω</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mo>+</m:mo>
+                  <m:msub>
+                    <m:mi>Ω</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:msqrt>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>ζ</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msqrt>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:msub>
+                  <m:mi>s</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mo>-</m:mo>
+                  <m:mi>ζ</m:mi>
+                  <m:msub>
+                    <m:mi>Ω</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>Ω</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                  <m:msqrt>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>ζ</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:msqrt>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id104418">
+There are three possible sets of poles that are categorized as follows:</para>
+      <list id="id104424" display="block" list-type="enumerated">
+        <item id="uid3"><emphasis effect="italics">Overdamped:</emphasis> the poles are real and distinct. This occurs if <m:math overflow="scroll"><m:mrow><m:mi>ζ</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn></m:mrow></m:math>. In this case the impulse response is given by:
+<equation id="uid4"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mn>2</m:mn><m:msqrt><m:mrow><m:msup><m:mi>ζ</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msqrt></m:mrow></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>s</m:mi><m:mn>1</m:mn></m:msub><m:mi>t</m:mi></m:mrow></m:msup><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mfrac><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mn>2</m:mn><m:msqrt><m:mrow><m:msup><m:mi>ζ</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msqrt></m:mrow></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>s</m:mi><m:mn>2</m:mn></m:msub><m:mi>t</m:mi></m:mrow></m:msup><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation></item>
+        <item id="uid5"><emphasis effect="italics">Critically damped:</emphasis> corresponds to <m:math overflow="scroll"><m:mrow><m:mi>ζ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math>. The two poles are repeated with,
+<equation id="uid6"><m:math overflow="scroll" mode="display"><m:mrow><m:msub><m:mi>s</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>s</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>ζ</m:mi><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mo>-</m:mo><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math></equation>
+and the impulse response is given by
+<equation id="uid7"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup><m:mi>Ω</m:mi><m:mi>n</m:mi><m:mn>2</m:mn></m:msubsup><m:mi>t</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>ζ</m:mi><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mi>t</m:mi></m:mrow></m:msup><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation></item>
+        <item id="uid8"><emphasis effect="italics">Underdamped:</emphasis> corresponds to <m:math overflow="scroll"><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>ζ</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:math>, giving a pair of complex conjugate poles. In this case, the impulse response is given by
+<equation id="uid9"><m:math overflow="scroll" mode="display"><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>ζ</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>ζ</m:mi><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mi>t</m:mi></m:mrow></m:msup><m:mo form="prefix">sin</m:mo><m:mfenced separators="" open="(" close=")"><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>ζ</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mi>t</m:mi></m:mfenced><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation>
+Note that in the underdamped case, the magnitude of the poles is <m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>s</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo><m:mo>|</m:mo></m:mrow><m:msub><m:mi>s</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>|</m:mo><m:mo>=</m:mo></m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math>, and when <m:math overflow="scroll"><m:mrow><m:mi>ζ</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>, the two poles are on the imaginary axis which corresponds to an impulse response that is a pure sinusoid and the system is unstable.
+</item>
+      </list>
+      <para id="id105164">A root locus diagram shows the paths that the poles of <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math> would take as the damping ratio is decreased from some number greater than 1 down to 0, and is shown in <link target-id="uid10"/>.</para>
+      <figure id="uid10">
+        <media id="uid10_media" alt="">
+          <image mime-type="image/png" src="../../media/rootlocus.png" id="uid10_onlineimage" width="391"><!-- NOTE: attribute width changes image size online (pixels). original width is 391. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/rootlocus.eps" id="uid10_printimage" print-width="3in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Root locus of second-order lowpass filter having <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math>.</caption>
+      </figure>
+      <para id="id105221">The frequency response of the second-order lowpass filter can be found using the substitution <m:math overflow="scroll"><m:msub><m:mrow><m:mi>H</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>H</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:msub></m:math>, giving</para>
+      <equation id="uid11">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:msubsup>
+                <m:mi>Ω</m:mi>
+                <m:mi>n</m:mi>
+                <m:mn>2</m:mn>
+              </m:msubsup>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msubsup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>Ω</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mi>j</m:mi>
+                <m:mn>2</m:mn>
+                <m:mi>ζ</m:mi>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mi>Ω</m:mi>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id105351">The frequency response magnitude is shown in <link target-id="uid12"/> for <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math> and several values of <m:math overflow="scroll"><m:mi>ζ</m:mi></m:math>. Note that for the underdamped case, there is a resonance or peak that would be expected to maximize at the undamped natural frequency <m:math overflow="scroll"><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:math>, when <m:math overflow="scroll"><m:mrow><m:mi>ζ</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>.</para>
+      <figure id="uid12">
+        <media id="uid12_media" alt="">
+          <image mime-type="image/png" src="../../media/secord_lp.png" id="uid12_onlineimage" width="594"><!-- NOTE: attribute width changes image size online (pixels). original width is 594. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/secord_lp-bbb8.eps" id="uid12_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Frequency response of second-order lowpass filter with <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math> and several values of <m:math overflow="scroll"><m:mi>ζ</m:mi></m:math>.</caption>
+      </figure>
+      <para id="id105455">We also observe that for the critically damped case, since</para>
+      <equation id="uid13">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:msubsup>
+                <m:mi>Ω</m:mi>
+                <m:mi>n</m:mi>
+                <m:mn>2</m:mn>
+              </m:msubsup>
+              <m:msup>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mi>s</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:msub>
+                    <m:mi>Ω</m:mi>
+                    <m:mi>n</m:mi>
+                  </m:msub>
+                </m:mfenced>
+                <m:mn>2</m:mn>
+              </m:msup>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id105520">setting <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> gives <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="|" close="|"><m:mi>H</m:mi><m:mfenced separators="" open="(" close=")"><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mfenced></m:mfenced><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math>. Moreover, it is clear that for <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>&lt;</m:mo><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="|" close="|"><m:mi>H</m:mi><m:mfenced separators="" open="(" close=")"><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mfenced></m:mfenced><m:mo>&gt;</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> and for <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="|" close="|"><m:mi>H</m:mi><m:mfenced separators="" open="(" close=")"><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mfenced></m:mfenced><m:mo>&lt;</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math>. These ideas will be used later when we discuss Bode plots.</para>
+    </section>
+    <section id="cid2">
+      <title>Second-Order Filter Implementation</title>
+      <figure id="uid14">
+        <media id="uid14_media" alt="">
+          <image mime-type="image/png" src="../../media/RLC.png" id="uid14_onlineimage" width="202"><!-- NOTE: attribute width changes image size online (pixels). original width is 202. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/RLC.eps" id="uid14_printimage"/>
+        </media>
+        <caption>Series RLC circuit.</caption>
+      </figure>
+      <para id="id105719">Second order filters can be implemented using either passive or active circuit elements. We will consider the series RLC circuit shown in <link target-id="uid14"/>.
+A lowpass filter results by taking the filter output to be the voltage across the capacitor. Using voltage division, the system function is easily found to be</para>
+      <equation id="uid15">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>H</m:mi>
+                    <m:mrow>
+                      <m:mi>l</m:mi>
+                      <m:mi>p</m:mi>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>V</m:mi>
+                        <m:mrow>
+                          <m:mi>l</m:mi>
+                          <m:mi>p</m:mi>
+                        </m:mrow>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>V</m:mi>
+                        <m:mi>i</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mrow>
+                        <m:mi>L</m:mi>
+                        <m:mi>C</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>s</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mi>R</m:mi>
+                        <m:mi>L</m:mi>
+                      </m:mfrac>
+                      <m:mi>s</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mrow>
+                          <m:mi>L</m:mi>
+                          <m:mi>C</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id105862">
+Comparing <link target-id="uid15"/> with <link target-id="uid1"/> we find that the undamped natural frequency is <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mrow><m:mi>L</m:mi><m:mi>C</m:mi></m:mrow></m:msqrt></m:mfrac></m:mrow></m:math>, while <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mi>ζ</m:mi><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mi>R</m:mi><m:mi>L</m:mi></m:mfrac></m:mrow></m:math>, giving the attenuation coefficient:</para>
+      <equation id="id105930">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>α</m:mi>
+            <m:mo>≡</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mi>R</m:mi>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>L</m:mi>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id105965">A second-order highpass filter is implemented by taking the output of the filter to be the inductor voltage in the series RLC circuit. The resulting system function is</para>
+      <equation id="uid16">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>H</m:mi>
+                    <m:mrow>
+                      <m:mi>h</m:mi>
+                      <m:mi>p</m:mi>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>V</m:mi>
+                        <m:mrow>
+                          <m:mi>h</m:mi>
+                          <m:mi>p</m:mi>
+                        </m:mrow>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>V</m:mi>
+                        <m:mi>i</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:msup>
+                      <m:mi>s</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>s</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mi>R</m:mi>
+                        <m:mi>L</m:mi>
+                      </m:mfrac>
+                      <m:mi>s</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mrow>
+                          <m:mi>L</m:mi>
+                          <m:mi>C</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id106102">
+So in terms of the undamped natural frequency and damping ratio, the second-order highpass filter is given by</para>
+      <equation id="uid17">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mrow>
+                <m:mi>h</m:mi>
+                <m:mi>p</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:msup>
+                <m:mi>s</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:mrow>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mn>2</m:mn>
+                <m:mi>ζ</m:mi>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msubsup>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id106188">The graph of the frequency response magnitude of this filter is shown in <link target-id="uid18"/> for several damping ratios and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math>.</para>
+      <figure id="uid18">
+        <media id="uid18_media" alt="">
+          <image mime-type="image/png" src="../../media/secord_hp.png" id="uid18_onlineimage" width="450"><!-- NOTE: attribute width changes image size online (pixels). original width is 450. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/secord_hp.eps" id="uid18_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Frequency response of second-order highpass filter with <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math> and several values of <m:math overflow="scroll"><m:mi>ζ</m:mi></m:math>.</caption>
+      </figure>
+      <para id="id106259">Not surprisingly, a second-order bandpass filter results by taking the output of the filter be the resistor voltage in the series RLC circuit. The system function is then</para>
+      <equation id="uid19">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>H</m:mi>
+                    <m:mrow>
+                      <m:mi>b</m:mi>
+                      <m:mi>p</m:mi>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>V</m:mi>
+                        <m:mrow>
+                          <m:mi>b</m:mi>
+                          <m:mi>p</m:mi>
+                        </m:mrow>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>V</m:mi>
+                        <m:mi>i</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>s</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mfrac>
+                        <m:mi>R</m:mi>
+                        <m:mi>L</m:mi>
+                      </m:mfrac>
+                      <m:mi>s</m:mi>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mi>s</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mi>R</m:mi>
+                        <m:mi>L</m:mi>
+                      </m:mfrac>
+                      <m:mi>s</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mrow>
+                          <m:mi>L</m:mi>
+                          <m:mi>C</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id106398">
+This can be expressed in terms of <m:math overflow="scroll"><m:mi>ζ</m:mi></m:math> and <m:math overflow="scroll"><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:math> as</para>
+      <equation id="uid20">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mrow>
+                <m:mi>b</m:mi>
+                <m:mi>p</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>ζ</m:mi>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mi>s</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:msup>
+                  <m:mi>s</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mn>2</m:mn>
+                <m:mi>ζ</m:mi>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:msubsup>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msubsup>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+    </section>
+    <section id="cid3">
+      <title>Frequency Response of Second-Order Bandpass Filter</title>
+      <para id="id106527">Setting <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> in <link target-id="uid20"/> gives the frequency response of the second-order bandpass filter</para>
+      <equation id="uid21">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mrow>
+                <m:mi>b</m:mi>
+                <m:mi>p</m:mi>
+              </m:mrow>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mn>2</m:mn>
+                <m:mi>ζ</m:mi>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mi>Ω</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msubsup>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mi>Ω</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:mi>j</m:mi>
+                <m:mn>2</m:mn>
+                <m:mi>ζ</m:mi>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mi>Ω</m:mi>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id106649">The magnitude of this frequency response is shown in <link target-id="uid22"/> where <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math>.</para>
+      <figure id="uid22">
+        <media id="uid22_media" alt="">
+          <image mime-type="image/png" src="../../media/secord_bp.png" id="uid22_onlineimage" width="450"><!-- NOTE: attribute width changes image size online (pixels). original width is 450. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/secord_bp.eps" id="uid22_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Frequency response of second-order bandpass filter with <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math> and several values of <m:math overflow="scroll"><m:mi>ζ</m:mi></m:math>.</caption>
+      </figure>
+      <para id="id106723">Evidently, the frequency response peaks at <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math>. To prove this, we can divide the numerator and denominator of <link target-id="uid21"/> by <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mn>2</m:mn><m:mi>ζ</m:mi><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mi>Ω</m:mi></m:mrow></m:math>, giving</para>
+      <equation id="uid23">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>H</m:mi>
+                    <m:mrow>
+                      <m:mi>b</m:mi>
+                      <m:mi>p</m:mi>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>-</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msubsup>
+                            <m:mi>Ω</m:mi>
+                            <m:mi>n</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msubsup>
+                          <m:mo>-</m:mo>
+                          <m:msup>
+                            <m:mi>Ω</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                          <m:mi>ζ</m:mi>
+                          <m:msub>
+                            <m:mi>Ω</m:mi>
+                            <m:mi>n</m:mi>
+                          </m:msub>
+                          <m:mi>Ω</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>+</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mi>Ω</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>-</m:mo>
+                          <m:msubsup>
+                            <m:mi>Ω</m:mi>
+                            <m:mi>n</m:mi>
+                            <m:mn>2</m:mn>
+                          </m:msubsup>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                          <m:mi>ζ</m:mi>
+                          <m:msub>
+                            <m:mi>Ω</m:mi>
+                            <m:mi>n</m:mi>
+                          </m:msub>
+                          <m:mi>Ω</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>+</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:mi>A</m:mi>
+                      <m:mo>(</m:mo>
+                      <m:mi>Ω</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id106982">
+where</para>
+      <equation id="id106988">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>A</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:msup>
+                  <m:mi>Ω</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>-</m:mo>
+                <m:msubsup>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msubsup>
+              </m:mrow>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>ζ</m:mi>
+                <m:msub>
+                  <m:mi>Ω</m:mi>
+                  <m:mi>n</m:mi>
+                </m:msub>
+                <m:mi>Ω</m:mi>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id107049">It is easy to check that <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="|" close="|"><m:mi>A</m:mi><m:mo>(</m:mo><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>)</m:mo></m:mfenced><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="|" close="|"><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mfenced><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>Ω</m:mi><m:mo>≠</m:mo><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math>. Therefore <m:math overflow="scroll"><m:mfenced separators="" open="|" close="|"><m:msub><m:mi>H</m:mi><m:mrow><m:mi>b</m:mi><m:mi>p</m:mi></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:mfenced></m:math> does in fact peak at <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math>.</para>
+      <para id="id107187">The bandwidth of bandpass filters is typically measured as the difference between the two frequencies, <m:math overflow="scroll"><m:msub><m:mi>Ω</m:mi><m:mn>2</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>Ω</m:mi><m:mn>1</m:mn></m:msub></m:math>, at which the gain has dropped by 3 decibels from its peak of 0 dB. A diagram of this is shown in <link target-id="uid24"/>.</para>
+      <figure id="uid24">
+        <media id="uid24_media" alt="">
+          <image mime-type="image/png" src="../../media/bpf.png" id="uid24_onlineimage" width="450"><!-- NOTE: attribute width changes image size online (pixels). original width is 450. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/bpf.eps" id="uid24_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Definition of bandpass filter bandwidth, <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mi>W</m:mi><m:mo>=</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math>.</caption>
+      </figure>
+      <para id="id107271">Formulas for <m:math overflow="scroll"><m:msub><m:mi>Ω</m:mi><m:mn>1</m:mn></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>Ω</m:mi><m:mn>2</m:mn></m:msub></m:math> can be found by solving</para>
+      <equation id="id107304">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>A</m:mi>
+            <m:mo>(</m:mo>
+            <m:mi>Ω</m:mi>
+            <m:mo>)</m:mo>
+            <m:mo>=</m:mo>
+            <m:mo>±</m:mo>
+            <m:mn>1</m:mn>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id107329">since if <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>±</m:mo><m:mn>1</m:mn></m:mrow></m:math>, we get <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="|" close="|"><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mfenced><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mfrac></m:mrow></m:math>. Solving the quadratic equation <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> gives two solutions:</para>
+      <equation id="id107415">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>Ω</m:mi>
+                <m:mo>˜</m:mo>
+              </m:mover>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>+</m:mo>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:msqrt>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>ζ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:msqrt>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <equation id="id107475">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>Ω</m:mi>
+                <m:mo>˜</m:mo>
+              </m:mover>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:msqrt>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>ζ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:msqrt>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id107536">while solving <m:math overflow="scroll"><m:mrow><m:mi>A</m:mi><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> gives two additional solutions</para>
+      <equation id="id107565">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>Ω</m:mi>
+                <m:mo>˜</m:mo>
+              </m:mover>
+              <m:mn>3</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mo>-</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>+</m:mo>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:msqrt>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>ζ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:msqrt>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <equation id="id107627">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mover accent="true">
+                <m:mi>Ω</m:mi>
+                <m:mo>˜</m:mo>
+              </m:mover>
+              <m:mn>4</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mo>-</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>-</m:mo>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:msqrt>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>ζ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:msqrt>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id107690">Since <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>ζ</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>&gt;</m:mo><m:mi>ζ</m:mi><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math>, we pick the two positive solutions as the “corner” frequencies:</para>
+      <equation id="uid25">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mo>-</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>+</m:mo>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:msqrt>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>ζ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:msqrt>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <equation id="uid26">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mi>ζ</m:mi>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:mo>+</m:mo>
+            <m:msub>
+              <m:mi>Ω</m:mi>
+              <m:mi>n</m:mi>
+            </m:msub>
+            <m:msqrt>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>ζ</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:msqrt>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id107857">The two negative frequencies are just the negatives of the two positive frequencies (recall that <m:math overflow="scroll"><m:mfenced separators="" open="|" close="|"><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mfenced></m:math> has even symmetry). So the bandwidth is <m:math overflow="scroll"><m:mrow><m:mi>B</m:mi><m:mi>W</m:mi><m:mo>=</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>ζ</m:mi><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math>. It can also be readily verified that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Ω</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msqrt><m:mrow><m:msub><m:mi>Ω</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>Ω</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:msqrt></m:mrow></m:math>, that is, the center frequency of the bandpass filter is the geometric mean of the two corner frequencies. The <emphasis effect="italics">qualify factor</emphasis>, <m:math overflow="scroll"><m:msub><m:mi>Q</m:mi><m:mi>o</m:mi></m:msub></m:math> is defined as</para>
+      <equation id="id107991">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>Q</m:mi>
+              <m:mi>o</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:msub>
+                <m:mi>Ω</m:mi>
+                <m:mi>n</m:mi>
+              </m:msub>
+              <m:mrow>
+                <m:mi>B</m:mi>
+                <m:mi>W</m:mi>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id108026">and is a measure of the narrowness of the filter bandwidth, with respect to its center frequency. It can be seen that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>Q</m:mi><m:mi>o</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>ζ</m:mi></m:mrow></m:mfrac></m:mrow></m:math>.</para>
+    </section>
+  </content>
+</document>

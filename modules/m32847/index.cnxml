@@ -1,0 +1,972 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>The Laplace Transform: Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32847</md:content-id>
+  <md:title>The Laplace Transform: Introduction</md:title>
+  <md:abstract>Introduces the double-sided and single-sided Laplace transforms.</md:abstract>
+  <md:uuid>98f2a920-1226-4b8b-a35f-d7bc07821a8d</md:uuid>
+</metadata>
+
+<content>
+    <section id="cid1">
+      <title>The Double-Sided Laplace Transform</title>
+      <para id="id215221">You may have noticed that we avoided taking the Fourier transform of a number of signals. For example, we did not try to compute the Fourier Transform of the unit step function, <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>, or the ramp function <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>t</m:mi><m:mi>u</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>. The reason for this is that these signals do not have a Fourier transform that converges to a finite value for all <m:math overflow="scroll"><m:mi>Ω</m:mi></m:math>. Recall that in order to deal with periodic signals such as <m:math overflow="scroll"><m:mrow><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:msub><m:mi>Ω</m:mi><m:mn>0</m:mn></m:msub><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> we had to settle for Fourier transforms having impulse functions in them. The Laplace transform gives us a mechanism for dealing with signals that do not have finite-valued Fourier Transforms.</para>
+      <para id="id215654">The double-sided Laplace Transform of <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is defined as follows:</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>s</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id215917">where we define</para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>s</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>σ</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>j</m:mi>
+            <m:mi>Ω</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id215948">We observe that the Laplace transform is a generalization of the Fourier transform since</para>
+      <equation id="uid3">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mfenced separators="" open="" close="|">
+                <m:mi>X</m:mi>
+                <m:mo>(</m:mo>
+                <m:mi>s</m:mi>
+                <m:mo>)</m:mo>
+              </m:mfenced>
+              <m:mrow>
+                <m:mi>s</m:mi>
+                <m:mo>=</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+              </m:mrow>
+            </m:msub>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id216010">Therefore, we can write</para>
+      <equation id="uid4">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mi>F</m:mi>
+            <m:mfenced separators="" open="{" close="}">
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>σ</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id216071">The inverse Laplace transform can be derived using this idea. Applying the inverse Fourier transform to <m:math overflow="scroll"><m:mrow><m:mi>F</m:mi><m:mfenced separators="" open="{" close="}"><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>σ</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mfenced></m:mrow></m:math> gives</para>
+      <equation id="uid5">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>σ</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>π</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>F</m:mi>
+            <m:mfenced separators="" open="{" close="}">
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>σ</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mfenced>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>Ω</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id216226">Using <link target-id="uid2"/> leads to</para>
+      <equation id="uid6">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>d</m:mi>
+            <m:mi>Ω</m:mi>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mi>d</m:mi>
+                <m:mi>s</m:mi>
+              </m:mrow>
+              <m:mi>j</m:mi>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id216264">Substituting <m:math overflow="scroll"><m:mi>s</m:mi></m:math> for <m:math overflow="scroll"><m:mi>Ω</m:mi></m:math> and solving for <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> in <link target-id="uid5"/> gives</para>
+      <equation id="uid7">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mrow>
+                <m:mn>2</m:mn>
+                <m:mi>π</m:mi>
+                <m:mi>j</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mi>σ</m:mi>
+                <m:mo>-</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mrow>
+                <m:mi>σ</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+            </m:msubsup>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>s</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>s</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id216390">Equation <link target-id="uid7"/> is called the inverse Laplace transform. The integration is along a straight line in the complex <emphasis effect="italics">s-plane</emphasis> corresponding to a fixed value of <m:math overflow="scroll"><m:mi>σ</m:mi></m:math>. This is illustrated in <link target-id="uid8"/>.</para>
+      <figure id="uid8">
+        <media id="uid8_media" alt="">
+          <image mime-type="image/png" src="../../media/Lap_splane.png" id="uid8_onlineimage" width="310"><!-- NOTE: attribute width changes image size online (pixels). original width is 310. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/Lap_splane.eps" id="uid8_printimage" print-width="2in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>The inverse Laplace transform integrates along a line having a constant <m:math overflow="scroll"><m:mi>σ</m:mi></m:math> in the complex <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>-</m:mo></m:mrow></m:math>plane.</caption>
+      </figure>
+      <para id="id216451">It is important that this line exist in a region of the <m:math overflow="scroll"><m:mi>s</m:mi></m:math>-plane that corresponds to the region of convergence for the Laplace transform. The region of convergence is defined as that region in the <m:math overflow="scroll"><m:mi>s</m:mi></m:math>-plane for which</para>
+      <equation id="uid9">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+            </m:mfenced>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>&lt;</m:mo>
+            <m:mi>∞</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id216537">Note that since <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>σ</m:mi><m:mo>+</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> this is equivalent to</para>
+      <equation id="uid10">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>∞</m:mi>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>σ</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+            </m:mfenced>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>&lt;</m:mo>
+            <m:mi>∞</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+    </section>
+    <section id="cid2">
+      <title>The Single-Sided Laplace Transform</title>
+      <para id="id216636">We define the single-sided Laplace transform as</para>
+      <equation id="uid11">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>X</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mi>x</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>s</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id216708">where the lower limit of integration tacitly includes the point <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. That is, <m:math overflow="scroll"><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:math> represents a point just to the negative side of <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. This allows for the integral to take into account signal features that occur at <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> such as a step or impulse function. The single-sided Laplace transform is motivated by the fact that most signals are <emphasis effect="italics">turned on</emphasis> at some point. If the region of convergence is not specified then different signals can yield identical double-sided Laplace transforms, as the following example illustrates.</para>
+      <para id="id216776"><emphasis effect="bold">Example 3.1</emphasis> Consider the signal</para>
+      <equation id="uid13">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>α</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>u</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id216839">The double-sided Laplace transform is given by</para>
+      <equation id="uid14">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>X</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mi>∞</m:mi>
+                  </m:msubsup>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>α</m:mi>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mi>∞</m:mi>
+                  </m:msubsup>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mo>(</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>α</m:mi>
+                      <m:mo>)</m:mo>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:msubsup>
+                  <m:mfenced separators="" open="" close="|">
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>α</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:mi>σ</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>j</m:mi>
+                        <m:mi>Ω</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>α</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mfenced>
+                  <m:mn>0</m:mn>
+                  <m:mi>∞</m:mi>
+                </m:msubsup>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>s</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>α</m:mi>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:mi>σ</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>α</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mi>Ω</m:mi>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id217126">the magnitude of <m:math overflow="scroll"><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mo>(</m:mo><m:mi>σ</m:mi><m:mo>+</m:mo><m:mi>α</m:mi><m:mo>)</m:mo><m:mi>∞</m:mi></m:mrow></m:msup></m:math> is zero only if <m:math overflow="scroll"><m:mrow><m:mi>σ</m:mi><m:mo>&gt;</m:mo><m:mo>-</m:mo><m:mi>α</m:mi></m:mrow></m:math> which establishes the region of convergence. Therefore we have</para>
+      <equation id="uid15">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>α</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>u</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>↔</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mrow>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>α</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>,</m:mo>
+            <m:mi>σ</m:mi>
+            <m:mo>&gt;</m:mo>
+            <m:mo>-</m:mo>
+            <m:mi>α</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id217234">Now consider the Laplace transform of the signal</para>
+      <equation id="uid16">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>x</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mo>-</m:mo>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>α</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>u</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id217296">We have</para>
+      <equation id="uid17">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>X</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>∞</m:mi>
+                    </m:mrow>
+                    <m:mn>0</m:mn>
+                  </m:msubsup>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>α</m:mi>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>∞</m:mi>
+                    </m:mrow>
+                    <m:mn>0</m:mn>
+                  </m:msubsup>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mo>(</m:mo>
+                      <m:mi>s</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>α</m:mi>
+                      <m:mo>)</m:mo>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:msubsup>
+                  <m:mfenced separators="" open="" close="|">
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mrow>
+                        <m:mi>s</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>α</m:mi>
+                      </m:mrow>
+                    </m:mfrac>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:mi>σ</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>j</m:mi>
+                        <m:mi>Ω</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>α</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mfenced>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                  <m:mn>0</m:mn>
+                </m:msubsup>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+              <m:mtd>
+                <m:mo>=</m:mo>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mfrac>
+                    <m:mn>1</m:mn>
+                    <m:mrow>
+                      <m:mi>s</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>α</m:mi>
+                    </m:mrow>
+                  </m:mfrac>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>σ</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>α</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mi>Ω</m:mi>
+                        <m:mi>∞</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow/>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id217586">Here, the quantity <m:math overflow="scroll"><m:msup><m:mi>e</m:mi><m:mrow><m:mo>(</m:mo><m:mi>σ</m:mi><m:mo>+</m:mo><m:mi>α</m:mi><m:mo>)</m:mo><m:mi>∞</m:mi></m:mrow></m:msup></m:math> is zero only if <m:math overflow="scroll"><m:mrow><m:mi>σ</m:mi><m:mo>&lt;</m:mo><m:mo>-</m:mo><m:mi>α</m:mi></m:mrow></m:math> so we have</para>
+      <equation id="uid18">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mo>-</m:mo>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>α</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mi>u</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mo>-</m:mo>
+              <m:mi>t</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>↔</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mrow>
+                <m:mi>s</m:mi>
+                <m:mo>+</m:mo>
+                <m:mi>α</m:mi>
+              </m:mrow>
+            </m:mfrac>
+            <m:mo>,</m:mo>
+            <m:mi>σ</m:mi>
+            <m:mo>&lt;</m:mo>
+            <m:mo>-</m:mo>
+            <m:mi>α</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id217700">which is identical to <m:math overflow="scroll"><m:mrow><m:msub><m:mi>X</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> except for the region of convergence.</para>
+      <para id="id217730">To avoid scenarios where two different signals have the same double-sided Laplace transform, we restrict our signals to those which are assumed to be zero for <m:math overflow="scroll"><m:mrow><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>. Such signals are called <emphasis effect="italics">causal signals</emphasis>.</para>
+      <para id="id217753">The region of convergence for the single-sided Laplace transform is a region in the <m:math overflow="scroll"><m:mi>s</m:mi></m:math>-plane satisfying <m:math overflow="scroll"><m:mrow><m:mi>σ</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>σ</m:mi><m:mrow><m:mi>m</m:mi><m:mi>i</m:mi><m:mi>n</m:mi></m:mrow></m:msub></m:mrow></m:math> as shown in <link target-id="uid19"/>.</para>
+      <figure id="uid19">
+        <media id="uid19_media" alt="">
+          <image mime-type="image/png" src="../../media/Lap_roc.png" id="uid19_onlineimage" width="310"><!-- NOTE: attribute width changes image size online (pixels). original width is 310. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/Lap_roc.eps" id="uid19_printimage" print-width="2in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>The region of convergence of the single-sided Laplace transform in the complex <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>-</m:mo></m:mrow></m:math>plane.</caption>
+      </figure>
+      <para id="id217824">To see this, we observe that if</para>
+      <equation id="uid20">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:msub>
+                    <m:mi>σ</m:mi>
+                    <m:mrow>
+                      <m:mi>m</m:mi>
+                      <m:mi>i</m:mi>
+                      <m:mi>n</m:mi>
+                    </m:mrow>
+                  </m:msub>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+            </m:mfenced>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>&lt;</m:mo>
+            <m:mi>∞</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id217909">then it must be the case that</para>
+      <equation id="uid21">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:msup>
+                  <m:mn>0</m:mn>
+                  <m:mo>-</m:mo>
+                </m:msup>
+              </m:mrow>
+              <m:mi>∞</m:mi>
+            </m:msubsup>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>x</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:msup>
+                <m:mi>e</m:mi>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mi>σ</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mrow>
+              </m:msup>
+            </m:mfenced>
+            <m:mi>d</m:mi>
+            <m:mi>t</m:mi>
+            <m:mo>&lt;</m:mo>
+            <m:mi>∞</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id217985">for <m:math overflow="scroll"><m:mrow><m:mi>σ</m:mi><m:mo>&gt;</m:mo><m:msub><m:mi>σ</m:mi><m:mrow><m:mi>m</m:mi><m:mi>i</m:mi><m:mi>n</m:mi></m:mrow></m:msub></m:mrow></m:math>, since <m:math overflow="scroll"><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:mi>σ</m:mi><m:mi>t</m:mi></m:mrow></m:msup></m:math> decreases faster than <m:math overflow="scroll"><m:msup><m:mi>e</m:mi><m:mrow><m:mo>-</m:mo><m:msub><m:mi>σ</m:mi><m:mrow><m:mi>m</m:mi><m:mi>i</m:mi><m:mi>n</m:mi></m:mrow></m:msub><m:mi>t</m:mi></m:mrow></m:msup></m:math>. Finally, the inverse single-sided Laplace transform is the same as the inverse double-sided Laplace transform (see <link target-id="uid7"/>), since a single sided Laplace transform can be interpreted as the double-sided Laplace transform of a signal satisfying <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>. From here on, we will work exclusively with the single-sided Laplace transform. Unless we need to specifically differentiate between the single or double-sided transforms, we will refer to the single-sided Laplace transform as simply the “Laplace transform".</para>
+    </section>
+  </content>
+</document>

@@ -1,0 +1,76 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Introduction to Continuous-Time Signals: Exercises</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32871</md:content-id>
+  <md:title>Introduction to Continuous-Time Signals: Exercises</md:title>
+  <md:abstract/>
+  <md:uuid>eddac4d0-858d-4dff-8a33-91e85defe209</md:uuid>
+</metadata>
+<content>
+
+      <list id="id201668" display="block" list-type="enumerated"><item id="uid1">Consider the signals shown in <link target-id="uid27"/>. Sketch the following signals<footnote id="uid2">Assume that for step discontinuities, the signal takes on the greater of the two values.</footnote>:
+<list id="id201697" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid3"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+</item><item id="uid4"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+</item><item id="uid5"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+</item><item id="uid6"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+</item><item id="uid7"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+</item><item id="uid8"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+</item><item id="uid9"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+</item><item id="uid10"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+</item><item id="uid11"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math>.
+</item></list></item>
+        <item id="uid12">For each of the signals in <link target-id="uid28"/>:
+<list id="id202439" display="block" list-type="enumerated" number-style="lower-alpha"><item id="uid13">What is the period?
+</item><item id="uid14">Sketch <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>0</m:mn><m:mo>.</m:mo><m:mn>25</m:mn><m:mo>)</m:mo></m:mrow></m:math>, and <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:math>.
+</item><item id="uid15">Find the power for each signal.
+</item></list></item>
+        <item id="uid16">Suppose that <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>+</m:mo><m:mi>j</m:mi><m:mn>2</m:mn></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>+</m:mo><m:mi>j</m:mi><m:mn>5</m:mn></m:mrow></m:math>. Find:
+<list id="id202761" display="block" list-type="bulleted"><item id="uid17"><m:math overflow="scroll"><m:mrow><m:mrow><m:mo>|</m:mo></m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>|</m:mo><m:mo>,</m:mo><m:mi>∠</m:mi></m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mrow><m:mo>|</m:mo><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>|</m:mo></m:mrow><m:mo>,</m:mo><m:mi>∠</m:mi><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math></item><item id="uid18"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> in rectangular coordinates.
+</item><item id="uid19"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> in rectangular and polar coordinates.
+</item><item id="uid20"><m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>/</m:mo><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> in polar coordinates.
+</item></list></item>
+        <item id="uid21">What is the period, frequency, and power of the sinusoidal signal <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>2</m:mn><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>5</m:mn><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>.
+</item>
+        <item id="uid22">Can you find a general formula for the power of the sinusoidal signal <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>A</m:mi><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>Ω</m:mi><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math>?
+</item>
+        <item id="uid23">Express <m:math overflow="scroll"><m:mrow><m:mn>2</m:mn><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mn>10</m:mn><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mn>3</m:mn><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>10</m:mn><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> as a single sinusoidal signal.
+</item>
+        <item id="uid24">Sketch <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>θ</m:mi><m:mo>)</m:mo></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math>, and <m:math overflow="scroll"><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>4</m:mn></m:mrow></m:math>.
+</item>
+        <item id="uid25">Sketch <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>θ</m:mi><m:mo>)</m:mo></m:mrow></m:math> for <m:math overflow="scroll"><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math>, and <m:math overflow="scroll"><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>4</m:mn></m:mrow></m:math>.
+</item>
+        <item id="uid26">Consider the motion of the second hand of a clock. Assume the length of the second hand is 1 meter. (a) what is the angular frequency of the second hand. (b) find an expression for the horizontal and vertical displacements of the tip of the second hand, assuming the origin is at the clock center and <m:math>
+<m:apply>
+  <m:eq/>
+  <m:ci>t</m:ci>
+  <m:cn>0</m:cn>
+</m:apply>
+</m:math> when the second hand is over the 3.
+</item>
+      </list>
+      <figure id="uid27">
+        <media id="uid27_media" alt="">
+          <image mime-type="image/png" src="../../media/ch1f1.png" id="uid27_onlineimage" width="554"><!-- NOTE: attribute width changes image size online (pixels). original width is 554. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/ch1f1.eps" id="uid27_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Signals for problem 1.</caption>
+      </figure>
+      <figure id="uid28">
+        <media id="uid28_media" alt="">
+          <image mime-type="image/png" src="../../media/hw1.png" id="uid28_onlineimage" width="513"><!-- NOTE: attribute width changes image size online (pixels). original width is 513. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/hw1.eps" id="uid28_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Signals for problem 2.</caption>
+      </figure>
+      <equation id="uid29">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow/>
+        </m:math>
+      </equation>
+
+  </content>
+</document>

@@ -1,0 +1,1198 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Bode Plots</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34302</md:content-id>
+  <md:title>Bode Plots</md:title>
+  <md:abstract>Describes how to manually sketch Bode amplitude and phase plots.</md:abstract>
+  <md:uuid>88d5d786-9c3d-4b35-968c-f908ef5c9cfa</md:uuid>
+</metadata>
+
+<content>
+    <section id="cid1">
+      <title>Bode Plots</title>
+      <para id="id257887">Plotting the magnitude and phase of the frequency response is most easily accomplished with a computer, provided you have the right software (for example, the Matlab function “freqs”). However if there is no computer handy, a classical method for quickly sketching the magnitude or phase response of a filter is using a <emphasis effect="italics">Bode plot</emphasis>. Consider a general system function given by</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mi>K</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mfrac>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∏</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>q</m:mi>
+                </m:msubsup>
+                <m:msup>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mi>s</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>β</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                  </m:mfenced>
+                  <m:msub>
+                    <m:mi>γ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:msup>
+              </m:mrow>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∏</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>p</m:mi>
+                </m:msubsup>
+                <m:msup>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mi>s</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>α</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                  </m:mfenced>
+                  <m:msub>
+                    <m:mi>δ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:msup>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id258370">where we assume the <m:math overflow="scroll"><m:msub><m:mi>γ</m:mi><m:mi>k</m:mi></m:msub></m:math> and <m:math overflow="scroll"><m:msub><m:mi>δ</m:mi><m:mi>k</m:mi></m:msub></m:math> are integers. The corresponding frequency response is therefore</para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mi>K</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mfrac>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∏</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>q</m:mi>
+                </m:msubsup>
+                <m:msup>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mi>j</m:mi>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>β</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                  </m:mfenced>
+                  <m:msub>
+                    <m:mi>γ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:msup>
+              </m:mrow>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∏</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>p</m:mi>
+                </m:msubsup>
+                <m:msup>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mi>j</m:mi>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>α</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                  </m:mfenced>
+                  <m:msub>
+                    <m:mi>δ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:msup>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id258535"><link target-id="uid2"/> can be written as</para>
+      <equation id="uid3">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mi>K</m:mi>
+            <m:mfrac>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∏</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>q</m:mi>
+                </m:msubsup>
+                <m:msup>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mfrac>
+                      <m:mi>Ω</m:mi>
+                      <m:msub>
+                        <m:mi>β</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:msub>
+                    </m:mfrac>
+                  </m:mfenced>
+                  <m:msub>
+                    <m:mi>γ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:msup>
+              </m:mrow>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∏</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>p</m:mi>
+                </m:msubsup>
+                <m:msup>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mfrac>
+                      <m:mi>Ω</m:mi>
+                      <m:msub>
+                        <m:mi>α</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:msub>
+                    </m:mfrac>
+                  </m:mfenced>
+                  <m:msub>
+                    <m:mi>δ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:msup>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id258681">where</para>
+      <equation id="uid4">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>K</m:mi>
+            <m:mo>=</m:mo>
+            <m:msub>
+              <m:mi>K</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+            <m:mfrac>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∏</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>q</m:mi>
+                </m:msubsup>
+                <m:msubsup>
+                  <m:mi>β</m:mi>
+                  <m:mi>k</m:mi>
+                  <m:msub>
+                    <m:mi>γ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:msubsup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:msub>
+                    <m:mi>γ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:msup>
+              </m:mrow>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∏</m:mo>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mi>p</m:mi>
+                </m:msubsup>
+                <m:msubsup>
+                  <m:mi>α</m:mi>
+                  <m:mi>k</m:mi>
+                  <m:msub>
+                    <m:mi>δ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:msubsup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mo>-</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:msub>
+                    <m:mi>δ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                </m:msup>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id258820">Since most frequency response plots are expressed in units of decibels, we have</para>
+      <equation id="uid5">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:mn>20</m:mn>
+                  <m:msub>
+                    <m:mo form="prefix">log</m:mo>
+                    <m:mn>10</m:mn>
+                  </m:msub>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:mi>H</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mn>20</m:mn>
+                  <m:msub>
+                    <m:mo form="prefix">log</m:mo>
+                    <m:mn>10</m:mn>
+                  </m:msub>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:mi>K</m:mi>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msubsup>
+                          <m:mo>∏</m:mo>
+                          <m:mrow>
+                            <m:mi>k</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                          </m:mrow>
+                          <m:mi>q</m:mi>
+                        </m:msubsup>
+                        <m:msup>
+                          <m:mfenced separators="" open="(" close=")">
+                            <m:mn>1</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mi>j</m:mi>
+                            <m:mfrac>
+                              <m:mi>Ω</m:mi>
+                              <m:msub>
+                                <m:mi>β</m:mi>
+                                <m:mi>k</m:mi>
+                              </m:msub>
+                            </m:mfrac>
+                          </m:mfenced>
+                          <m:msub>
+                            <m:mi>γ</m:mi>
+                            <m:mi>k</m:mi>
+                          </m:msub>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:msubsup>
+                          <m:mo>∏</m:mo>
+                          <m:mrow>
+                            <m:mi>k</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                          </m:mrow>
+                          <m:mi>p</m:mi>
+                        </m:msubsup>
+                        <m:msup>
+                          <m:mfenced separators="" open="(" close=")">
+                            <m:mn>1</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mi>j</m:mi>
+                            <m:mfrac>
+                              <m:mi>Ω</m:mi>
+                              <m:msub>
+                                <m:mi>α</m:mi>
+                                <m:mi>k</m:mi>
+                              </m:msub>
+                            </m:mfrac>
+                          </m:mfenced>
+                          <m:msub>
+                            <m:mi>δ</m:mi>
+                            <m:mi>k</m:mi>
+                          </m:msub>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mn>20</m:mn>
+                  <m:msub>
+                    <m:mo form="prefix">log</m:mo>
+                    <m:mn>10</m:mn>
+                  </m:msub>
+                  <m:mfenced open="|" close="|">
+                    <m:mi>K</m:mi>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>+</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mi>q</m:mi>
+                  </m:munderover>
+                  <m:msub>
+                    <m:mi>γ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mn>20</m:mn>
+                  <m:msub>
+                    <m:mo form="prefix">log</m:mo>
+                    <m:mn>10</m:mn>
+                  </m:msub>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mfrac>
+                      <m:mi>Ω</m:mi>
+                      <m:msub>
+                        <m:mi>β</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:msub>
+                    </m:mfrac>
+                  </m:mfenced>
+                  <m:mo>-</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mi>p</m:mi>
+                  </m:munderover>
+                  <m:msub>
+                    <m:mi>δ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mn>20</m:mn>
+                  <m:msub>
+                    <m:mo form="prefix">log</m:mo>
+                    <m:mn>10</m:mn>
+                  </m:msub>
+                  <m:mfenced separators="" open="|" close="|">
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mfrac>
+                      <m:mi>Ω</m:mi>
+                      <m:msub>
+                        <m:mi>α</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:msub>
+                    </m:mfrac>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id259172">
+where we have used basic properties of logarithms. The individual terms in the sums can be plotted, to within a reasonable approximation, with relative ease. So the Bode magnitude plot involves summing the graphs of each individual term in <link target-id="uid5"/>.
+Lets consider first a single positive term having the form</para>
+      <equation id="uid6">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>M</m:mi>
+            <m:mo>≡</m:mo>
+            <m:mi>γ</m:mi>
+            <m:mn>20</m:mn>
+            <m:msub>
+              <m:mo form="prefix">log</m:mo>
+              <m:mn>10</m:mn>
+            </m:msub>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:mi>j</m:mi>
+              <m:mfrac>
+                <m:mi>Ω</m:mi>
+                <m:mi>β</m:mi>
+              </m:mfrac>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id259235">It is clear that when <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>≪</m:mo><m:mi>β</m:mi></m:mrow></m:math> then <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>≈</m:mo><m:mn>0</m:mn></m:mrow></m:math>. On the other hand if <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>≫</m:mo><m:mi>β</m:mi></m:mrow></m:math>, <m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>≈</m:mo><m:mi>γ</m:mi><m:mn>20</m:mn><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced separators="" open="|" close="|"><m:mfrac><m:mi>Ω</m:mi><m:mi>β</m:mi></m:mfrac></m:mfenced><m:mo>=</m:mo><m:mi>γ</m:mi><m:mn>20</m:mn><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced open="|" close="|"><m:mi>Ω</m:mi></m:mfenced><m:mo>-</m:mo><m:mi>γ</m:mi><m:mn>20</m:mn><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced open="|" close="|"><m:mi>β</m:mi></m:mfenced></m:mrow></m:math>. If we plot this as a function of <m:math overflow="scroll"><m:mrow><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced open="|" close="|"><m:mi>Ω</m:mi></m:mfenced></m:mrow></m:math>, this represents a straight line having a slope of <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mn>20</m:mn></m:mrow></m:math> that crosses the <m:math overflow="scroll"><m:mrow><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced open="|" close="|"><m:mi>Ω</m:mi></m:mfenced></m:mrow></m:math>-axis at <m:math overflow="scroll"><m:mrow><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced open="|" close="|"><m:mi>Ω</m:mi></m:mfenced><m:mo>=</m:mo><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced open="|" close="|"><m:mi>β</m:mi></m:mfenced></m:mrow></m:math>. These approximations are illustrated in <link target-id="uid7"/>.</para>
+      <figure id="uid7">
+        <media id="uid7_media" alt="">
+          <image mime-type="image/png" src="../../media/bp1.png" id="uid7_onlineimage" width="448"><!-- NOTE: attribute width changes image size online (pixels). original width is 448. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/bp1.eps" id="uid7_printimage" print-width="4.25in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Straight-line approximations to <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mn>20</m:mn><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced separators="" open="|" close="|"><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>j</m:mi><m:mfrac><m:mi>Ω</m:mi><m:mi>β</m:mi></m:mfrac></m:mfenced></m:mrow></m:math>.</caption>
+      </figure>
+      <para id="id259702">Instead of plotting <m:math overflow="scroll"><m:mi>M</m:mi></m:math> as a function of <m:math overflow="scroll"><m:mrow><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced open="|" close="|"><m:mi>Ω</m:mi></m:mfenced></m:mrow></m:math>, it is more common to plot it as a function of <m:math overflow="scroll"><m:mi>Ω</m:mi></m:math> with the frequency axis on a logarithmic scale. In this case the non-zero slope is <m:math overflow="scroll"><m:mrow><m:mn>20</m:mn><m:mi>γ</m:mi></m:mrow></m:math> decibels per decade, where one decade represents an increase in <m:math overflow="scroll"><m:mi>Ω</m:mi></m:math> by a factor of 10. The modified graph is shown in <link target-id="uid8"/>.</para>
+      <figure id="uid8">
+        <media id="uid8_media" alt="">
+          <image mime-type="image/png" src="../../media/bp2.png" id="uid8_onlineimage" width="427"><!-- NOTE: attribute width changes image size online (pixels). original width is 427. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/bp2.eps" id="uid8_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Straight-line approximations to <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mn>20</m:mn><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced separators="" open="|" close="|"><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>j</m:mi><m:mfrac><m:mi>Ω</m:mi><m:mi>β</m:mi></m:mfrac></m:mfenced></m:mrow></m:math> using logarithmic frequency axis.</caption>
+      </figure>
+      <para id="id259825">We also note that when <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:mi>β</m:mi></m:mrow></m:math>, the straight-line approximations are not valid, however the true value is easily found to be <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mn>20</m:mn><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced separators="" open="|" close="|"><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>j</m:mi></m:mfenced><m:mo>=</m:mo><m:mi>γ</m:mi><m:mn>20</m:mn><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>≈</m:mo><m:mn>3</m:mn><m:mi>γ</m:mi></m:mrow></m:math> dB. Negative terms in <link target-id="uid5"/> are approximated in a similar manner, but the non-zero slope is now <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mn>20</m:mn><m:mi>γ</m:mi></m:mrow></m:math> dB/decade. The resulting approximation is shown in <link target-id="uid9"/>.</para>
+      <figure id="uid9">
+        <media id="uid9_media" alt="">
+          <image mime-type="image/png" src="../../media/bp3.png" id="uid9_onlineimage" width="437"><!-- NOTE: attribute width changes image size online (pixels). original width is 437. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/bp3.eps" id="uid9_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Straight-line approximations to <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>δ</m:mi><m:mn>20</m:mn><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced separators="" open="|" close="|"><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>j</m:mi><m:mfrac><m:mi>Ω</m:mi><m:mi>α</m:mi></m:mfrac></m:mfenced></m:mrow></m:math>.</caption>
+      </figure>
+      <para id="id259981"><link target-id="uid5"/> did not take into account cases where the poles or zeros occur at <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math>. For example, if <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mi>γ</m:mi></m:msup></m:mrow></m:math>, then
+<m:math overflow="scroll"><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mn>20</m:mn><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced separators="" open="|" close="|"><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mfenced><m:mo>=</m:mo><m:mi>γ</m:mi><m:mn>20</m:mn><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced open="|" close="|"><m:mi>Ω</m:mi></m:mfenced></m:mrow></m:math>, which is a line having a slope of <m:math overflow="scroll"><m:mrow><m:mn>20</m:mn><m:mi>γ</m:mi></m:mrow></m:math> dB/decade passing through the <m:math overflow="scroll"><m:mi>Ω</m:mi></m:math>-axis at <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> (see <link target-id="uid10"/>). When there is a single or repeated pole at the origin, the graph appears just as in <link target-id="uid10"/> but with a negative slope.</para>
+      <figure id="uid10">
+        <media id="uid10_media" alt="">
+          <image mime-type="image/png" src="../../media/bp4.png" id="uid10_onlineimage" width="433"><!-- NOTE: attribute width changes image size online (pixels). original width is 433. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/bp4.eps" id="uid10_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Straight-line approximations to <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mn>20</m:mn><m:msub><m:mo form="prefix">log</m:mo><m:mn>10</m:mn></m:msub><m:mfenced open="|" close="|"><m:mi>Ω</m:mi></m:mfenced></m:mrow></m:math>.</caption>
+      </figure>
+      <para id="id260176">Next we'll look at approximations to the phase response. Here we'll begin with <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math> as shown in <link target-id="uid3"/>. Taking the phase of both sides gives</para>
+      <equation id="uid11">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:mi>∠</m:mi>
+                  <m:mrow>
+                    <m:mi>H</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mi>∠</m:mi>
+                  <m:mfenced separators="" open="{" close="}">
+                    <m:mi>K</m:mi>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:msubsup>
+                          <m:mo>∏</m:mo>
+                          <m:mrow>
+                            <m:mi>k</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                          </m:mrow>
+                          <m:mi>q</m:mi>
+                        </m:msubsup>
+                        <m:msup>
+                          <m:mfenced separators="" open="(" close=")">
+                            <m:mn>1</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mi>j</m:mi>
+                            <m:mfrac>
+                              <m:mi>Ω</m:mi>
+                              <m:msub>
+                                <m:mi>β</m:mi>
+                                <m:mi>k</m:mi>
+                              </m:msub>
+                            </m:mfrac>
+                          </m:mfenced>
+                          <m:msub>
+                            <m:mi>γ</m:mi>
+                            <m:mi>k</m:mi>
+                          </m:msub>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:msubsup>
+                          <m:mo>∏</m:mo>
+                          <m:mrow>
+                            <m:mi>k</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                          </m:mrow>
+                          <m:mi>p</m:mi>
+                        </m:msubsup>
+                        <m:msup>
+                          <m:mfenced separators="" open="(" close=")">
+                            <m:mn>1</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mi>j</m:mi>
+                            <m:mfrac>
+                              <m:mi>Ω</m:mi>
+                              <m:msub>
+                                <m:mi>α</m:mi>
+                                <m:mi>k</m:mi>
+                              </m:msub>
+                            </m:mfrac>
+                          </m:mfenced>
+                          <m:msub>
+                            <m:mi>δ</m:mi>
+                            <m:mi>k</m:mi>
+                          </m:msub>
+                        </m:msup>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mi>∠</m:mi>
+                  <m:mi>K</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mi>q</m:mi>
+                  </m:munderover>
+                  <m:msub>
+                    <m:mi>γ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mi>∠</m:mi>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mfrac>
+                      <m:mi>Ω</m:mi>
+                      <m:msub>
+                        <m:mi>β</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:msub>
+                    </m:mfrac>
+                  </m:mfenced>
+                  <m:mo>-</m:mo>
+                  <m:munderover>
+                    <m:mo>∑</m:mo>
+                    <m:mrow>
+                      <m:mi>k</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mi>p</m:mi>
+                  </m:munderover>
+                  <m:msub>
+                    <m:mi>δ</m:mi>
+                    <m:mi>k</m:mi>
+                  </m:msub>
+                  <m:mi>∠</m:mi>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mfrac>
+                      <m:mi>Ω</m:mi>
+                      <m:msub>
+                        <m:mi>α</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:msub>
+                    </m:mfrac>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id260489">
+where we have used the fact <m:math overflow="scroll"><m:mrow><m:mi>∠</m:mi><m:mfenced separators="" open="{" close="}"><m:msub><m:mi>Z</m:mi><m:mn>1</m:mn></m:msub><m:msub><m:mi>Z</m:mi><m:mn>2</m:mn></m:msub></m:mfenced><m:mo>=</m:mo><m:mi>∠</m:mi><m:msub><m:mi>Z</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:mi>∠</m:mi><m:msub><m:mi>Z</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>∠</m:mi><m:mfenced separators="" open="{" close="}"><m:msup><m:mi>Z</m:mi><m:mi>γ</m:mi></m:msup></m:mfenced><m:mo>=</m:mo><m:mi>γ</m:mi><m:mi>∠</m:mi><m:mi>Z</m:mi></m:mrow></m:math>. Lets now consider how we approximate each of the terms in <link target-id="uid11"/>. Consider the single term</para>
+      <equation id="id260591">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>∠</m:mi>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mn>1</m:mn>
+              <m:mo>-</m:mo>
+              <m:mi>j</m:mi>
+              <m:mfrac>
+                <m:mi>Ω</m:mi>
+                <m:mi>β</m:mi>
+              </m:mfrac>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mo>-</m:mo>
+            <m:mo form="prefix">arctan</m:mo>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mfrac>
+                <m:mi>Ω</m:mi>
+                <m:mi>β</m:mi>
+              </m:mfrac>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id260646">The graph of this function is shown in <link target-id="uid12"/>.</para>
+      <figure id="uid12">
+        <media id="uid12_media" alt="">
+          <image mime-type="image/png" src="../../media/atan1.png" id="uid12_onlineimage" width="508"><!-- NOTE: attribute width changes image size online (pixels). original width is 508. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/atan1.eps" id="uid12_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Graph of <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mo form="prefix">arctan</m:mo><m:mfenced separators="" open="(" close=")"><m:mfrac><m:mi>Ω</m:mi><m:mi>β</m:mi></m:mfrac></m:mfenced></m:mrow></m:math>, shown on a linear frequency scale.</caption>
+      </figure>
+      <para id="id260700">Since the magnitude response plots are on a logarithmic frequency axis, it would be desirable to do the same for the phase response plots. If we restrict <m:math overflow="scroll"><m:mi>Ω</m:mi></m:math> to positive values and plot <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mo form="prefix">arctan</m:mo><m:mfenced separators="" open="(" close=")"><m:mfrac><m:mi>Ω</m:mi><m:mi>β</m:mi></m:mfrac></m:mfenced></m:mrow></m:math> on a logarithmic frequency scale, we get the graph shown in <link target-id="uid13"/>.</para>
+      <figure id="uid13">
+        <media id="uid13_media" alt="">
+          <image mime-type="image/png" src="../../media/atan2.png" id="uid13_onlineimage" width="508"><!-- NOTE: attribute width changes image size online (pixels). original width is 508. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/atan2.eps" id="uid13_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Graph of <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mo form="prefix">arctan</m:mo><m:mfenced separators="" open="(" close=")"><m:mfrac><m:mi>Ω</m:mi><m:mi>β</m:mi></m:mfrac></m:mfenced></m:mrow></m:math>, shown on a logarithmic frequency scale, for <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math>.</caption>
+      </figure>
+      <para id="id260805">This graph can be approximated with straight lines as shown in <link target-id="uid14"/>. The approximation is a straight line having a slope of <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>4</m:mn></m:mrow></m:math> rad/decade passing through a phase of <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>4</m:mn></m:mrow></m:math> at <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:mi>β</m:mi></m:mrow></m:math>. The line then levels off at <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo><m:mn>1</m:mn><m:mi>β</m:mi></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>Ω</m:mi><m:mo>=</m:mo><m:mn>10</m:mn><m:mi>β</m:mi></m:mrow></m:math>. The resulting approximation is shown in <link target-id="uid14"/>.</para>
+      <figure id="uid14">
+        <media id="uid14_media" alt="">
+          <image mime-type="image/png" src="../../media/atan3.png" id="uid14_onlineimage" width="508"><!-- NOTE: attribute width changes image size online (pixels). original width is 508. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/atan3.eps" id="uid14_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Approximation (in red) to graph of <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mo form="prefix">arctan</m:mo><m:mfenced separators="" open="(" close=")"><m:mfrac><m:mi>Ω</m:mi><m:mi>β</m:mi></m:mfrac></m:mfenced></m:mrow></m:math> on a logarithmic frequency scale.</caption>
+      </figure>
+      <para id="id260946">Constant terms in <link target-id="uid11"/> have a phase of 0 or <m:math overflow="scroll"><m:mrow><m:mo>±</m:mo><m:mi>π</m:mi></m:mrow></m:math>, depending on their sign, while poles or zeros of <m:math overflow="scroll"><m:mrow><m:mi>H</m:mi><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:math> at the origin produce phase terms of <m:math overflow="scroll"><m:mrow><m:mi>γ</m:mi><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> for zeros or order <m:math overflow="scroll"><m:mi>γ</m:mi></m:math> or <m:math overflow="scroll"><m:mrow><m:mo>-</m:mo><m:mi>δ</m:mi><m:mi>π</m:mi><m:mo>/</m:mo><m:mn>2</m:mn></m:mrow></m:math> for poles of order <m:math overflow="scroll"><m:mi>δ</m:mi></m:math>. Next we'll illustrate these techniques with a few examples.</para>
+      <para id="id261039"><emphasis effect="bold">Example 3.1</emphasis> Sketch the Bode magnitude and phase response plot for the following filter:</para>
+      <equation id="id261051">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:msup>
+                <m:mn>10</m:mn>
+                <m:mn>4</m:mn>
+              </m:msup>
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>10</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>s</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:msup>
+                    <m:mn>10</m:mn>
+                    <m:mn>3</m:mn>
+                  </m:msup>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id261113">We begin by finding the corresponding frequency response by setting <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math>:</para>
+      <equation id="id261135">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mrow>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mn>1</m:mn>
+                  <m:mo>+</m:mo>
+                  <m:mi>j</m:mi>
+                  <m:mfrac>
+                    <m:mi>Ω</m:mi>
+                    <m:mn>10</m:mn>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mn>1</m:mn>
+                  <m:mo>+</m:mo>
+                  <m:mi>j</m:mi>
+                  <m:mfrac>
+                    <m:mi>Ω</m:mi>
+                    <m:msup>
+                      <m:mn>10</m:mn>
+                      <m:mn>3</m:mn>
+                    </m:msup>
+                  </m:mfrac>
+                </m:mfenced>
+              </m:mrow>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id261209">Lets find the magnitude response first:</para>
+      <equation id="uid16">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mn>20</m:mn>
+            <m:msub>
+              <m:mo form="prefix">log</m:mo>
+              <m:mn>10</m:mn>
+            </m:msub>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>H</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mo>-</m:mo>
+            <m:mn>20</m:mn>
+            <m:msub>
+              <m:mo form="prefix">log</m:mo>
+              <m:mn>10</m:mn>
+            </m:msub>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mi>j</m:mi>
+              <m:mfrac>
+                <m:mi>Ω</m:mi>
+                <m:mn>10</m:mn>
+              </m:mfrac>
+            </m:mfenced>
+            <m:mo>-</m:mo>
+            <m:mn>20</m:mn>
+            <m:msub>
+              <m:mo form="prefix">log</m:mo>
+              <m:mn>10</m:mn>
+            </m:msub>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mi>j</m:mi>
+              <m:mfrac>
+                <m:mi>Ω</m:mi>
+                <m:msup>
+                  <m:mn>10</m:mn>
+                  <m:mn>3</m:mn>
+                </m:msup>
+              </m:mfrac>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id261337">The resulting straight-line approximations to the two terms in <link target-id="uid16"/> along with their sum are shown in <link target-id="uid17"/>.</para>
+      <figure id="uid17">
+        <media id="uid17_media" alt="">
+          <image mime-type="image/png" src="../../media/bp5.png" id="uid17_onlineimage" width="430"><!-- NOTE: attribute width changes image size online (pixels). original width is 430. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/bp5.eps" id="uid17_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Bode magnitude response plot derivation for Example 1.</caption>
+      </figure>
+      <para id="id261366">The phase is given by</para>
+      <equation id="uid18">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>∠</m:mi>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mo>-</m:mo>
+            <m:mi>∠</m:mi>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mi>j</m:mi>
+              <m:mfrac>
+                <m:mi>Ω</m:mi>
+                <m:mn>10</m:mn>
+              </m:mfrac>
+            </m:mfenced>
+            <m:mo>-</m:mo>
+            <m:mi>∠</m:mi>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mi>j</m:mi>
+              <m:mfrac>
+                <m:mi>Ω</m:mi>
+                <m:msup>
+                  <m:mn>10</m:mn>
+                  <m:mn>3</m:mn>
+                </m:msup>
+              </m:mfrac>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id261455">The straight-line approximations to the two phase terms, along with their sum are shown in <link target-id="uid19"/>.</para>
+      <figure id="uid19">
+        <media id="uid19_media" alt="">
+          <image mime-type="image/png" src="../../media/bp6.png" id="uid19_onlineimage" width="507"><!-- NOTE: attribute width changes image size online (pixels). original width is 507. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/bp6.eps" id="uid19_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Bode phase response plot derivation for Example 1.</caption>
+      </figure>
+      <para id="id261480">Next we'll look at an example of a second-order highpass filter.</para>
+      <para id="id261484"><emphasis effect="bold">Example 3.2</emphasis> Find the Bode magnitude and phase response of the following filter</para>
+      <equation id="uid21">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>s</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:msup>
+                <m:mi>s</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:msup>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mi>s</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mn>10</m:mn>
+                </m:mfenced>
+                <m:mn>2</m:mn>
+              </m:msup>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id261552">Substituting <m:math overflow="scroll"><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi></m:mrow></m:math> in <link target-id="uid21"/> gives</para>
+      <equation id="uid22">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>H</m:mi>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:msup>
+                  <m:mn>10</m:mn>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mn>2</m:mn>
+                  </m:mrow>
+                </m:msup>
+                <m:msup>
+                  <m:mi>Ω</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+              <m:msup>
+                <m:mfenced separators="" open="(" close=")">
+                  <m:mn>1</m:mn>
+                  <m:mo>+</m:mo>
+                  <m:mi>j</m:mi>
+                  <m:mfrac>
+                    <m:mi>Ω</m:mi>
+                    <m:mn>10</m:mn>
+                  </m:mfrac>
+                </m:mfenced>
+                <m:mn>2</m:mn>
+              </m:msup>
+            </m:mfrac>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id261655">The magnitude response, expressed in decibels becomes</para>
+      <equation id="uid23">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mn>20</m:mn>
+            <m:msub>
+              <m:mo form="prefix">log</m:mo>
+              <m:mn>10</m:mn>
+            </m:msub>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mi>H</m:mi>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mfenced>
+            <m:mo>=</m:mo>
+            <m:mn>20</m:mn>
+            <m:msub>
+              <m:mo form="prefix">log</m:mo>
+              <m:mn>10</m:mn>
+            </m:msub>
+            <m:mfenced separators="" open="|" close="|">
+              <m:msup>
+                <m:mn>10</m:mn>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mn>2</m:mn>
+                </m:mrow>
+              </m:msup>
+            </m:mfenced>
+            <m:mo>+</m:mo>
+            <m:mn>40</m:mn>
+            <m:msub>
+              <m:mo form="prefix">log</m:mo>
+              <m:mn>10</m:mn>
+            </m:msub>
+            <m:mfenced open="|" close="|">
+              <m:mi>Ω</m:mi>
+            </m:mfenced>
+            <m:mo>-</m:mo>
+            <m:mn>40</m:mn>
+            <m:msub>
+              <m:mo form="prefix">log</m:mo>
+              <m:mn>10</m:mn>
+            </m:msub>
+            <m:mfenced separators="" open="|" close="|">
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>j</m:mi>
+                  <m:mi>Ω</m:mi>
+                </m:mrow>
+                <m:mn>10</m:mn>
+              </m:mfrac>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id261796">The graphs of the straight-line approximations for the three terms in the right-hand side of <link target-id="uid23"/> along with their sum are shown in <link target-id="uid24"/>.</para>
+      <figure id="uid24">
+        <media id="uid24_media" alt="">
+          <image mime-type="image/png" src="../../media/bp7.png" id="uid24_onlineimage" width="427"><!-- NOTE: attribute width changes image size online (pixels). original width is 427. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/bp7.eps" id="uid24_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Bode magnitude response plot derivation for Example 3.2.</caption>
+      </figure>
+      <para id="id261825">The phase of the frequency response is found to be</para>
+      <equation id="uid25">
+        <m:math overflow="scroll" mode="display">
+          <m:mtable displaystyle="true">
+            <m:mtr>
+              <m:mtd columnalign="right">
+                <m:mrow>
+                  <m:mi>∠</m:mi>
+                  <m:mi>H</m:mi>
+                  <m:mo>(</m:mo>
+                  <m:mi>j</m:mi>
+                  <m:mi>Ω</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mtd>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mi>∠</m:mi>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mo>-</m:mo>
+                    <m:msup>
+                      <m:mn>10</m:mn>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mn>2</m:mn>
+                      </m:mrow>
+                    </m:msup>
+                    <m:msup>
+                      <m:mi>Ω</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                  </m:mfenced>
+                  <m:mo>-</m:mo>
+                  <m:mi>∠</m:mi>
+                  <m:msup>
+                    <m:mfenced separators="" open="(" close=")">
+                      <m:mn>1</m:mn>
+                      <m:mo>+</m:mo>
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mi>j</m:mi>
+                          <m:mi>Ω</m:mi>
+                        </m:mrow>
+                        <m:mn>10</m:mn>
+                      </m:mfrac>
+                    </m:mfenced>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+            <m:mtr>
+              <m:mtd/>
+              <m:mtd columnalign="left">
+                <m:mrow>
+                  <m:mo>=</m:mo>
+                  <m:mi>π</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:mn>2</m:mn>
+                  <m:mi>∠</m:mi>
+                  <m:mfenced separators="" open="(" close=")">
+                    <m:mn>1</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mi>Ω</m:mi>
+                      </m:mrow>
+                      <m:mn>10</m:mn>
+                    </m:mfrac>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mtd>
+            </m:mtr>
+          </m:mtable>
+        </m:math>
+      </equation>
+      <para id="id261971">
+The resulting Bode phase response plot is found in <link target-id="uid26"/>.</para>
+      <figure id="uid26">
+        <media id="uid26_media" alt="">
+          <image mime-type="image/png" src="../../media/bp8.png" id="uid26_onlineimage" width="410"><!-- NOTE: attribute width changes image size online (pixels). original width is 410. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/bp8.eps" id="uid26_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Bode phase response plot derivation for Example 3.2.</caption>
+      </figure>
+    </section>
+  </content>
+</document>

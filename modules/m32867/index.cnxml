@@ -1,0 +1,541 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Complex Numbers and Complex Arithmetic</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32867</md:content-id>
+  <md:title>Complex Numbers and Complex Arithmetic</md:title>
+  <md:abstract/>
+  <md:uuid>64770b86-49fc-44bd-8202-1023f614b642</md:uuid>
+</metadata>
+<content>
+
+      <para id="id2773433">Before we begin studying signals, we need to review some basic
+aspects of complex numbers and complex arithmetic. The <emphasis effect="italics">rectangular coordinate</emphasis> representation of a complex number <m:math overflow="scroll"><m:mi>z</m:mi></m:math> is
+<m:math overflow="scroll"><m:mi>z</m:mi></m:math> has the form:</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>z</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>j</m:mi>
+            <m:mi>b</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2774119">where <m:math overflow="scroll"><m:mi>a</m:mi></m:math> and <m:math overflow="scroll"><m:mi>b</m:mi></m:math> are real numbers and <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msqrt></m:mrow></m:math>. The <emphasis effect="italics">real
+part</emphasis> of <m:math overflow="scroll"><m:mi>z</m:mi></m:math> is the number <m:math overflow="scroll"><m:mi>a</m:mi></m:math>, while the <emphasis effect="italics">imaginary part</emphasis> of <m:math overflow="scroll"><m:mi>z</m:mi></m:math>
+is the number <m:math overflow="scroll"><m:mi>b</m:mi></m:math>. We also note that <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mi>b</m:mi><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>-</m:mo><m:msup><m:mi>b</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> (a real number)
+since <m:math overflow="scroll"><m:mrow><m:mi>j</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math>. Any number having the form</para>
+      <equation id="id2774266">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>z</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>j</m:mi>
+            <m:mi>b</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2774284">where <m:math overflow="scroll"><m:mi>b</m:mi></m:math> is a real number is an <emphasis effect="italics">imaginary number</emphasis>. A complex number can also be represented in <emphasis effect="italics">polar coordinates</emphasis></para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>z</m:mi>
+            <m:mo>=</m:mo>
+            <m:mi>r</m:mi>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mi>j</m:mi>
+                <m:mi>θ</m:mi>
+              </m:mrow>
+            </m:msup>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2774340">where</para>
+      <equation id="uid3">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>r</m:mi>
+            <m:mo>=</m:mo>
+            <m:msqrt>
+              <m:mrow>
+                <m:msup>
+                  <m:mi>a</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+                <m:mo>+</m:mo>
+                <m:msup>
+                  <m:mi>b</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msup>
+              </m:mrow>
+            </m:msqrt>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2774383">is the <emphasis effect="italics">magnitude</emphasis> and</para>
+      <equation id="uid4">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>θ</m:mi>
+            <m:mo>=</m:mo>
+            <m:mo form="prefix">arctan</m:mo>
+            <m:mfenced separators="" open="(" close=")">
+              <m:mfrac>
+                <m:mi>b</m:mi>
+                <m:mi>a</m:mi>
+              </m:mfrac>
+            </m:mfenced>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2774430">is the <emphasis effect="italics">phase</emphasis> of the complex number <m:math overflow="scroll"><m:mi>z</m:mi></m:math>. The notation for the magnitude and phase of a complex number is given by <m:math overflow="scroll"><m:mfenced open="|" close="|"><m:mi>z</m:mi></m:mfenced></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>∠</m:mi><m:mi>z</m:mi></m:mrow></m:math>, respectively.
+Using Euler's Identity:</para>
+      <equation id="id2774477">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>±</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>θ</m:mi>
+              </m:mrow>
+            </m:msup>
+            <m:mo>=</m:mo>
+            <m:mo form="prefix">cos</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>θ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>±</m:mo>
+            <m:mi>j</m:mi>
+            <m:mo form="prefix">sin</m:mo>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>θ</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2774529">it follows that
+<m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mo form="prefix">cos</m:mo><m:mo>(</m:mo><m:mi>θ</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mo form="prefix">sin</m:mo><m:mo>(</m:mo><m:mi>θ</m:mi><m:mo>)</m:mo></m:mrow></m:math>.
+<link target-id="uid5"/> illustrates how polar coordinates and rectangular coordinates are related.</para>
+      <figure id="uid5">
+        <media id="uid5_media" alt="">
+          <image mime-type="image/png" src="../../media/pol_plot.png" id="uid5_onlineimage" width="307"><!-- NOTE: attribute width changes image size online (pixels). original width is 307. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/pol_plot.eps" id="uid5_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>Relationship between rectangular and polar coordinates.</caption>
+      </figure>
+      <para id="id2774604">Rectangular coordinates and polar coordinates are each useful depending on the type of mathematical operation performed on the complex numbers. Often, complex numbers are easier to add in rectangular coordinates, but multiplication and division is easier in polar coordinates.
+If <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>j</m:mi><m:mi>b</m:mi></m:mrow></m:math> is a complex number then its <emphasis effect="italics">complex conjugate</emphasis> is defined by</para>
+      <equation id="id2774639">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msup>
+              <m:mi>z</m:mi>
+              <m:mo>*</m:mo>
+            </m:msup>
+            <m:mo>=</m:mo>
+            <m:mi>a</m:mi>
+            <m:mo>-</m:mo>
+            <m:mi>j</m:mi>
+            <m:mi>b</m:mi>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2774667">in polar coordinates we have</para>
+      <equation id="id2774673">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msup>
+              <m:mi>z</m:mi>
+              <m:mo>*</m:mo>
+            </m:msup>
+            <m:mo>=</m:mo>
+            <m:mi>r</m:mi>
+            <m:msup>
+              <m:mi>e</m:mi>
+              <m:mrow>
+                <m:mo>-</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>θ</m:mi>
+              </m:mrow>
+            </m:msup>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2774707">note that <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:msup><m:mi>z</m:mi><m:mo>*</m:mo></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mo>|</m:mo><m:mi>z</m:mi><m:mo>|</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>z</m:mi><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mo>*</m:mo></m:msup><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>a</m:mi></m:mrow></m:math>. Also, if <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mo>...</m:mo><m:mo>,</m:mo><m:msub><m:mi>z</m:mi><m:mi>N</m:mi></m:msub></m:mrow></m:math> are complex numbers it can be easily shown that</para>
+      <equation id="uid6">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msup>
+              <m:mfenced separators="" open="(" close=")">
+                <m:msub>
+                  <m:mi>z</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>z</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mo>⋯</m:mo>
+                <m:mo>+</m:mo>
+                <m:msub>
+                  <m:mi>z</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+              </m:mfenced>
+              <m:mo>*</m:mo>
+            </m:msup>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mi>z</m:mi>
+              <m:mn>1</m:mn>
+              <m:mo>*</m:mo>
+            </m:msubsup>
+            <m:mo>+</m:mo>
+            <m:msubsup>
+              <m:mi>z</m:mi>
+              <m:mn>2</m:mn>
+              <m:mo>*</m:mo>
+            </m:msubsup>
+            <m:mo>+</m:mo>
+            <m:mo>⋯</m:mo>
+            <m:mo>+</m:mo>
+            <m:msubsup>
+              <m:mi>z</m:mi>
+              <m:mi>N</m:mi>
+              <m:mo>*</m:mo>
+            </m:msubsup>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2775158">and</para>
+      <equation id="uid7">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msup>
+              <m:mfenced separators="" open="(" close=")">
+                <m:msub>
+                  <m:mi>z</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+                <m:msub>
+                  <m:mi>z</m:mi>
+                  <m:mn>2</m:mn>
+                </m:msub>
+                <m:mo>⋯</m:mo>
+                <m:msub>
+                  <m:mi>z</m:mi>
+                  <m:mi>N</m:mi>
+                </m:msub>
+              </m:mfenced>
+              <m:mo>*</m:mo>
+            </m:msup>
+            <m:mo>=</m:mo>
+            <m:msubsup>
+              <m:mi>z</m:mi>
+              <m:mn>1</m:mn>
+              <m:mo>*</m:mo>
+            </m:msubsup>
+            <m:msubsup>
+              <m:mi>z</m:mi>
+              <m:mn>2</m:mn>
+              <m:mo>*</m:mo>
+            </m:msubsup>
+            <m:mo>⋯</m:mo>
+            <m:msubsup>
+              <m:mi>z</m:mi>
+              <m:mi>N</m:mi>
+              <m:mo>*</m:mo>
+            </m:msubsup>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2775248"><link target-id="uid8"/> indicates how two complex numbers combine in terms of addition, multiplication, and division when expressed in rectangular and in polar coordinates.</para>
+      <table id="uid8" summary="">
+        <tgroup cols="3">
+          <tbody>
+            <row>
+              <entry>operation</entry>
+              <entry>rectangular</entry>
+              <entry>polar</entry>
+            </row>
+            <row>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>z</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:msub>
+                      <m:mi>z</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msub>
+                        <m:mi>a</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>+</m:mo>
+                      <m:msub>
+                        <m:mi>a</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo>+</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msub>
+                        <m:mi>b</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>+</m:mo>
+                      <m:msub>
+                        <m:mi>b</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>z</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>z</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>a</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>a</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>b</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>b</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:mo>+</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:msub>
+                        <m:mi>a</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:msub>
+                        <m:mi>b</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:mo>+</m:mo>
+                      <m:msub>
+                        <m:mi>a</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                      <m:msub>
+                        <m:mi>b</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>r</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>r</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                          <m:mi>θ</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mo>+</m:mo>
+                        <m:msub>
+                          <m:mi>θ</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mrow>
+                </m:math>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>z</m:mi>
+                      <m:mn>1</m:mn>
+                    </m:msub>
+                    <m:mo>/</m:mo>
+                    <m:msub>
+                      <m:mi>z</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                  </m:mrow>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                          <m:mi>a</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:msub>
+                          <m:mi>a</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                        <m:mo>+</m:mo>
+                        <m:msub>
+                          <m:mi>b</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:msub>
+                          <m:mi>b</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo>+</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                          <m:mi>b</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:msub>
+                          <m:mi>a</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                        <m:mo>-</m:mo>
+                        <m:msub>
+                          <m:mi>a</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:msub>
+                          <m:mi>b</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:msubsup>
+                        <m:mi>a</m:mi>
+                        <m:mn>2</m:mn>
+                        <m:mn>2</m:mn>
+                      </m:msubsup>
+                      <m:mo>+</m:mo>
+                      <m:msubsup>
+                        <m:mi>b</m:mi>
+                        <m:mn>2</m:mn>
+                        <m:mn>2</m:mn>
+                      </m:msubsup>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:math>
+              </entry>
+              <entry>
+                <m:math overflow="scroll">
+                  <m:mrow>
+                    <m:mfrac>
+                      <m:msub>
+                        <m:mi>r</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                      <m:msub>
+                        <m:mi>r</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                    </m:mfrac>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mi>j</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                          <m:mi>θ</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mo>-</m:mo>
+                        <m:msub>
+                          <m:mi>θ</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mrow>
+                </m:math>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+        <caption>Operations on two complex numbers, <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:mi>j</m:mi><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>r</m:mi><m:mn>1</m:mn></m:msub><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:msub><m:mi>θ</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:msup></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:msub><m:mi>z</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>a</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:mi>j</m:mi><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>r</m:mi><m:mn>2</m:mn></m:msub><m:msup><m:mi>e</m:mi><m:mrow><m:mi>j</m:mi><m:msub><m:mi>θ</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:msup></m:mrow></m:math>. The sum of two complex numbers is cumbersome to express in polar coordinates, and is not shown.</caption>
+      </table>
+
+  </content>
+</document>

@@ -1,0 +1,223 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Symmetry Properties of the Fourier Transform</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m33894</md:content-id>
+  <md:title>Symmetry Properties of the Fourier Transform</md:title>
+  <md:abstract>Looks at some of the consequences of conjugate symmetry of the Fourier transform of real signals.</md:abstract>
+  <md:uuid>6d28536f-b36c-47e5-ac18-66029417030e</md:uuid>
+</metadata>
+<content>
+    <para id="id231352">When <m:math overflow="scroll"><m:mrow><m:mi>x</m:mi><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:math> is real, the Fourier transform has <emphasis effect="italics">conjugate symmetry</emphasis>, <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>X</m:mi><m:msup><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:mo>*</m:mo></m:msup></m:mrow></m:math>. It is not hard to see this:</para>
+    <equation id="uid1">
+      <m:math overflow="scroll" mode="display">
+        <m:mtable displaystyle="true">
+          <m:mtr>
+            <m:mtd columnalign="right">
+              <m:mrow>
+                <m:mi>X</m:mi>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>j</m:mi>
+                    <m:mi>Ω</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mo>*</m:mo>
+                </m:msup>
+              </m:mrow>
+            </m:mtd>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:msup>
+                <m:mfenced separators="" open="[" close="]">
+                  <m:msubsup>
+                    <m:mo>∫</m:mo>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>∞</m:mi>
+                    </m:mrow>
+                    <m:mi>∞</m:mi>
+                  </m:msubsup>
+                  <m:mi>x</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>t</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mi>e</m:mi>
+                    <m:mrow>
+                      <m:mo>-</m:mo>
+                      <m:mi>j</m:mi>
+                      <m:mi>Ω</m:mi>
+                      <m:mi>t</m:mi>
+                    </m:mrow>
+                  </m:msup>
+                  <m:mi>d</m:mi>
+                  <m:mi>t</m:mi>
+                </m:mfenced>
+                <m:mo>*</m:mo>
+              </m:msup>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:msubsup>
+                <m:msup>
+                  <m:mfenced separators="" open="[" close="]">
+                    <m:mi>x</m:mi>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mi>t</m:mi>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mi>e</m:mi>
+                      <m:mrow>
+                        <m:mo>-</m:mo>
+                        <m:mi>j</m:mi>
+                        <m:mi>Ω</m:mi>
+                        <m:mi>t</m:mi>
+                      </m:mrow>
+                    </m:msup>
+                  </m:mfenced>
+                  <m:mo>*</m:mo>
+                </m:msup>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo>∫</m:mo>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mi>∞</m:mi>
+                  </m:mrow>
+                  <m:mi>∞</m:mi>
+                </m:msubsup>
+                <m:mi>x</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:msup>
+                  <m:mi>e</m:mi>
+                  <m:mrow>
+                    <m:mi>j</m:mi>
+                    <m:mi>Ω</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:mrow>
+                </m:msup>
+                <m:mi>d</m:mi>
+                <m:mi>t</m:mi>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+          <m:mtr>
+            <m:mtd/>
+            <m:mtd>
+              <m:mo>=</m:mo>
+            </m:mtd>
+            <m:mtd columnalign="left">
+              <m:mrow>
+                <m:mi>X</m:mi>
+                <m:mo>(</m:mo>
+                <m:mo>-</m:mo>
+                <m:mi>j</m:mi>
+                <m:mi>Ω</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mtd>
+          </m:mtr>
+        </m:mtable>
+      </m:math>
+    </equation>
+    <para id="id232175">where the second equality uses the definition of a Riemann integral as the limiting case of a summation, and the fact that the complex conjugate of a sum is equal to the sum of the complex conjugates. The third equality used the fact that the complex conjugate of a product is equal to the product of complex conjugates.</para>
+    <para id="id232183">Letting <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo><m:mo>+</m:mo><m:mi>j</m:mi><m:mi>b</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math>, it follows that</para>
+    <equation id="uid2">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>X</m:mi>
+          <m:mo>(</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>j</m:mi>
+          <m:mi>Ω</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>=</m:mo>
+          <m:mi>a</m:mi>
+          <m:mo>(</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>j</m:mi>
+          <m:mi>Ω</m:mi>
+          <m:mo>)</m:mo>
+          <m:mo>+</m:mo>
+          <m:mi>j</m:mi>
+          <m:mi>b</m:mi>
+          <m:mo>(</m:mo>
+          <m:mo>-</m:mo>
+          <m:mi>j</m:mi>
+          <m:mi>Ω</m:mi>
+          <m:mo>)</m:mo>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id232288">and</para>
+    <equation id="uid3">
+      <m:math overflow="scroll" mode="display">
+        <m:mrow>
+          <m:mi>X</m:mi>
+          <m:msup>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mi>j</m:mi>
+              <m:mi>Ω</m:mi>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:mo>*</m:mo>
+          </m:msup>
+          <m:mo>=</m:mo>
+          <m:mi>a</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>j</m:mi>
+            <m:mi>Ω</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+          <m:mo>-</m:mo>
+          <m:mi>j</m:mi>
+          <m:mi>b</m:mi>
+          <m:mrow>
+            <m:mo>(</m:mo>
+            <m:mi>j</m:mi>
+            <m:mi>Ω</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+        </m:mrow>
+      </m:math>
+    </equation>
+    <para id="id232353">Equating <link target-id="uid2"/> and <link target-id="uid3"/> gives <m:math overflow="scroll"><m:mrow><m:mi>a</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math> and <m:math overflow="scroll"><m:mrow><m:mi>b</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>b</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math>, which implies that the real and imaginary parts of <m:math overflow="scroll"><m:mrow><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow></m:math> have even and odd symmetry, respectively. A consequence of this is that <m:math overflow="scroll"><m:mrow><m:mfenced separators="" open="|" close="|"><m:mi>X</m:mi><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mfenced><m:mo>=</m:mo><m:mfenced separators="" open="|" close="|"><m:mi>X</m:mi><m:msup><m:mrow><m:mo>(</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mrow><m:mo>*</m:mo></m:msup></m:mfenced><m:mo>=</m:mo><m:mfenced separators="" open="|" close="|"><m:mi>X</m:mi><m:mo>(</m:mo><m:mo>-</m:mo><m:mi>j</m:mi><m:mi>Ω</m:mi><m:mo>)</m:mo></m:mfenced></m:mrow></m:math>, that is, the magnitude of the Fourier transform has even symmetry. It can similarly be shown that the phase of the Fourier transform has odd symmetry.</para>
+  </content>
+</document>

@@ -1,0 +1,90 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Periodic Signals</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32869</md:content-id>
+  <md:title>Periodic Signals</md:title>
+  <md:abstract/>
+  <md:uuid>f9314c04-43c1-4bac-935d-5cacf1f8867f</md:uuid>
+</metadata>
+<content>
+
+      <para id="id2758209">Periodic signals have the following property:</para>
+      <equation id="uid1">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:mi>x</m:mi>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>)</m:mo>
+            <m:mo>=</m:mo>
+            <m:mi>x</m:mi>
+            <m:mo>(</m:mo>
+            <m:mi>t</m:mi>
+            <m:mo>+</m:mo>
+            <m:mi>k</m:mi>
+            <m:mi>T</m:mi>
+            <m:mo>)</m:mo>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2758883">where <m:math overflow="scroll"><m:mi>k</m:mi></m:math> is an integer and <m:math overflow="scroll"><m:mi>T</m:mi></m:math> is called the <emphasis effect="italics">fundamental period</emphasis>.
+Periodic have the property that they “repeat" every <m:math overflow="scroll"><m:mi>T</m:mi></m:math> seconds.
+For periodic signals, the power can be defined as</para>
+      <equation id="uid2">
+        <m:math overflow="scroll" mode="display">
+          <m:mrow>
+            <m:msub>
+              <m:mi>p</m:mi>
+              <m:mi>x</m:mi>
+            </m:msub>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+              <m:mn>1</m:mn>
+              <m:mi>T</m:mi>
+            </m:mfrac>
+            <m:msubsup>
+              <m:mo>∫</m:mo>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:mrow>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>t</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+                <m:mo>+</m:mo>
+                <m:mi>T</m:mi>
+              </m:mrow>
+            </m:msubsup>
+            <m:mrow>
+              <m:msup>
+                <m:mi>x</m:mi>
+                <m:mn>2</m:mn>
+              </m:msup>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>t</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mi>d</m:mi>
+              <m:mi>t</m:mi>
+            </m:mrow>
+          </m:mrow>
+        </m:math>
+      </equation>
+      <para id="id2759241"><link target-id="uid3"/> shows an example of a periodic signal. We will study the frequency content of periodic signals in some detail in Chapter 2.</para>
+      <figure id="uid3">
+        <media id="uid3_media" alt="">
+          <image mime-type="image/png" src="../../media/per_sig.png" id="uid3_onlineimage" width="515"><!-- NOTE: attribute width changes image size online (pixels). original width is 515. --></image>
+          <image mime-type="application/postscript" for="pdf" src="../../media/per_sig.eps" id="uid3_printimage" print-width="4in">
+            <!--NOTE: attribute width changes image size in printed PDF (if specified in .tex file)-->
+          </image>
+        </media>
+        <caption>General periodic signal.</caption>
+      </figure>
+
+  </content>
+</document>
